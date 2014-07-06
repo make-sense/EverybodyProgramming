@@ -154,7 +154,7 @@ MonoBehaviour:
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 0}
   mFont: {fileID: 11400000, guid: 29056518aafb01b49a5b08faf8e30cff, type: 2}
-  mText: Chuck
+  mText: 
   mFontSize: 20
   mFontStyle: 0
   mAlignment: 0
@@ -206,13 +206,13 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 120
-  mHeight: 90
+  mWidth: 110
+  mHeight: 85
   mDepth: 4
   autoResizeBoxCollider: 1
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 1.33333337
+  aspectRatio: 1.29411769
   mType: 3
   mFillDirection: 4
   mFillAmount: 1
@@ -224,7 +224,7 @@ MonoBehaviour:
   bottomType: 1
   topType: 1
   mAtlas: {fileID: 11400000, guid: b85285fefb106402faa216e4dcb36432, type: 2}
-  mSpriteName: chuck_dummy
+  mSpriteName: chuck_tmp2
   mFillCenter: 1
 --- !u!114 &11400018
 MonoBehaviour:
