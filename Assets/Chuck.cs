@@ -43,6 +43,15 @@ public class Chuck : MonoBehaviour {
 //	void OnTriggerStay(Collider other) {
 //		Debug.Log ("OnTriggerStay");
 //	}
+	void OnDragEnd ()
+	{
+		if (isChuckDisconnect(this.transform, this.transform.parent)) {
+			Debug.Log ("isChuckDisconnect");
+			if (uiRoot != null)
+				this.transform.parent = uiRoot.transform;
+		}
+		Debug.Log ("OnDragEnd");
+	}
 
 	void OnTriggerExit(Collider other) {
 		Debug.Log ("OnTriggerExit");
@@ -55,6 +64,13 @@ public class Chuck : MonoBehaviour {
 	private bool isRightEdge(Transform src, Transform dst)
 	{
 		if (src.localPosition.x > dst.localPosition.x + CHUCK_WIDTH/2)
+			return true;
+		return false;
+	}
+
+	private bool isChuckDisconnect(Transform src, Transform dst)
+	{
+		if (src.localPosition.x > dst.localPosition.x + CHUCK_WIDTH + 10)
 			return true;
 		return false;
 	}
