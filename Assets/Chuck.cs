@@ -23,13 +23,14 @@ public class Chuck : MonoBehaviour {
 	}
 
 	void OnCollisionExit() {
-		Debug.Log ("OnTriggerExit");
+		Debug.Log ("OnCollisionExit");
 		this.transform.parent = uiRoot.transform;
 	}
 
 	void OnTriggerEnter(Collider other) {
 		Debug.Log ("OnTriggerEnter");
-		if (other.tag == "Chuck") {
+		if (other.tag == "Chuck") 
+		{
 			if (isRightEdge(this.transform, other.transform))
 			{
 				this.transform.parent = other.transform;
@@ -40,36 +41,32 @@ public class Chuck : MonoBehaviour {
 		}
 	}
 
-//	void OnTriggerStay(Collider other) {
-//		Debug.Log ("OnTriggerStay");
-//	}
-	void OnDragEnd ()
-	{
-		if (isChuckDisconnect(this.transform, this.transform.parent)) {
+	void OnDragEnd () {
+		if (isChuckDisconnect(this.transform, this.transform.parent))
+		{
 			Debug.Log ("isChuckDisconnect");
-			if (uiRoot != null)
-				this.transform.parent = uiRoot.transform;
+			if (UIRoot.list.Count > 0)
+				this.transform.parent = UIRoot.list[0].transform;
 		}
 		Debug.Log ("OnDragEnd");
 	}
 
 	void OnTriggerExit(Collider other) {
 		Debug.Log ("OnTriggerExit");
-		if (other.tag == "Chuck") {
-			if (uiRoot != null)
-				this.transform.parent = uiRoot.transform;
+		if (other.tag == "Chuck")
+		{
+			if (UIRoot.list.Count > 0)
+				this.transform.parent = UIRoot.list[0].transform;
 		}
 	}
 
-	private bool isRightEdge(Transform src, Transform dst)
-	{
+	private bool isRightEdge(Transform src, Transform dst) {
 		if (src.localPosition.x > dst.localPosition.x + CHUCK_WIDTH/2)
 			return true;
 		return false;
 	}
 
-	private bool isChuckDisconnect(Transform src, Transform dst)
-	{
+	private bool isChuckDisconnect(Transform src, Transform dst) {
 		if (src.localPosition.x > dst.localPosition.x + CHUCK_WIDTH + 10)
 			return true;
 		return false;
