@@ -114,6 +114,9 @@ public class Chuck : MonoBehaviour {
 
 	private bool isRoot(Transform transform)
 	{
+		if (transform.parent == null)
+			return true;
+
 		if (!transform.parent.name.Contains("Chuck"))
 			return true;
 		return false;
