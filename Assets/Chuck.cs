@@ -43,6 +43,7 @@ public class Chuck : MonoBehaviour {
 		}
 		else if (other.tag == "ChuckStack")
 		{
+			Debug.Log ("Destroy " + gameObject.name);
 			Destroy(this.gameObject);
 		}
 	}

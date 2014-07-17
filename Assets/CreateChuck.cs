@@ -3,6 +3,7 @@ using System.Collections;
 
 public class CreateChuck : MonoBehaviour {
 	public GameObject chuckPrefab;
+	private static Vector3 _lastPosition;
 
 	public void DisableAnchor()
 	{
@@ -11,17 +12,18 @@ public class CreateChuck : MonoBehaviour {
 		sprite.ResetAnchors();
 	}
 
-	private Vector3 CurrentNGUIMousePosition()
+	void OnDrag (Vector2 delta)
 	{
-		float x = Input.mousePosition.x - Screen.width/2;
-		float y = Input.mousePosition.y - Screen.height/2;
-		return new Vector3(x, y, 0f);
+		Transform _transform = UIRoot.list[0].transform.FindChild("ChuckStack(Clone)");
+		if (_transform != null) {
+			_lastPosition = _transform.localPosition;
+			Debug.Log(_transform.name + ":" + _lastPosition.ToString());
+		}
 	}
 
 	public void Create()
 	{
-		GameObject gameObject = (GameObject)Instantiate(chuckPrefab,CurrentNGUIMousePosition(),Quaternion.identity);
-		gameObject.transform.localPosition = CurrentNGUIMousePosition();
-		Debug.Log (gameObject.name + gameObject.transform.localPosition.ToString());
+		GameObject instantiatedGameObject = NGUITools.AddChild(this.transform.parent.gameObject, chuckPrefab);
+		instantiatedGameObject.transform.localPosition = _lastPosition;
 	}
 }
