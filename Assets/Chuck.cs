@@ -13,7 +13,7 @@ public class Chuck : MonoBehaviour {
 	void Start () {
 		if (UIRoot.list.Count > 0)
 			_uiRoot = UIRoot.list[0];
-		Debug.Log("Start");
+//		Debug.Log("Start");
 	}
 	
 	// Update is called once per frame
@@ -22,24 +22,28 @@ public class Chuck : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other) 
 	{
-		Debug.Log ("OnTriggerEnter");
+//		Debug.Log ("OnTriggerEnter");
 		if (other.tag == "Chuck") 
 		{
 			Vector3 srcPos = getGlobalPosition(this.transform);
 			Vector3 dstPos = getGlobalPosition(other.transform);
-			Debug.Log (srcPos.ToString() + "<=>" + dstPos.ToString());
+//			Debug.Log (srcPos.ToString() + "<=>" + dstPos.ToString());
 			if (isRightEdge(srcPos, dstPos))
 			{
 				this.transform.parent = other.transform;
 				this.transform.localPosition = new Vector3(CHUCK_WIDTH, 0);
-				Debug.Log ("Set this to right child");
+//				Debug.Log ("Set this to right child");
 			}
 			else if (isBottomEdge(srcPos, dstPos))
 	        {
 				this.transform.parent = other.transform;
 				this.transform.localPosition = new Vector3(0, -CHUCK_HEIGHT);
-				Debug.Log ("Set this to bottom child");
+//				Debug.Log ("Set this to bottom child");
 			}
+		}
+		else if (other.tag == "ChuckStack")
+		{
+			Destroy(this.gameObject);
 		}
 	}
 
@@ -50,10 +54,15 @@ public class Chuck : MonoBehaviour {
 
 		if (isChuckSeparated(this.transform))
 		{
-			Debug.Log ("isChuckDisconnect");
+//			Debug.Log ("isChuckDisconnect");
 			this.transform.parent = _uiRoot.transform;
 		}
-		Debug.Log ("OnDragEnd");
+//		Debug.Log ("OnDragEnd");
+	}
+
+	void OnDragDropRelease(GameObject surface)
+	{
+		Debug.Log ("OnDragDropRelease");
 	}
 
 //	void OnTriggerExit(Collider other) 
@@ -68,7 +77,7 @@ public class Chuck : MonoBehaviour {
 
 	private bool isRightEdge(Vector3 src, Vector3 dst) 
 	{
-		Debug.Log ("isRightEdge");
+//		Debug.Log ("isRightEdge");
 		if (src.x > dst.x + CHUCK_WIDTH/2 &&
 		    src.x < dst.x + CHUCK_WIDTH &&
 		    src.y > dst.y - CHUCK_HEIGHT/2 &&
@@ -79,7 +88,7 @@ public class Chuck : MonoBehaviour {
 
 	private bool isBottomEdge(Vector3 src, Vector3 dst)
 	{
-		Debug.Log ("isBottomEdge");
+//		Debug.Log ("isBottomEdge");
 		if (src.x > dst.x &&
 		    src.x < dst.x + CHUCK_WIDTH/2 &&
 		    src.y > dst.y - CHUCK_HEIGHT &&

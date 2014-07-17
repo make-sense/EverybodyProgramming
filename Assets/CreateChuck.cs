@@ -22,5 +22,6 @@ public class CreateChuck : MonoBehaviour {
 	{
 		GameObject gameObject = (GameObject)Instantiate(chuckPrefab,CurrentNGUIMousePosition(),Quaternion.identity);
 		gameObject.transform.localPosition = CurrentNGUIMousePosition();
+		Debug.Log (gameObject.name + gameObject.transform.localPosition.ToString());
 	}
 }
