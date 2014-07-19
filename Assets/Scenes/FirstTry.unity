@@ -85,12 +85,13 @@ GameObject:
   - 114: {fileID: 30442506}
   - 114: {fileID: 30442505}
   - 65: {fileID: 30442504}
-  - 114: {fileID: 30442509}
   - 54: {fileID: 30442508}
+  - 114: {fileID: 30442509}
   - 114: {fileID: 30442507}
+  - 114: {fileID: 30442510}
   m_Layer: 8
   m_Name: ButtyStack
-  m_TagString: Untagged
+  m_TagString: ButtyStack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -213,7 +214,11 @@ MonoBehaviour:
   onHoverOver: []
   onHoverOut: []
   onPress: []
-  onRelease: []
+  onRelease:
+  - mTarget: {fileID: 30442510}
+    mMethodName: Create
+    mParameters: []
+    oneShot: 0
   onSelect: []
   onDeselect: []
   onClick: []
@@ -249,6 +254,19 @@ MonoBehaviour:
   restriction: 0
   cloneOnDrag: 1
   pressAndHoldDelay: 1
+--- !u!114 &30442510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 30442502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b494b154192875444be45b8cc678f9c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  positionOfPrefab: {fileID: 30442502}
+  prefab: {fileID: 100004, guid: 4cd7a78de2d5927489057fdfe6a40549, type: 2}
 --- !u!1 &234216902
 GameObject:
   m_ObjectHideFlags: 0
@@ -623,10 +641,10 @@ GameObject:
   - 114: {fileID: 1439961882}
   - 114: {fileID: 1439961881}
   - 65: {fileID: 1439961880}
+  - 54: {fileID: 1439961886}
   - 114: {fileID: 1439961885}
   - 114: {fileID: 1439961883}
   - 114: {fileID: 1439961884}
-  - 54: {fileID: 1439961886}
   m_Layer: 8
   m_Name: ChuckStack
   m_TagString: ChuckStack
@@ -771,10 +789,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1439961878}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f405aef1930e0634d9537a2ce2770af5, type: 3}
+  m_Script: {fileID: 11500000, guid: b494b154192875444be45b8cc678f9c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chuckPrefab: {fileID: 100016, guid: 5906e90061c544c408d118500c1503f0, type: 2}
+  positionOfPrefab: {fileID: 1439961878}
+  prefab: {fileID: 100016, guid: 940967da652985e43a81dde716d69b3f, type: 2}
 --- !u!114 &1439961885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1083,7 +1102,7 @@ Transform:
   m_GameObject: {fileID: 1951330661}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: .00488997577, y: .00488997577, z: .00488997577}
+  m_LocalScale: {x: .00487804879, y: .00487804879, z: .00487804879}
   m_Children:
   - {fileID: 403662347}
   - {fileID: 1552710993}
@@ -1461,6 +1480,10 @@ Prefab:
     - target: {fileID: 11400002, guid: 7c3a28b051e872b448d4808cfcf9199c, type: 2}
       propertyPath: mText
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 7c3a28b051e872b448d4808cfcf9199c, type: 2}
+      propertyPath: m_TagString
+      value: ButtyStack
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7c3a28b051e872b448d4808cfcf9199c, type: 2}
