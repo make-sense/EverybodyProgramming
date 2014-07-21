@@ -1,9 +1,7 @@
-﻿using Uniduino;
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 
 public class Butty : Actor {
-	Arduino arduino = Arduino.global;
 
 	// Use this for initialization
 	void Start () {

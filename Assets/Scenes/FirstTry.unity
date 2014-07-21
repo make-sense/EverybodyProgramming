@@ -302,7 +302,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 251140501}
-  - 114: {fileID: 251140500}
   m_Layer: 0
   m_Name: ArduinoManager
   m_TagString: Untagged
@@ -310,21 +309,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &251140500
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 251140499}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee80ba8b4c5bd46839658bcfeb780748, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PortName: 
-  Baud: 57600
-  RebootDelay: 3
-  AutoConnect: 1
 --- !u!4 &251140501
 Transform:
   m_ObjectHideFlags: 0
@@ -1145,7 +1129,7 @@ Transform:
   m_GameObject: {fileID: 1951330661}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: .00465116277, y: .00465116277, z: .00465116277}
+  m_LocalScale: {x: .00593471806, y: .00593471806, z: .00593471806}
   m_Children:
   - {fileID: 403662347}
   - {fileID: 1552710993}
