@@ -1,8 +1,6 @@
 [Ll]ibrary/
 [Tt]emp/
 [Oo]bj/
-Assets/ExternalScripts*
-Assets/Packages*
 Assets/Packages/NGUI*
 Assets/Packages/Uniduino*
 
