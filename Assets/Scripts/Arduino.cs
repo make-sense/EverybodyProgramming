@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
+using System;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Arduino : MonoBehaviour {
 
@@ -17,22 +19,25 @@ public class Arduino : MonoBehaviour {
 		}
 	}
 
+	Firmata firmata;
+	SerialDevice _serialDevice;
+
 	/// <summary>
 	/// Automatically connect to the arduino if properly configured.
 	/// </summary>
 	void Awake () {		
 		
-		Log("Arduino awake");
+		Debug.Log("Arduino awake");
 		if (instance == null) instance = this; // track the first instance that was created as a convenience, but dont preclude multiple uniduino's coexisting
 		
 		DontDestroyOnLoad(this);
-		
+
 		if (AutoConnect)
 		{
-			Log("AutoConnecting...");
-			if (PortName == null || PortName.Length == 0 && Arduino.guessPortName().Length > 0)
+			Debug.Log("AutoConnecting...");
+			if (PortName == null || PortName.Length == 0 && guessPortName().Length > 0)
 			{
-				PortName = Arduino.guessPortName();
+				PortName = guessPortName();
 			}
 			
 			Connect();								
@@ -44,10 +49,10 @@ public class Arduino : MonoBehaviour {
 	/// Runs the default serial input processing loop
 	/// </summary>
 	void Update () {
-		if (_serialPort != null && _serialPort.IsOpen)
+		if (_serialDevice != null && _serialDevice.IsOpen)
 		{
 			// process incoming serial messages	
-			processInput();				
+			firmata.processInput();
 		}					
 	}
 
@@ -75,22 +80,21 @@ public class Arduino : MonoBehaviour {
 	/// </summary>
 	public void Connect()
 	{
-		Log ("Connectiong to arduino at " + PortName + "...");		
-		connect(PortName, Baud, true, RebootDelay);
-		
-		VersionDataReceived += delegate(int majorVersion, int minorVersion) 
-		{
-			StartCoroutine(setup_delay());				
-		};
-		
-		
-		reportVersion(); // some boards (like the micro) do not send the version right away for some reason. perhaps a timing issue.		
-		
+		Debug.Log ("Connectiong to arduino at " + PortName + "...");
+		_serialDevice = new SerialDevice (PortName, Baud);
+		firmata = new Firmata(_serialDevice, AutoConnect, RebootDelay);
+
+//		Firmata.VersionDataReceived += delegate(int majorVersion, int minorVersion) 
+//		{
+//			StartCoroutine(setup_delay());				
+//		};
+//
+//		firmata.reportVersion(); // some boards (like the micro) do not send the version right away for some reason. perhaps a timing issue.		
 	}
 	
 	IEnumerator setup_delay (){	
 		yield return new WaitForSeconds(RebootDelay);
-		Log("Version data received, running setup commands");			
+		Debug.Log("Version data received, running setup commands");			
 		lock(setup_lock)
 		{
 			Connected = true;	
@@ -100,14 +104,13 @@ public class Arduino : MonoBehaviour {
 			}
 			setup_queue.Clear();
 		}
-		
 	}
 	
 	
 	public void Disconnect()
 	{
 		Connected = false;
-		Close ();
+		firmata.Close ();
 		
 	}
 	
@@ -118,7 +121,7 @@ public class Arduino : MonoBehaviour {
 	
 	
 	// Static Helpers	
-	public static string guessPortName()
+	public string guessPortName()
 	{		
 		switch (Application.platform)
 		{
@@ -133,9 +136,9 @@ public class Arduino : MonoBehaviour {
 		}
 	}
 	
-	public static string guessPortNameWindows()
+	public string guessPortNameWindows()
 	{
-		var devices = System.IO.Ports.SerialPort.GetPortNames();
+		var devices = _serialDevice.GetPortNames();
 		
 		if (devices.Length == 0) // 
 		{
@@ -144,9 +147,9 @@ public class Arduino : MonoBehaviour {
 			return devices[0];				
 	}
 	
-	public static string guessPortNameUnix()
+	public string guessPortNameUnix()
 	{			
-		var devices = System.IO.Ports.SerialPort.GetPortNames();
+		var devices = _serialDevice.GetPortNames();
 		
 		if (devices.Length ==0) // try manual enumeration
 		{
