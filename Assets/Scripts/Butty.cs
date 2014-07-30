@@ -48,6 +48,7 @@ public class Butty : Actor {
 		if (pin >= 0)
 		{
 			Arduino.global.pinMode(pin, PinMode.INPUT);
+			Arduino.global.digitalWrite(pin, Arduino.HIGH);
 			UILabel uiLabel = this.GetComponentInChildren<UILabel>() as UILabel;
 			uiLabel.text = "D" + pin.ToString();
 		}
@@ -62,8 +63,8 @@ public class Butty : Actor {
 				if (Arduino.global.Connected)
 				{
 					int value = Arduino.global.digitalRead (pin);
-					ChangeState ((value == Arduino.LOW) ? true : false);	// pressing button is LOW
 					Debug.Log (value.ToString());
+					ChangeState ((value == Arduino.LOW) ? true : false);	// pressing button is LOW
 				}
 			}
 		}
