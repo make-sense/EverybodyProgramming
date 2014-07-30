@@ -4,15 +4,16 @@ using System.Collections;
 public class PropertyManager : MonoBehaviour {
 
 	public GameObject ActorName;
+	public GameObject propertyRoot;
+	public GameObject propertyDetail;
 
-	GameObject propertyGameObject;
 	Actor.eCharactor selectedCharactor = Actor.eCharactor.NONE;
 	System.Guid currentGuid;
 
 	// Use this for initialization
 	void Start () {
-		propertyGameObject = GameObject.Find ("Property");
-		if (propertyGameObject != null)
+		propertyRoot = GameObject.Find ("Property");
+		if (propertyRoot != null)
 			Hide ();
 		else
 			Debug.Log ("Can't find Property GameObject");
@@ -48,17 +49,31 @@ public class PropertyManager : MonoBehaviour {
 	}
 
 	public void Show () {
-		propertyGameObject.SetActive(true);
+		propertyRoot.SetActive(true);
 	}
 
 	public void Hide () {
-		propertyGameObject.SetActive(false);
+		propertyRoot.SetActive(false);
 	}
 
 	public void Set () {
 		UILabel label = ActorName.GetComponentInChildren<UILabel> () as UILabel;
 		Actor actor = ActorManager.Instance.Get (currentGuid);
 		actor.ActorName = label.text;
+		switch (selectedCharactor) 
+		{
+			case Actor.eCharactor.BUTTY:
+			{
+				GameObject gameObject = GameObject.Find ("ButtyProperty");
+				if (gameObject != null)
+				{
+					UIPopupList list = gameObject.GetComponentInChildren<UIPopupList> () as UIPopupList;
+					Debug.Log (list.value.Substring(1));
+					((Butty)actor).AttachPin(System.Convert.ToInt32(list.value.Substring(1)));
+				}
+				break;
+			}
+		}
 	}
 
 	private static PropertyManager _instance = null;
