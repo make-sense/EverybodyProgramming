@@ -27,6 +27,14 @@ public class PropertyManager : MonoBehaviour {
 	public void ShowButtyProperty (System.Guid guid) {
 		currentGuid = guid;
 		Show ();
+
+		foreach (Transform t in propertyDetail.transform) {
+			if (t.name == "ButtyProperty")
+				t.gameObject.SetActive(true);
+			else
+				t.gameObject.SetActive(false);
+		}
+
 		selectedCharactor = Actor.eCharactor.BUTTY;
 		Actor actor = ActorManager.Instance.Get (currentGuid);
 		if (actor != null)
@@ -45,6 +53,38 @@ public class PropertyManager : MonoBehaviour {
 		else
 		{
 			Debug.Log ("Fail to found");
+		}
+	}
+
+	public void ShowBulbyProperty (System.Guid guid) {
+		currentGuid = guid;
+		Show ();
+
+		foreach (Transform t in propertyDetail.transform) {
+			if (t.name == "BulbyProperty")
+				t.gameObject.SetActive(true);
+			else
+				t.gameObject.SetActive(false);
+		}
+
+		selectedCharactor = Actor.eCharactor.BULBY;
+		Actor actor = ActorManager.Instance.Get (currentGuid);
+		if (actor != null)
+		{
+			UILabel label = ActorName.GetComponentInChildren<UILabel> () as UILabel;
+			if (label != null)
+			{
+				label.text = actor.ActorName;
+			}
+			else
+			{
+				Debug.Log ("Fail to found UIInput");
+			}
+			Debug.Log ("Found actor");
+		}
+		else
+		{
+			Debug.Log ("Fail to found Actor : " + currentGuid.ToString ());
 		}
 	}
 
