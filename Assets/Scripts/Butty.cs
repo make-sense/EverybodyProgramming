@@ -42,7 +42,7 @@ public class Butty : Actor {
 		}
 	}
 
-	int pin = -1;
+	public int pin = -1;
 	bool swButtonPressed = false;
 
 	public void AttachPin(int p)
@@ -59,12 +59,14 @@ public class Butty : Actor {
 	{
 		arduino.pinMode(pin, PinMode.INPUT);
 		arduino.digitalWrite(pin, Arduino.HIGH);
+		arduino.reportDigital((byte)(pin/8), 1);
 		UILabel uiLabel = this.GetComponentInChildren<UILabel>() as UILabel;
 		uiLabel.text = "D" + pin.ToString();
 		_configured = true;
 	}
 
 	void Start () {
+		Guid = System.Guid.NewGuid ();
 		arduino = Arduino.global;
 	}
 
@@ -161,5 +163,6 @@ public class Butty : Actor {
 			}
 		}
 		Debug.Log (_state.ToString());
+		ChangeSplite ();
 	}
 }
