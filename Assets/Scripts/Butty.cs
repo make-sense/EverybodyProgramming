@@ -10,6 +10,9 @@ using Uniduino;
 
 public class Butty : Actor {
 
+	Arduino arduino;
+	private bool _configured = false;
+
 	public enum STATE 
 	{
 		NONE,
@@ -39,19 +42,30 @@ public class Butty : Actor {
 		}
 	}
 
-	public int pin = -1;
-	private bool swButtonPressed = false;
+	int pin = -1;
+	bool swButtonPressed = false;
 
 	public void AttachPin(int p)
 	{
 		pin = p;
 		if (pin >= 0)
 		{
-			Arduino.global.pinMode(pin, PinMode.INPUT);
-			Arduino.global.digitalWrite(pin, Arduino.HIGH);
-			UILabel uiLabel = this.GetComponentInChildren<UILabel>() as UILabel;
-			uiLabel.text = "D" + pin.ToString();
+			_configured = false;
+			arduino.Setup(ConfigurePin);
 		}
+	}
+
+	void ConfigurePin ()
+	{
+		arduino.pinMode(pin, PinMode.INPUT);
+		arduino.digitalWrite(pin, Arduino.HIGH);
+		UILabel uiLabel = this.GetComponentInChildren<UILabel>() as UILabel;
+		uiLabel.text = "D" + pin.ToString();
+		_configured = true;
+	}
+
+	void Start () {
+		arduino = Arduino.global;
 	}
 
 	// Update is called once per frame
@@ -60,11 +74,11 @@ public class Butty : Actor {
 		{
 			if (!swButtonPressed)
 			{
-				if (Arduino.global.Connected)
+				if (_configured)
 				{
-					int value = Arduino.global.digitalRead (pin);
-					Debug.Log (value.ToString());
+					int value = arduino.digitalRead (pin);
 					ChangeState ((value == Arduino.LOW) ? true : false);	// pressing button is LOW
+					Debug.Log (value.ToString());
 				}
 			}
 		}
@@ -76,6 +90,27 @@ public class Butty : Actor {
 		ChangeState (swButtonPressed);
 		Debug.Log ("Butty OnPress");
 		PropertyManager.Instance.ShowButtyProperty (Guid);
+	}
+
+	private void ChangeSplite()
+	{
+		switch(_state)
+		{
+			case STATE.TOUCHDOWN:
+			case STATE.TOUCHDOWN_CHECKED:
+			case STATE.TOUCHING:
+			{
+				UISprite sprite = GetComponentInChildren<UISprite> () as UISprite;
+				sprite.spriteName = "Button_Red";
+				break;
+			}
+			default:
+			{
+				UISprite sprite = GetComponentInChildren<UISprite> () as UISprite;
+				sprite.spriteName = "Button";
+				break;
+			}
+		}
 	}
 
 	private void ChangeState(bool pushed)

@@ -1073,7 +1073,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 617266907c9e847b89ed57db89d8f7bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Model: {fileID: 2137258919}
+  Model: {fileID: 0}
 --- !u!1 &709485898
 GameObject:
   m_ObjectHideFlags: 0
@@ -3073,7 +3073,6 @@ MonoBehaviour:
   backgroundSprite: Button
   highlightSprite: Button
   position: 2
-  alignment: 1
   items:
   - D0
   - D1
