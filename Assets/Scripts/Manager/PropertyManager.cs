@@ -8,7 +8,7 @@ public class PropertyManager : MonoBehaviour {
 	public GameObject propertyDetail;
 
 	Actor.eCharactor selectedCharactor = Actor.eCharactor.NONE;
-	System.Guid currentGuid;
+	public System.Guid currentGuid;
 
 	// Use this for initialization
 	void Start () {
@@ -78,13 +78,13 @@ public class PropertyManager : MonoBehaviour {
 			}
 			else
 			{
-				Debug.Log ("Fail to found UIInput");
+				Debug.Log ("[ShowBulbyProperty]Fail to found UIInput");
 			}
-			Debug.Log ("Found actor");
+			Debug.Log ("[ShowBulbyProperty]Found actor");
 		}
 		else
 		{
-			Debug.Log ("Fail to found Actor : " + currentGuid.ToString ());
+			Debug.Log ("[ShowBulbyProperty]Fail to found Actor : " + currentGuid.ToString ());
 		}
 	}
 
@@ -108,14 +108,61 @@ public class PropertyManager : MonoBehaviour {
 				if (gameObject != null)
 				{
 					UIPopupList list = gameObject.GetComponentInChildren<UIPopupList> () as UIPopupList;
-					Debug.Log (list.value.Substring(1));
-					((Butty)actor).AttachPin(System.Convert.ToInt32(list.value.Substring(1)));
+					int pin = ConvertPin(list.value);
+					((Butty)actor).AttachPin(pin);
+					Debug.Log ("Attach pin:" + pin);
+				}
+				break;
+			}
+			case Actor.eCharactor.BULBY:
+			{
+				GameObject gameObject = GameObject.Find ("BulbyProperty");
+				if (gameObject != null)
+				{
+					int pinRed = -1;
+					int pinGreen = -1;
+					int pinBlue = -1;
+					UIPopupList[] lists = gameObject.GetComponentsInChildren<UIPopupList> () as UIPopupList[];
+					foreach (UIPopupList list in lists)
+					{
+						switch (list.name)
+						{
+							case "3.SelectRed":
+							{
+								pinRed = ConvertPin(list.value);
+								break;
+							}
+							case "4.SelectGreen":
+							{
+								pinGreen = ConvertPin(list.value);
+								break;
+							}
+							case "5.SelectBlue":
+							{
+								pinBlue = ConvertPin(list.value);
+								break;
+							}
+						}
+					}
+					((Bulby)actor).AttachPins(pinRed, pinGreen, pinBlue);
+					Debug.Log ("Attach pin ("+pinRed+", "+pinGreen+", "+pinBlue+")");
 				}
 				break;
 			}
 		}
 	}
 
+	int ConvertPin(string pinName)
+	{
+		if (pinName == "X")
+			return -1;
+
+		if (pinName.Length==2)
+			return System.Convert.ToInt32(pinName.Substring(1));
+		else
+			return System.Convert.ToInt32(pinName.Substring(1,2));
+	}
+	
 	private static PropertyManager _instance = null;
 	public static PropertyManager Instance
 	{
