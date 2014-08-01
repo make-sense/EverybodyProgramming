@@ -57,7 +57,7 @@ public class Bulby : Actor {
 
 	// Use this for initialization
 	void Start () {
-		Guid = System.Guid.NewGuid ();
+		base.Start ();
 		arduino = Arduino.global;
 	}
 	

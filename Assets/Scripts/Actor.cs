@@ -16,9 +16,9 @@ public class Actor : MonoBehaviour {
 	public string ActorName;
 	public Vector3 Pos;
 
-	void Start ()
+	public void Start ()
 	{
-//		Guid = System.Guid.NewGuid ();
+		Guid = System.Guid.NewGuid ();
 	}
 
 	void OnTriggerEnter(Collider other) 

@@ -47,11 +47,18 @@ public class Butty : Actor {
 
 	public void AttachPin(int p)
 	{
+		UILabel uiLabel = this.GetComponentInChildren<UILabel> () as UILabel;
+
 		pin = p;
-		if (pin >= 0)
+		if (pin >= 0) 
 		{
 			_configured = false;
-			arduino.Setup(ConfigurePin);
+			arduino.Setup (ConfigurePin);
+			uiLabel.text = "D" + pin.ToString ();
+		} 
+		else 
+		{
+			uiLabel.text = "";
 		}
 	}
 
@@ -60,13 +67,11 @@ public class Butty : Actor {
 		arduino.pinMode(pin, PinMode.INPUT);
 		arduino.digitalWrite(pin, Arduino.HIGH);
 		arduino.reportDigital((byte)(pin/8), 1);
-		UILabel uiLabel = this.GetComponentInChildren<UILabel>() as UILabel;
-		uiLabel.text = "D" + pin.ToString();
 		_configured = true;
 	}
 
-	void Start () {
-		Guid = System.Guid.NewGuid ();
+	public void Start () {
+		base.Start ();
 		arduino = Arduino.global;
 	}
 
@@ -80,7 +85,7 @@ public class Butty : Actor {
 				{
 					int value = arduino.digitalRead (pin);
 					ChangeState ((value == Arduino.LOW) ? true : false);	// pressing button is LOW
-					Debug.Log (value.ToString());
+//					Debug.Log (value.ToString());
 				}
 			}
 		}
@@ -90,7 +95,7 @@ public class Butty : Actor {
 	{
 		swButtonPressed = isPressed;
 		ChangeState (swButtonPressed);
-		Debug.Log ("Butty OnPress");
+//		Debug.Log ("Butty OnPress");
 		PropertyManager.Instance.ShowButtyProperty (Guid);
 	}
 
@@ -162,7 +167,7 @@ public class Butty : Actor {
 				break;
 			}
 		}
-		Debug.Log (_state.ToString());
+//		Debug.Log (_state.ToString());
 		ChangeSplite ();
 	}
 }
