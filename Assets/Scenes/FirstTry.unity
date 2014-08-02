@@ -2597,6 +2597,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 788644356}
+  - 114: {fileID: 788644357}
   m_Layer: 0
   m_Name: ChuckManager
   m_TagString: Untagged
@@ -2616,6 +2617,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 80046857}
   m_RootOrder: 0
+--- !u!114 &788644357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 788644355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 327e056351bb8ff4e823564b4e785051, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &795306835
 GameObject:
   m_ObjectHideFlags: 0

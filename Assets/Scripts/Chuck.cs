@@ -6,6 +6,7 @@ public class Chuck : MonoBehaviour {
 	private float CHUCK_HEIGHT = 75f;
 	private float CHUCK_WIDTH = 100f;
 
+	public System.Guid guid;
 	private UIRoot _uiRoot = null;
 	private Chuck[] _children = new Chuck[2];
 
@@ -65,16 +66,6 @@ public class Chuck : MonoBehaviour {
 	{
 		Debug.Log ("OnDragDropRelease");
 	}
-
-//	void OnTriggerExit(Collider other) 
-//	{
-//		Debug.Log ("OnTriggerExit");
-//		if (other.tag == "Chuck")
-//		{
-//			if (UIRoot.list.Count > 0)
-//				this.transform.parent = UIRoot.list[0].transform;
-//		}
-//	}
 
 	private bool isRightEdge(Vector3 src, Vector3 dst) 
 	{
