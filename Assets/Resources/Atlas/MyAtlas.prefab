@@ -54,6 +54,32 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
+  - name: _AddActor_Sprite_BackgroundGray
+    x: 895
+    y: 595
+    width: 54
+    height: 54
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: _AddInterface_Sprite_Background
+    x: 956
+    y: 792
+    width: 60
+    height: 109
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
   - name: Bulb
     x: 827
     y: 458
@@ -69,7 +95,7 @@ MonoBehaviour:
     paddingBottom: 5
   - name: Button
     x: 827
-    y: 779
+    y: 902
     width: 128
     height: 122
     borderLeft: 0
@@ -81,8 +107,8 @@ MonoBehaviour:
     paddingTop: 4
     paddingBottom: 2
   - name: Button_Cancel
-    x: 956
-    y: 865
+    x: 986
+    y: 742
     width: 36
     height: 36
     borderLeft: 0
@@ -95,7 +121,7 @@ MonoBehaviour:
     paddingBottom: 0
   - name: Button_Red
     x: 827
-    y: 902
+    y: 779
     width: 128
     height: 122
     borderLeft: 0
