@@ -30,6 +30,10 @@ public class ActorManager : MonoBehaviour {
 		return null;
 	}
 
+	public BetterList<Actor> GetActors() {
+		return _actors;
+	}
+
 	private static ActorManager _instance = null;
 	public static ActorManager Instance
 	{

@@ -10,7 +10,7 @@ public class Actor : MonoBehaviour {
 		CALCHY,
 		BULBY,
 	};
-	eCharactor charactorType = eCharactor.NONE;
+	public eCharactor charactorType = eCharactor.NONE;
 
 	public System.Guid Guid;
 	public string ActorName;

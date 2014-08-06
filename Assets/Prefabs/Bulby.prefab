@@ -129,9 +129,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyTag: BulbyStack
+  charactorType: 3
   ActorName: 
   Pos: {x: 0, y: 0, z: 0}
-  pin: -1
+  pinR: -1
+  pinG: -1
+  pinB: -1
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1

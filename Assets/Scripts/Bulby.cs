@@ -58,6 +58,7 @@ public class Bulby : Actor {
 	// Use this for initialization
 	void Start () {
 		base.Start ();
+		base.charactorType = eCharactor.BULBY;
 		arduino = Arduino.global;
 	}
 	

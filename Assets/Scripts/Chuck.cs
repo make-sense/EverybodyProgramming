@@ -21,6 +21,12 @@ public class Chuck : MonoBehaviour {
 	void Update () {
 	}
 
+	void OnPress (bool isPressed) 
+	{
+		Debug.Log ("Chuck OnPress");
+		ChuckPropertyManager.Instance.Show ();
+	}
+
 	void OnTriggerEnter(Collider other) 
 	{
 //		Debug.Log ("OnTriggerEnter");

@@ -280,6 +280,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyTag: ButtyStack
+  charactorType: 1
   ActorName: 
   Pos: {x: 0, y: 0, z: 0}
   pin: -1

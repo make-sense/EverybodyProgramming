@@ -72,6 +72,7 @@ public class Butty : Actor {
 
 	public void Start () {
 		base.Start ();
+		base.charactorType = eCharactor.BUTTY;
 		arduino = Arduino.global;
 	}
 
