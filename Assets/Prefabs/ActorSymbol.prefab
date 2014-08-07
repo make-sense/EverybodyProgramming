@@ -92,7 +92,7 @@ MonoBehaviour:
   bottomType: 1
   topType: 1
   mAtlas: {fileID: 11400000, guid: b85285fefb106402faa216e4dcb36432, type: 2}
-  mSpriteName: Button
+  mSpriteName: _AddActor_Sprite_BackgroundGray
   mFillCenter: 1
 --- !u!114 &11400002
 MonoBehaviour:

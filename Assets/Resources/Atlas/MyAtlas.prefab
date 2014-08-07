@@ -41,8 +41,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: de82763caa9aa4820ac58f9e600721bd, type: 2}
   mSprites:
+  - name: _ActorList_Button_RobotItem
+    x: 986
+    y: 572
+    width: 28
+    height: 42
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
   - name: _AddActor_Sprite_Background
-    x: 956
+    x: 952
     y: 914
     width: 61
     height: 110
@@ -55,8 +68,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: _AddActor_Sprite_BackgroundGray
-    x: 895
-    y: 595
+    x: 956
+    y: 720
     width: 54
     height: 54
     borderLeft: 0
@@ -69,7 +82,7 @@ MonoBehaviour:
     paddingBottom: 0
   - name: _AddInterface_Sprite_Background
     x: 956
-    y: 792
+    y: 788
     width: 60
     height: 109
     borderLeft: 0
@@ -80,9 +93,152 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: Bulb
+  - name: 1407405112_Black_button
+    x: 111
+    y: 61
+    width: 48
+    height: 48
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 1407405117_Yellow_button
+    x: 160
+    y: 110
+    width: 48
+    height: 48
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 1407405119_Orange_button
+    x: 111
+    y: 110
+    width: 48
+    height: 48
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 1407405121_Light_blue_button
+    x: 49
+    y: 24
+    width: 48
+    height: 48
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 1407405122_Green_button
+    x: 0
+    y: 24
+    width: 48
+    height: 48
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 1407405123_Dark_blue_button
+    x: 956
+    y: 671
+    width: 48
+    height: 48
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 1407405125_Red_button
     x: 827
-    y: 458
+    y: 402
+    width: 48
+    height: 48
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 1407405129_button-check_basic_blue
+    x: 111
+    y: 14
+    width: 46
+    height: 46
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 2
+    paddingRight: 0
+    paddingTop: 2
+    paddingBottom: 0
+  - name: 1407405131_button-check_basic_green
+    x: 160
+    y: 63
+    width: 46
+    height: 46
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 2
+    paddingRight: 0
+    paddingTop: 2
+    paddingBottom: 0
+  - name: 1407405133_button-check_basic_yellow
+    x: 160
+    y: 16
+    width: 46
+    height: 46
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 2
+    paddingRight: 0
+    paddingTop: 2
+    paddingBottom: 0
+  - name: 1407411897_live folder back
+    x: 827
+    y: 898
+    width: 124
+    height: 126
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 2
+    paddingRight: 2
+    paddingTop: 2
+    paddingBottom: 0
+  - name: Bulb
+    x: 895
+    y: 403
     width: 87
     height: 119
     borderLeft: 0
@@ -95,7 +251,7 @@ MonoBehaviour:
     paddingBottom: 5
   - name: Button
     x: 827
-    y: 902
+    y: 652
     width: 128
     height: 122
     borderLeft: 0
@@ -108,7 +264,7 @@ MonoBehaviour:
     paddingBottom: 2
   - name: Button_Cancel
     x: 986
-    y: 742
+    y: 615
     width: 36
     height: 36
     borderLeft: 0
@@ -121,7 +277,7 @@ MonoBehaviour:
     paddingBottom: 0
   - name: Button_Red
     x: 827
-    y: 779
+    y: 775
     width: 128
     height: 122
     borderLeft: 0
@@ -134,7 +290,7 @@ MonoBehaviour:
     paddingBottom: 2
   - name: Calculator
     x: 895
-    y: 650
+    y: 523
     width: 90
     height: 128
     borderLeft: 0
@@ -186,7 +342,7 @@ MonoBehaviour:
     paddingBottom: 0
   - name: chuck_right
     x: 827
-    y: 578
+    y: 451
     width: 67
     height: 200
     borderLeft: 0
