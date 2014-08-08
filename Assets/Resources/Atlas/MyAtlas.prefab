@@ -43,7 +43,7 @@ MonoBehaviour:
   mSprites:
   - name: _ActorList_Button_RobotItem
     x: 986
-    y: 572
+    y: 609
     width: 28
     height: 42
     borderLeft: 0
@@ -95,7 +95,7 @@ MonoBehaviour:
     paddingBottom: 0
   - name: 1407405112_Black_button
     x: 111
-    y: 61
+    y: 12
     width: 48
     height: 48
     borderLeft: 0
@@ -107,6 +107,19 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: 1407405117_Yellow_button
+    x: 111
+    y: 61
+    width: 48
+    height: 48
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 1407405119_Orange_button
     x: 160
     y: 110
     width: 48
@@ -119,7 +132,7 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: 1407405119_Orange_button
+  - name: 1407405121_Light_blue_button
     x: 111
     y: 110
     width: 48
@@ -132,7 +145,7 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: 1407405121_Light_blue_button
+  - name: 1407405122_Green_button
     x: 49
     y: 24
     width: 48
@@ -145,22 +158,9 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: 1407405122_Green_button
+  - name: 1407405123_Dark_blue_button
     x: 0
     y: 24
-    width: 48
-    height: 48
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: 1407405123_Dark_blue_button
-    x: 956
-    y: 671
     width: 48
     height: 48
     borderLeft: 0
@@ -185,8 +185,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: 1407405129_button-check_basic_blue
-    x: 111
-    y: 14
+    x: 221
+    y: 112
     width: 46
     height: 46
     borderLeft: 0
@@ -198,8 +198,8 @@ MonoBehaviour:
     paddingTop: 2
     paddingBottom: 0
   - name: 1407405131_button-check_basic_green
-    x: 160
-    y: 63
+    x: 221
+    y: 159
     width: 46
     height: 46
     borderLeft: 0
@@ -211,8 +211,8 @@ MonoBehaviour:
     paddingTop: 2
     paddingBottom: 0
   - name: 1407405133_button-check_basic_yellow
-    x: 160
-    y: 16
+    x: 221
+    y: 206
     width: 46
     height: 46
     borderLeft: 0
@@ -236,6 +236,162 @@ MonoBehaviour:
     paddingRight: 2
     paddingTop: 2
     paddingBottom: 0
+  - name: 1407478763_button-cross_sticker
+    x: 160
+    y: 14
+    width: 48
+    height: 47
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 10
+    paddingRight: 6
+    paddingTop: 10
+    paddingBottom: 7
+  - name: 1407478768_button-check_sticker
+    x: 160
+    y: 62
+    width: 48
+    height: 47
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 10
+    paddingRight: 6
+    paddingTop: 10
+    paddingBottom: 7
+  - name: 1407478773_button-check_yellow
+    x: 956
+    y: 661
+    width: 44
+    height: 58
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 10
+    paddingRight: 10
+    paddingTop: 3
+    paddingBottom: 3
+  - name: 1407478776_Yellow_ball
+    x: 221
+    y: 64
+    width: 45
+    height: 47
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 2
+    paddingRight: 1
+    paddingTop: 1
+    paddingBottom: 0
+  - name: 1407478778_Green_ball
+    x: 221
+    y: 301
+    width: 46
+    height: 47
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 1
+    paddingRight: 1
+    paddingTop: 0
+    paddingBottom: 1
+  - name: 1407478780_Blue_ball
+    x: 221
+    y: 253
+    width: 46
+    height: 47
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 1
+    paddingRight: 1
+    paddingTop: 0
+    paddingBottom: 1
+  - name: 1407478783_Button Info
+    x: 986
+    y: 578
+    width: 28
+    height: 30
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 2
+    paddingRight: 2
+    paddingTop: 2
+    paddingBottom: 0
+  - name: 1407478792_Red_ball
+    x: 221
+    y: 16
+    width: 45
+    height: 47
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 2
+    paddingRight: 1
+    paddingTop: 0
+    paddingBottom: 1
+  - name: 1407478795_Aqua_ball
+    x: 221
+    y: 349
+    width: 46
+    height: 48
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 1
+    paddingRight: 1
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 1407479270_Red tag
+    x: 983
+    y: 498
+    width: 24
+    height: 24
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 1407479273_Blue tag
+    x: 986
+    y: 553
+    width: 24
+    height: 24
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 1407479275_Green tag
+    x: 986
+    y: 528
+    width: 24
+    height: 24
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
   - name: Bulb
     x: 895
     y: 403
@@ -251,7 +407,7 @@ MonoBehaviour:
     paddingBottom: 5
   - name: Button
     x: 827
-    y: 652
+    y: 775
     width: 128
     height: 122
     borderLeft: 0
@@ -262,22 +418,9 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 4
     paddingBottom: 2
-  - name: Button_Cancel
-    x: 986
-    y: 615
-    width: 36
-    height: 36
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
   - name: Button_Red
     x: 827
-    y: 775
+    y: 652
     width: 128
     height: 122
     borderLeft: 0
