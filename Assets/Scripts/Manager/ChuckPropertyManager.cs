@@ -51,14 +51,18 @@ public class ChuckPropertyManager : MonoBehaviour {
 			switch (actor.charactorType) {
 				case Actor.eCharactor.BUTTY:
 				{
-					UISprite sprite = instantiatedGameObject.GetComponentInChildren<UISprite> () as UISprite;
-					sprite.spriteName = "Button";
+//					UISprite sprite = instantiatedGameObject.GetComponentInChildren<UISprite> () as UISprite;
+//					sprite.spriteName = "Button";
+					UIButton button = instantiatedGameObject.GetComponentInChildren<UIButton> () as UIButton;
+					button.normalSprite = "Button";
 					break;
 				}
 				case Actor.eCharactor.BULBY:
 				{
-					UISprite sprite = instantiatedGameObject.GetComponentInChildren<UISprite> () as UISprite;
-					sprite.spriteName = "Bulb";
+//					UISprite sprite = instantiatedGameObject.GetComponentInChildren<UISprite> () as UISprite;
+//					sprite.spriteName = "Bulb";
+					UIButton button = instantiatedGameObject.GetComponentInChildren<UIButton> () as UIButton;
+					button.normalSprite = "1407588716_bulb";
 					break;
 				}
 			}
@@ -109,6 +113,10 @@ public class ChuckPropertyManager : MonoBehaviour {
 				}
 			}
 		}
+	}
+
+	public void SetCurrentAction() {
+		Debug.Log (UIButton.current.name);
 	}
 
 	private static ChuckPropertyManager _instance = null;
