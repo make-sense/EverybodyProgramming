@@ -1186,7 +1186,7 @@ MonoBehaviour:
   alwaysOnScreen: 0
   anchorOffset: 0
   renderQueue: 0
-  startingRenderQueue: 3008
+  startingRenderQueue: 3006
   mAlpha: 1
   mClipping: 3
   mClipRange: {x: 0, y: 0, z: 180, w: 55}
@@ -2592,42 +2592,6 @@ Prefab:
       propertyPath: mSpriteName
       value: _AddActor_Sprite_Background
       objectReference: {fileID: 0}
-    - target: {fileID: 11400038, guid: 8e7fc25aa6fb94c50b3484e6d154ac14, type: 2}
-      propertyPath: mSpriteName
-      value: 1407478763_button-cross_sticker
-      objectReference: {fileID: 0}
-    - target: {fileID: 6500006, guid: 8e7fc25aa6fb94c50b3484e6d154ac14, type: 2}
-      propertyPath: m_Size.x
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400038, guid: 8e7fc25aa6fb94c50b3484e6d154ac14, type: 2}
-      propertyPath: mWidth
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400038, guid: 8e7fc25aa6fb94c50b3484e6d154ac14, type: 2}
-      propertyPath: aspectRatio
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6500006, guid: 8e7fc25aa6fb94c50b3484e6d154ac14, type: 2}
-      propertyPath: m_Size.y
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400038, guid: 8e7fc25aa6fb94c50b3484e6d154ac14, type: 2}
-      propertyPath: mHeight
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: 8e7fc25aa6fb94c50b3484e6d154ac14, type: 2}
-      propertyPath: mWidth
-      value: 42
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: 8e7fc25aa6fb94c50b3484e6d154ac14, type: 2}
-      propertyPath: mHeight
-      value: 42
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: 8e7fc25aa6fb94c50b3484e6d154ac14, type: 2}
-      propertyPath: mText
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11400040, guid: 8e7fc25aa6fb94c50b3484e6d154ac14, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 8e7fc25aa6fb94c50b3484e6d154ac14, type: 2}
@@ -3306,7 +3270,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 50, y: 50, z: 0}
+  m_Size: {x: 30, y: 30, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &537079248
 MonoBehaviour:
@@ -3369,8 +3333,8 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 50
-  mHeight: 50
+  mWidth: 30
+  mHeight: 30
   mDepth: 1
   autoResizeBoxCollider: 1
   hideIfOffScreen: 0
@@ -3387,7 +3351,7 @@ MonoBehaviour:
   bottomType: 1
   topType: 1
   mAtlas: {fileID: 11400000, guid: b85285fefb106402faa216e4dcb36432, type: 2}
-  mSpriteName: 1407478763_button-cross_sticker
+  mSpriteName: Button_Cancel
   mFillCenter: 1
 --- !u!1001 &603625883
 Prefab:
@@ -4007,7 +3971,7 @@ MonoBehaviour:
   bottomType: 1
   topType: 1
   mAtlas: {fileID: 11400000, guid: b85285fefb106402faa216e4dcb36432, type: 2}
-  mSpriteName: 1407478792_Red_ball
+  mSpriteName: _AddActor_Sprite_BackgroundGray
   mFillCenter: 1
 --- !u!114 &708905532
 MonoBehaviour:
@@ -4246,11 +4210,11 @@ Prefab:
         type: 2}
     - target: {fileID: 11400004, guid: 7c3a28b051e872b448d4808cfcf9199c, type: 2}
       propertyPath: mSpriteName
-      value: 1407478763_button-cross_sticker
+      value: Button_Cancel
       objectReference: {fileID: 0}
     - target: {fileID: 11400004, guid: 7c3a28b051e872b448d4808cfcf9199c, type: 2}
       propertyPath: mWidth
-      value: 50
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 11400004, guid: 7c3a28b051e872b448d4808cfcf9199c, type: 2}
       propertyPath: aspectRatio
@@ -4258,15 +4222,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 6500000, guid: 7c3a28b051e872b448d4808cfcf9199c, type: 2}
       propertyPath: m_Size.x
-      value: 50
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 11400004, guid: 7c3a28b051e872b448d4808cfcf9199c, type: 2}
       propertyPath: mHeight
-      value: 50
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 6500000, guid: 7c3a28b051e872b448d4808cfcf9199c, type: 2}
       propertyPath: m_Size.y
-      value: 50
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 7c3a28b051e872b448d4808cfcf9199c, type: 2}
       propertyPath: mWidth
@@ -6011,8 +5975,8 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 0, g: 0, b: 0, a: .737254918}
   mPivot: 4
-  mWidth: 42
-  mHeight: 42
+  mWidth: 22
+  mHeight: 22
   mDepth: 5
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
@@ -6021,7 +5985,7 @@ MonoBehaviour:
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 0}
   mFont: {fileID: 11400000, guid: 29056518aafb01b49a5b08faf8e30cff, type: 2}
-  mText: 
+  mText: Button
   mFontSize: 20
   mFontStyle: 0
   mAlignment: 0
@@ -8388,7 +8352,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 50, y: 50, z: 0}
+  m_Size: {x: 30, y: 30, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1533008948
 MonoBehaviour:
@@ -8451,8 +8415,8 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 50
-  mHeight: 50
+  mWidth: 30
+  mHeight: 30
   mDepth: 4
   autoResizeBoxCollider: 1
   hideIfOffScreen: 0
@@ -8469,7 +8433,7 @@ MonoBehaviour:
   bottomType: 1
   topType: 1
   mAtlas: {fileID: 11400000, guid: b85285fefb106402faa216e4dcb36432, type: 2}
-  mSpriteName: 1407478763_button-cross_sticker
+  mSpriteName: Button_Cancel
   mFillCenter: 1
 --- !u!1 &1552710992
 GameObject:
@@ -8739,7 +8703,7 @@ MonoBehaviour:
   alwaysOnScreen: 0
   anchorOffset: 0
   renderQueue: 0
-  startingRenderQueue: 3009
+  startingRenderQueue: 3007
   mAlpha: 1
   mClipping: 3
   mClipRange: {x: 0, y: 0, z: 180, w: 180}
@@ -12194,8 +12158,8 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 0, g: 0, b: 0, a: .737254918}
   mPivot: 4
-  mWidth: 42
-  mHeight: 42
+  mWidth: 22
+  mHeight: 22
   mDepth: 5
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
