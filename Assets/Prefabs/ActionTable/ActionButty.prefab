@@ -8,6 +8,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400000}
+  - 114: {fileID: 11400002}
   - 114: {fileID: 11400000}
   m_Layer: 0
   m_Name: ActionButty
@@ -41,17 +42,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DataList:
   - Name: Touched
+    Guid: -63941309
     Type: 0
     Length: 0
     CallFunctionName: 
     CallFunctionParam: 
     Params: []
   - Name: Touching
+    Guid: -1620462626
     Type: 0
     Length: 0
     CallFunctionName: 
     CallFunctionParam: 
     Params: []
+--- !u!114 &11400002
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f0e25d203c734a419744615c6e7865d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newGuid: -1620462626
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

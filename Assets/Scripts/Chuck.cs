@@ -6,15 +6,19 @@ public class Chuck : MonoBehaviour {
 	private float CHUCK_HEIGHT = 75f;
 	private float CHUCK_WIDTH = 100f;
 
-	public System.Guid guid;
+	public System.Guid Guid;
 	private UIRoot _uiRoot = null;
 	private Chuck[] _children = new Chuck[2];
 
+	public System.Guid actorGuid;
+	public int actionGuid;
+
 	// Use this for initialization
 	void Start () {
+		Guid = System.Guid.NewGuid ();
+		ChuckManager.Instance.Add(this);
 		if (UIRoot.list.Count > 0)
 			_uiRoot = UIRoot.list[0];
-//		Debug.Log("Start");
 	}
 	
 	// Update is called once per frame
@@ -25,6 +29,7 @@ public class Chuck : MonoBehaviour {
 	{
 		Debug.Log ("Chuck OnPress");
 		ChuckPropertyManager.Instance.Show ();
+		ChuckPropertyManager.SelectedChuckGuid = Guid;
 	}
 
 	void OnTriggerEnter(Collider other) 
@@ -51,6 +56,7 @@ public class Chuck : MonoBehaviour {
 		else if (other.tag == "ChuckStack")
 		{
 			Debug.Log ("Destroy " + gameObject.name);
+			ChuckManager.Instance.Remove(this);
 			Destroy(this.gameObject);
 		}
 	}

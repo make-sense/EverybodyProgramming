@@ -100,7 +100,7 @@ public class Butty : Actor {
 		PropertyManager.Instance.ShowButtyProperty (Guid);
 	}
 
-	private void ChangeSplite()
+	private void ChangeSprite()
 	{
 		switch(_state)
 		{
@@ -169,6 +169,6 @@ public class Butty : Actor {
 			}
 		}
 //		Debug.Log (_state.ToString());
-		ChangeSplite ();
+		ChangeSprite ();
 	}
 }

@@ -18,8 +18,8 @@ public class ActorManager : MonoBehaviour {
 		_actors.Add(actor);
 	}
 
-	public int Count () {
-		return _actors.size;
+	public void Remove (Actor actor) {
+		_actors.Remove(actor);
 	}
 
 	public Actor Get(System.Guid guid) {
@@ -28,6 +28,10 @@ public class ActorManager : MonoBehaviour {
 				return actor;
 		}
 		return null;
+	}
+
+	public int Count () {
+		return _actors.size;
 	}
 
 	public BetterList<Actor> GetActors() {

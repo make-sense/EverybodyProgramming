@@ -8,7 +8,10 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400000}
+  - 114: {fileID: 11400006}
   - 114: {fileID: 11400000}
+  - 114: {fileID: 11400002}
+  - 114: {fileID: 11400004}
   m_Layer: 0
   m_Name: ActionBulby
   m_TagString: Untagged
@@ -41,53 +44,101 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DataList:
   - Name: Off
+    Guid: -526438998
     Type: 1
     Length: 0
-    CallFunctionName: 
-    CallFunctionParam: 
+    CallFunctionName: SetColor
+    CallFunctionParam: Off
     Params: []
   - Name: White
+    Guid: -844790351
     Type: 1
     Length: 0
-    CallFunctionName: 
-    CallFunctionParam: 
+    CallFunctionName: SetColor
+    CallFunctionParam: White
     Params: []
   - Name: Red
+    Guid: -323650059
     Type: 1
     Length: 0
-    CallFunctionName: 
-    CallFunctionParam: 
+    CallFunctionName: SetColor
+    CallFunctionParam: Red
     Params: []
   - Name: Green
+    Guid: -268715499
     Type: 1
     Length: 0
-    CallFunctionName: 
-    CallFunctionParam: 
+    CallFunctionName: SetColor
+    CallFunctionParam: Green
     Params: []
   - Name: Blue
+    Guid: -1310113180
     Type: 1
     Length: 0
-    CallFunctionName: 
-    CallFunctionParam: 
+    CallFunctionName: SetColor
+    CallFunctionParam: Blue
     Params: []
   - Name: Yellow
+    Guid: -135481751
     Type: 1
     Length: 0
-    CallFunctionName: 
-    CallFunctionParam: 
+    CallFunctionName: SetColor
+    CallFunctionParam: Yellow
     Params: []
   - Name: Magenta
+    Guid: -356674938
     Type: 1
     Length: 0
-    CallFunctionName: 
-    CallFunctionParam: 
+    CallFunctionName: SetColor
+    CallFunctionParam: Magenta
     Params: []
   - Name: Cyan
+    Guid: -1155006195
     Type: 1
     Length: 0
-    CallFunctionName: 
-    CallFunctionParam: 
+    CallFunctionName: SetColor
+    CallFunctionParam: Cyan
     Params: []
+--- !u!114 &11400002
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f70610ee8ff944056ae1a638afb8b4e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Targets: []
+  m_IsDirty: 0
+  m_ReferenceTargetIndex: 0
+  m_InspectorMode: 0
+  hideInspector: 0
+--- !u!114 &11400004
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66af711ad3bca4e7bb4ea4e5f506b5ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  guidAsString: 
+--- !u!114 &11400006
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f0e25d203c734a419744615c6e7865d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newGuid: -1155006195
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

@@ -19,13 +19,20 @@ public class CreatePrefab : MonoBehaviour {
 	{
 		GameObject instantiatedGameObject = NGUITools.AddChild(this.transform.parent.gameObject, prefab);
 		instantiatedGameObject.transform.localPosition = _lastPosition;
-		if (prefab.name == "Butty") 
+		switch (prefab.name)
 		{
+		case "Butty":
 			ActorManager.Instance.Add (instantiatedGameObject.GetComponentInChildren<Butty> () as Butty);
 			Debug.Log ("Actor Butty Added!");
-		} else if (prefab.name == "Bulby") {
+			break;
+		case "Bulby":
 			ActorManager.Instance.Add (instantiatedGameObject.GetComponentInChildren<Bulby> () as Bulby);
 			Debug.Log ("Actor Bulby Added!");
+			break;
+		case "Chuck":
+			ChuckManager.Instance.Add (instantiatedGameObject.GetComponentInChildren<Chuck> () as Chuck);
+			Debug.Log ("Chuck Added!");
+			break;
 		}
 	}
 }

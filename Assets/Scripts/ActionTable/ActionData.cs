@@ -15,6 +15,7 @@ public enum eActionType {
 [System.Serializable]
 public class ActionData {
 	public string Name;
+	public int Guid;
 	public eActionType Type;
 	public float Length = 0.1f;
 	public string CallFunctionName = "";

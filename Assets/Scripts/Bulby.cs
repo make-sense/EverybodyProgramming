@@ -74,7 +74,7 @@ public class Bulby : Actor {
 		PropertyManager.Instance.ShowBulbyProperty (Guid);
 	}
 
-	private void ChangeSplite()
+	private void ChangeSprite()
 	{
 	}
 }

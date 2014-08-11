@@ -10,6 +10,9 @@ public class ChuckPropertyManager : MonoBehaviour {
 	public GameObject actorSymbolPrefab;
 	public GameObject actionButtonPrefab;
 
+	public static System.Guid SelectedChuckGuid;
+	public static System.Guid SelectedActorGuid;
+
 	// Use this for initialization
 	void Start () {
 		Hide ();
@@ -77,6 +80,8 @@ public class ChuckPropertyManager : MonoBehaviour {
 	public void UpdateAction(System.Guid actorGuid) {
 		DeleteActionButton ();
 
+		SelectedActorGuid = actorGuid;
+
 		Debug.Log ("ChuckPropertyManager::UpdateAction with " + actorGuid);
 		Actor actor = ActorManager.Instance.Get (actorGuid);
 		if (actor != null) {
@@ -94,6 +99,8 @@ public class ChuckPropertyManager : MonoBehaviour {
 						instantiatedGO.transform.localPosition = new Vector3(0f, (float)baseY+height*count, 0f);
 						UILabel label = instantiatedGO.GetComponentInChildren<UILabel> () as UILabel;
 						label.text = data.Name;
+						ActionSymbol action = instantiatedGO.GetComponentInChildren<ActionSymbol> () as ActionSymbol;
+						action.guid = data.Guid;
 						count++;
 					}
 					break;
@@ -107,6 +114,8 @@ public class ChuckPropertyManager : MonoBehaviour {
 						instantiatedGO.transform.localPosition = new Vector3(0f, (float)baseY+height*count, 0f);
 						UILabel label = instantiatedGO.GetComponentInChildren<UILabel> () as UILabel;
 						label.text = data.Name;
+						ActionSymbol action = instantiatedGO.GetComponentInChildren<ActionSymbol> () as ActionSymbol;
+						action.guid = data.Guid;
 						count++;
 					}
 					break;
@@ -115,8 +124,13 @@ public class ChuckPropertyManager : MonoBehaviour {
 		}
 	}
 
-	public void SetCurrentAction() {
-		Debug.Log (UIButton.current.name);
+	public void SetCurrentAction(int actionGuid) {
+		Chuck chuck = ChuckManager.Instance.Get (SelectedChuckGuid);
+		if (chuck != null) {
+			chuck.actorGuid = SelectedActorGuid;
+			chuck.actionGuid = actionGuid;
+		}
+		Debug.Log ("SetCurrentAction:" + actionGuid.ToString ());
 	}
 
 	private static ChuckPropertyManager _instance = null;
