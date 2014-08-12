@@ -55,6 +55,13 @@ MonoBehaviour:
     CallFunctionName: 
     CallFunctionParam: 
     Params: []
+  - Name: TouchUp
+    Guid: -1483390853
+    Type: 0
+    Length: 0
+    CallFunctionName: 
+    CallFunctionParam: 
+    Params: []
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -66,7 +73,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f0e25d203c734a419744615c6e7865d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newGuid: -1620462626
+  newGuid: -1483390853
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

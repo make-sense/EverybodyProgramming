@@ -2239,7 +2239,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 505360970b9e94e9c875cd277f73cef9, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 505360970b9e94e9c875cd277f73cef9, type: 2}
@@ -2901,7 +2901,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ece696d493fa3485e9c612e2545e142f, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ece696d493fa3485e9c612e2545e142f, type: 2}
@@ -5531,6 +5531,13 @@ MonoBehaviour:
     CallFunctionName: 
     CallFunctionParam: 
     Params: []
+  - Name: TouchUp
+    Guid: -1483390853
+    Type: 0
+    Length: 0
+    CallFunctionName: 
+    CallFunctionParam: 
+    Params: []
 --- !u!114 &997722819
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5543,7 +5550,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f0e25d203c734a419744615c6e7865d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newGuid: -1620462626
+  newGuid: -1483390853
 --- !u!1 &1008764313
 GameObject:
   m_ObjectHideFlags: 0
