@@ -1414,7 +1414,7 @@ MonoBehaviour:
   alwaysOnScreen: 0
   anchorOffset: 0
   renderQueue: 0
-  startingRenderQueue: 3008
+  startingRenderQueue: 3006
   mAlpha: 1
   mClipping: 3
   mClipRange: {x: 0, y: 0, z: 180, w: 55}
@@ -6742,6 +6742,10 @@ Prefab:
       propertyPath: aspectRatio
       value: 1.3225807
       objectReference: {fileID: 0}
+    - target: {fileID: 11400016, guid: 940967da652985e43a81dde716d69b3f, type: 2}
+      propertyPath: mSpriteName
+      value: chuck_arrow_base
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 940967da652985e43a81dde716d69b3f, type: 2}
   m_RootGameObject: {fileID: 166756329}
@@ -8460,7 +8464,7 @@ MonoBehaviour:
   alwaysOnScreen: 0
   anchorOffset: 0
   renderQueue: 0
-  startingRenderQueue: 3009
+  startingRenderQueue: 3007
   mAlpha: 1
   mClipping: 3
   mClipRange: {x: 0, y: 0, z: 180, w: 180}

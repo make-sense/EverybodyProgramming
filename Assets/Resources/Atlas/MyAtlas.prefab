@@ -94,7 +94,7 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: 1407405112_Black_button
-    x: 487
+    x: 349
     y: 5
     width: 48
     height: 48
@@ -121,7 +121,7 @@ MonoBehaviour:
     paddingBottom: 0
   - name: 1407405119_Orange_button
     x: 487
-    y: 54
+    y: 5
     width: 48
     height: 48
     borderLeft: 0
@@ -133,8 +133,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: 1407405121_Light_blue_button
-    x: 438
-    y: 5
+    x: 487
+    y: 54
     width: 48
     height: 48
     borderLeft: 0
@@ -147,7 +147,7 @@ MonoBehaviour:
     paddingBottom: 0
   - name: 1407405122_Green_button
     x: 438
-    y: 54
+    y: 5
     width: 48
     height: 48
     borderLeft: 0
@@ -159,8 +159,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: 1407405123_Dark_blue_button
-    x: 567
-    y: 122
+    x: 438
+    y: 54
     width: 48
     height: 48
     borderLeft: 0
@@ -172,8 +172,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: 1407405125_Red_button
-    x: 349
-    y: 5
+    x: 567
+    y: 122
     width: 48
     height: 48
     borderLeft: 0
@@ -198,8 +198,8 @@ MonoBehaviour:
     paddingTop: 2
     paddingBottom: 0
   - name: 1407405131_button-check_basic_green
-    x: 536
-    y: 7
+    x: 585
+    y: 56
     width: 46
     height: 46
     borderLeft: 0
@@ -211,8 +211,8 @@ MonoBehaviour:
     paddingTop: 2
     paddingBottom: 0
   - name: 1407405133_button-check_basic_yellow
-    x: 585
-    y: 56
+    x: 536
+    y: 7
     width: 46
     height: 46
     borderLeft: 0
@@ -316,7 +316,7 @@ MonoBehaviour:
     paddingBottom: 0
   - name: chuck_arrow_base
     x: 0
-    y: 339
+    y: 165
     width: 223
     height: 173
     borderLeft: 0
@@ -329,7 +329,7 @@ MonoBehaviour:
     paddingBottom: 1
   - name: chuck_arrow_bottom
     x: 224
-    y: 165
+    y: 339
     width: 213
     height: 173
     borderLeft: 0
@@ -355,7 +355,7 @@ MonoBehaviour:
     paddingBottom: 11
   - name: chuck_base
     x: 0
-    y: 165
+    y: 339
     width: 223
     height: 173
     borderLeft: 0
@@ -368,7 +368,7 @@ MonoBehaviour:
     paddingBottom: 1
   - name: chuck_bottom
     x: 224
-    y: 339
+    y: 165
     width: 213
     height: 173
     borderLeft: 0
