@@ -3,8 +3,8 @@ using System.Collections;
 
 public class Chuck : MonoBehaviour {
 
-	private float CHUCK_HEIGHT = 75f;
-	private float CHUCK_WIDTH = 100f;
+	private float CHUCK_HEIGHT = 110f;
+	private float CHUCK_WIDTH = 152f;
 
 	public System.Guid Guid;
 	private UIRoot _uiRoot = null;
