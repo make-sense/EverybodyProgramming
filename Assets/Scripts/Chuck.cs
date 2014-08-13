@@ -13,8 +13,8 @@ public class Chuck : MonoBehaviour {
 	public System.Guid actorGuid;
 	public int actionGuid;
 
-	Color inputColor = new Color(1f, 0.3f, 0.3f);
-	Color outputColor = new Color(0.3f, 0.3f, 1f);
+	Color inputColor = new Color(1f, 0.5f, 0.5f);
+	Color outputColor = new Color(0.5f, 0.5f, 1f);
 	
 	public void SetAction(System.Guid actorID, int actionID)
 	{
@@ -32,32 +32,58 @@ public class Chuck : MonoBehaviour {
 			Transform detail = this.transform.FindChild("Detail");
 			if (detail != null) {
 				detail.gameObject.SetActive(true);
-				switch (actor.charactorType) {
-				case Actor.eCharactor.BUTTY:
-					switch (actionGuid) {
-					case -63941309:
+				UIButton button = detail.GetComponentInChildren<UIButton> () as UIButton;
+				switch (actor.charactorType)
+				{
+					case Actor.eCharactor.BUTTY:
 					{
-						UIButton button = detail.GetComponentInChildren<UIButton> () as UIButton;
-						button.normalSprite = "1407589060_Perspective Button - Games";
 						baseButtonColor.defaultColor = inputColor;
+						switch (actionGuid) 
+						{
+							case -63941309:
+								button.normalSprite = "1407589060_Perspective Button - Games";
+								break;
+							case -1620462626:
+								button.normalSprite = "Button_Red";
+								break;
+							case -1483390853:
+								button.normalSprite = "1407862950_Perspective Button - Favorites";
+								break;
+						}
 						break;
 					}
-					case -1620462626:
+					case Actor.eCharactor.BULBY:
 					{
-						UIButton button = detail.GetComponentInChildren<UIButton> () as UIButton;
-						button.normalSprite = "Button_Red";
-						baseButtonColor.defaultColor = inputColor;
+						baseButtonColor.defaultColor = outputColor;
+						switch (actionGuid)
+						{
+							case -526438998:
+								button.normalSprite = "1407405112_Black_button";
+								break;
+							case -844790351:
+								button.normalSprite = "1407922654_Silver_button";
+								break;
+							case -323650059:
+								button.normalSprite = "1407405125_Red_button";
+								break;
+							case -268715499:
+								button.normalSprite = "1407405122_Green_button";
+								break;
+							case -1310113180:
+								button.normalSprite = "1407405123_Dark_blue_button";
+								break;
+							case -135481751:
+								button.normalSprite = "1407405117_Yellow_button";
+								break;
+							case -356674938:
+								button.normalSprite = "1407405119_Orange_button";
+								break;
+							case -1155006195:
+								button.normalSprite = "1407405121_Light_blue_button";
+								break;
+						}
 						break;
 					}
-					case -1483390853:
-					{
-						UIButton button = detail.GetComponentInChildren<UIButton> () as UIButton;
-						button.normalSprite = "1407862950_Perspective Button - Favorites";
-						baseButtonColor.defaultColor = inputColor;
-						break;
-					}
-					}
-					break;
 				}
 			}
 		}
@@ -77,7 +103,7 @@ public class Chuck : MonoBehaviour {
 
 	void OnPress (bool isPressed) 
 	{
-		Debug.Log ("Chuck OnPress");
+		Debug.Log ("Chuck OnPress:"+Guid.ToString ());
 		ChuckPropertyManager.Instance.Show ();
 		ChuckPropertyManager.SelectedChuckGuid = Guid;
 	}
