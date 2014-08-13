@@ -13,6 +13,56 @@ public class Chuck : MonoBehaviour {
 	public System.Guid actorGuid;
 	public int actionGuid;
 
+	Color inputColor = new Color(1f, 0.3f, 0.3f);
+	Color outputColor = new Color(0.3f, 0.3f, 1f);
+	
+	public void SetAction(System.Guid actorID, int actionID)
+	{
+		actorGuid = actorID;
+		actionGuid = actionID;
+		SetActionUI();
+	}
+
+	private void SetActionUI() {
+		Actor actor = ActorManager.Instance.Get (actorGuid);
+		if (actor != null) {
+			UIButtonColor baseButtonColor = GetComponentInChildren<UIButtonColor> () as UIButtonColor;
+			UIButton baseButton = GetComponentInChildren<UIButton> () as UIButton;
+			baseButton.normalSprite = "chuck_base";
+			Transform detail = this.transform.FindChild("Detail");
+			if (detail != null) {
+				detail.gameObject.SetActive(true);
+				switch (actor.charactorType) {
+				case Actor.eCharactor.BUTTY:
+					switch (actionGuid) {
+					case -63941309:
+					{
+						UIButton button = detail.GetComponentInChildren<UIButton> () as UIButton;
+						button.normalSprite = "1407589060_Perspective Button - Games";
+						baseButtonColor.defaultColor = inputColor;
+						break;
+					}
+					case -1620462626:
+					{
+						UIButton button = detail.GetComponentInChildren<UIButton> () as UIButton;
+						button.normalSprite = "Button_Red";
+						baseButtonColor.defaultColor = inputColor;
+						break;
+					}
+					case -1483390853:
+					{
+						UIButton button = detail.GetComponentInChildren<UIButton> () as UIButton;
+						button.normalSprite = "1407862950_Perspective Button - Favorites";
+						baseButtonColor.defaultColor = inputColor;
+						break;
+					}
+					}
+					break;
+				}
+			}
+		}
+	}
+
 	// Use this for initialization
 	void Start () {
 		Guid = System.Guid.NewGuid ();

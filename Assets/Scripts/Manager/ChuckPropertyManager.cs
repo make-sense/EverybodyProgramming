@@ -127,8 +127,9 @@ public class ChuckPropertyManager : MonoBehaviour {
 	public void SetCurrentAction(int actionGuid) {
 		Chuck chuck = ChuckManager.Instance.Get (SelectedChuckGuid);
 		if (chuck != null) {
-			chuck.actorGuid = SelectedActorGuid;
-			chuck.actionGuid = actionGuid;
+			chuck.SetAction(SelectedActorGuid, actionGuid);
+//			chuck.actorGuid = SelectedActorGuid;
+//			chuck.actionGuid = actionGuid;
 		}
 		Debug.Log ("SetCurrentAction:" + actionGuid.ToString ());
 	}
