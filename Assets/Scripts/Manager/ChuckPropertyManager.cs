@@ -51,23 +51,14 @@ public class ChuckPropertyManager : MonoBehaviour {
 			ActorSymbol actorSymbol = instantiatedGameObject.GetComponentInChildren<ActorSymbol> () as ActorSymbol;
 			actorSymbol.guid = actor.Guid;
 
+			UIButton button = instantiatedGameObject.GetComponentInChildren<UIButton> () as UIButton;
 			switch (actor.charactorType) {
 				case Actor.eCharactor.BUTTY:
-				{
-//					UISprite sprite = instantiatedGameObject.GetComponentInChildren<UISprite> () as UISprite;
-//					sprite.spriteName = "Button";
-					UIButton button = instantiatedGameObject.GetComponentInChildren<UIButton> () as UIButton;
 					button.normalSprite = "Button";
 					break;
-				}
 				case Actor.eCharactor.BULBY:
-				{
-//					UISprite sprite = instantiatedGameObject.GetComponentInChildren<UISprite> () as UISprite;
-//					sprite.spriteName = "Bulb";
-					UIButton button = instantiatedGameObject.GetComponentInChildren<UIButton> () as UIButton;
 					button.normalSprite = "1407588716_bulb";
 					break;
-				}
 			}
 			count++;
 		}
@@ -87,7 +78,7 @@ public class ChuckPropertyManager : MonoBehaviour {
 		if (actor != null) {
 			int count = 0;
 			int baseY = 70;
-			int height = -40;
+			int heightStep = -40;
 			switch (actor.charactorType)
 			{
 				case Actor.eCharactor.BUTTY:
@@ -96,7 +87,7 @@ public class ChuckPropertyManager : MonoBehaviour {
 					foreach (ActionData data in actions.DataList)
 					{
 						GameObject instantiatedGO = NGUITools.AddChild(actionScrollRoot, actionButtonPrefab);
-						instantiatedGO.transform.localPosition = new Vector3(0f, (float)baseY+height*count, 0f);
+						instantiatedGO.transform.localPosition = new Vector3(0f, (float)baseY+heightStep*count, 0f);
 						UILabel label = instantiatedGO.GetComponentInChildren<UILabel> () as UILabel;
 						label.text = data.Name;
 						ActionSymbol action = instantiatedGO.GetComponentInChildren<ActionSymbol> () as ActionSymbol;
@@ -111,7 +102,7 @@ public class ChuckPropertyManager : MonoBehaviour {
 					foreach (ActionData data in actions.DataList)
 					{
 						GameObject instantiatedGO = NGUITools.AddChild(actionScrollRoot, actionButtonPrefab);
-						instantiatedGO.transform.localPosition = new Vector3(0f, (float)baseY+height*count, 0f);
+						instantiatedGO.transform.localPosition = new Vector3(0f, (float)baseY+heightStep*count, 0f);
 						UILabel label = instantiatedGO.GetComponentInChildren<UILabel> () as UILabel;
 						label.text = data.Name;
 						ActionSymbol action = instantiatedGO.GetComponentInChildren<ActionSymbol> () as ActionSymbol;

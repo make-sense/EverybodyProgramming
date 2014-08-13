@@ -99,8 +99,15 @@ public class Chuck : MonoBehaviour {
 
 		// 2. run this
 		ActionData actionData = ActionManager.Instance.GetActionData(actionGuid);
-		if (actionData != null)
-			Debug.Log ("Action:" + actionData.CallFunctionName);
+		if (actionData != null) 
+		{
+			Actor actor = ActorManager.Instance.Get(actorGuid);
+			if (actor != null)
+			{
+				actor.gameObject.BroadcastMessage(actionData.CallFunctionName);
+				Debug.Log ("Action:" + actionData.CallFunctionName);
+			}
+		}
 
 		// 3. run bottom chuck
 

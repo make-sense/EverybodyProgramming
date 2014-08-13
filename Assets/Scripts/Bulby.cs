@@ -39,24 +39,47 @@ public class Bulby : Actor {
 		_configured = true;
 	}
 
-	public void SetColorOff () 
+	public void SetColorBlack () 
 	{
 		SetColor(Color.black);
 	}
-
-	public void SetColorOn ()
+	public void SetColorWhite ()
 	{
 		SetColor(Color.white);
+	}
+	public void SetColorRed ()
+	{
+		SetColor (Color.red);
+	}
+	public void SetColorGreen ()
+	{
+		SetColor (Color.green);
+	}
+	public void SetColorBlue ()
+	{
+		SetColor (Color.blue);
+	}
+	public void SetColorYellow ()
+	{
+		SetColor (Color.yellow);
+	}
+	public void SetColorMagenta ()
+	{
+		SetColor (Color.magenta);
+	}
+	public void SetColorCyan ()
+	{
+		SetColor (Color.cyan);
 	}
 
 	public void SetColor(Color color)
 	{
-		if (!_configured)
-			return;
-
 		UISprite sprite = GetComponent<UISprite> () as UISprite;
 		sprite.color = color;
 
+		if (!_configured)
+			return;
+		
 		if (pinR >= 0)
 			arduino.digitalWrite (pinR, (int)(color.r * 255));
 		if (pinG >= 0)
