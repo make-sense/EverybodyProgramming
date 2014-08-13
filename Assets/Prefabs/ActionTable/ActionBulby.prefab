@@ -39,65 +39,65 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8272af0a36ccf4e67a910df6fad5a06d, type: 3}
+  m_Script: {fileID: 11500000, guid: 044dc5c6ddbb549c89106ae74fd195ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   DataList:
-  - Name: Off
+  - Name: 4f6666
     Guid: -526438998
     Type: 1
     Length: 0
-    CallFunctionName: SetColor
-    CallFunctionParam: Off
+    CallFunctionName: 536574436f6c6f724f6666
+    CallFunctionParam: 
     Params: []
-  - Name: White
+  - Name: 5768697465
     Guid: -844790351
     Type: 1
     Length: 0
-    CallFunctionName: SetColor
-    CallFunctionParam: White
+    CallFunctionName: 536574436f6c6f725768697465
+    CallFunctionParam: 
     Params: []
-  - Name: Red
+  - Name: 526564
     Guid: -323650059
     Type: 1
     Length: 0
-    CallFunctionName: SetColor
-    CallFunctionParam: Red
+    CallFunctionName: 536574436f6c6f72
+    CallFunctionParam: 526564
     Params: []
-  - Name: Green
+  - Name: 477265656e
     Guid: -268715499
     Type: 1
     Length: 0
-    CallFunctionName: SetColor
-    CallFunctionParam: Green
+    CallFunctionName: 536574436f6c6f72
+    CallFunctionParam: 477265656e
     Params: []
-  - Name: Blue
+  - Name: 426c7565
     Guid: -1310113180
     Type: 1
     Length: 0
-    CallFunctionName: SetColor
-    CallFunctionParam: Blue
+    CallFunctionName: 536574436f6c6f72
+    CallFunctionParam: 426c7565
     Params: []
-  - Name: Yellow
+  - Name: 59656c6c6f77
     Guid: -135481751
     Type: 1
     Length: 0
-    CallFunctionName: SetColor
-    CallFunctionParam: Yellow
+    CallFunctionName: 536574436f6c6f72
+    CallFunctionParam: 59656c6c6f77
     Params: []
-  - Name: Magenta
+  - Name: 4d6167656e7461
     Guid: -356674938
     Type: 1
     Length: 0
-    CallFunctionName: SetColor
-    CallFunctionParam: Magenta
+    CallFunctionName: 536574436f6c6f72
+    CallFunctionParam: 4d6167656e7461
     Params: []
-  - Name: Cyan
+  - Name: 4379616e
     Guid: -1155006195
     Type: 1
     Length: 0
-    CallFunctionName: SetColor
-    CallFunctionParam: Cyan
+    CallFunctionName: 536574436f6c6f72
+    CallFunctionParam: 4379616e
     Params: []
 --- !u!114 &11400002
 MonoBehaviour:

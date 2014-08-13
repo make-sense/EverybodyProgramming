@@ -92,7 +92,7 @@ public class ChuckPropertyManager : MonoBehaviour {
 			{
 				case Actor.eCharactor.BUTTY:
 				{
-					ActionButty actions = GameObject.Find ("ActionButty").GetComponentInChildren<ActionButty> () as ActionButty;
+					ActionTable actions = GameObject.Find ("ActionButty").GetComponentInChildren<ActionTable> () as ActionTable;
 					foreach (ActionData data in actions.DataList)
 					{
 						GameObject instantiatedGO = NGUITools.AddChild(actionScrollRoot, actionButtonPrefab);
@@ -107,7 +107,7 @@ public class ChuckPropertyManager : MonoBehaviour {
 				}
 				case Actor.eCharactor.BULBY:
 				{
-					ActionBulby actions = GameObject.Find ("ActionBulby").GetComponentInChildren<ActionBulby> () as ActionBulby;
+					ActionTable actions = GameObject.Find ("ActionBulby").GetComponentInChildren<ActionTable> () as ActionTable;
 					foreach (ActionData data in actions.DataList)
 					{
 						GameObject instantiatedGO = NGUITools.AddChild(actionScrollRoot, actionButtonPrefab);
@@ -128,8 +128,6 @@ public class ChuckPropertyManager : MonoBehaviour {
 		Chuck chuck = ChuckManager.Instance.Get (SelectedChuckGuid);
 		if (chuck != null) {
 			chuck.SetAction(SelectedActorGuid, actionGuid);
-//			chuck.actorGuid = SelectedActorGuid;
-//			chuck.actionGuid = actionGuid;
 		}
 		Debug.Log ("SetCurrentAction:" + actionGuid.ToString ());
 	}

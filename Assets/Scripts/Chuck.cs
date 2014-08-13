@@ -89,6 +89,24 @@ public class Chuck : MonoBehaviour {
 		}
 	}
 
+	void OnDoubleClick () {
+		Debug.Log ("Chuck OnDoubleClick:"+Guid.ToString ());
+		Execute ();
+	}
+
+	void Execute () {
+		// 1. check state
+
+		// 2. run this
+		ActionData actionData = ActionManager.Instance.GetActionData(actionGuid);
+		if (actionData != null)
+			Debug.Log ("Action:" + actionData.CallFunctionName);
+
+		// 3. run bottom chuck
+
+		// 4. if end this, run right chuck
+	}
+
 	// Use this for initialization
 	void Start () {
 		Guid = System.Guid.NewGuid ();

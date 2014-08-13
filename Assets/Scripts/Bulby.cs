@@ -39,6 +39,16 @@ public class Bulby : Actor {
 		_configured = true;
 	}
 
+	public void SetColorOff () 
+	{
+		SetColor(Color.black);
+	}
+
+	public void SetColorOn ()
+	{
+		SetColor(Color.white);
+	}
+
 	public void SetColor(Color color)
 	{
 		if (!_configured)
