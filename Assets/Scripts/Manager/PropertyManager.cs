@@ -44,11 +44,7 @@ public class PropertyManager : MonoBehaviour {
 			{
 				label.text = actor.ActorName;
 			}
-			else
-			{
-				Debug.Log ("Fail to found UIInput");
-			}
-			Debug.Log ("Found actor");
+//			Debug.Log ("Found actor");
 		}
 		else
 		{

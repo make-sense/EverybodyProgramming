@@ -23,7 +23,7 @@ public class Butty : Actor {
 		TOUCHUP,
 		TOUCHUP_CHECKED,
 	};
-	private STATE _state = STATE.NONE;
+	private STATE _state = STATE.RELEASING;
 	public STATE CheckState 
 	{
 		get 
@@ -42,6 +42,38 @@ public class Butty : Actor {
 		}
 	}
 
+	public void IsTouchDown(out bool resultValue)
+	{
+		Debug.Log ("Butty:State : " + CheckState);
+		if (CheckState == STATE.TOUCHDOWN)
+			resultValue = true;
+		resultValue = false;
+	}
+	
+	public bool IsTouching()
+	{
+		Debug.Log ("Butty:State : " + CheckState);
+		if (CheckState == STATE.TOUCHING)
+			return true;
+		return false;
+	}
+	
+	public void IsTouchUp(out bool resultValue)
+	{
+		Debug.Log ("Butty:State : " + CheckState);
+		if (CheckState == STATE.TOUCHUP)
+			resultValue = true;
+		resultValue = false;
+	}
+	
+	public void IsReleasing(out bool resultValue)
+	{
+		Debug.Log ("Butty:State : " + CheckState);
+		if (CheckState == STATE.RELEASING)
+			resultValue = true;
+		resultValue = false;
+	}
+	
 	public int pin = -1;
 	bool swButtonPressed = false;
 

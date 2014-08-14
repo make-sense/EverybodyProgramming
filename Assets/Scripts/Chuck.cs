@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Reflection;
 
 public class Chuck : MonoBehaviour {
 
@@ -13,8 +14,9 @@ public class Chuck : MonoBehaviour {
 	public System.Guid actorGuid;
 	public int actionGuid;
 
-	Color inputColor = new Color(1f, 0.5f, 0.5f);
-	Color outputColor = new Color(0.5f, 0.5f, 1f);
+	Color inputColor = new Color (1f, 0.5f, 0.5f);
+	Color outputColor = new Color (0.5f, 0.5f, 1f);
+	Color normalColor = new Color (230f/255f, 180f/255f, 30f/255f);
 	
 	public void SetAction(System.Guid actorID, int actionID)
 	{
@@ -27,6 +29,17 @@ public class Chuck : MonoBehaviour {
 		Actor actor = ActorManager.Instance.Get (actorGuid);
 		if (actor != null) {
 			UIButtonColor baseButtonColor = GetComponentInChildren<UIButtonColor> () as UIButtonColor;
+			ActionData actionData = ActionManager.Instance.GetActionData(actionGuid);
+			if (actionData != null) {
+				if (actionData.Type == eActionType.Input)
+					baseButtonColor.defaultColor = inputColor;
+				else
+					baseButtonColor.defaultColor = outputColor;
+			}
+			else {
+				baseButtonColor.defaultColor = normalColor;
+			}
+
 			UIButton baseButton = GetComponentInChildren<UIButton> () as UIButton;
 			baseButton.normalSprite = "chuck_base";
 			Transform detail = this.transform.FindChild("Detail");
@@ -37,7 +50,6 @@ public class Chuck : MonoBehaviour {
 				{
 					case Actor.eCharactor.BUTTY:
 					{
-						baseButtonColor.defaultColor = inputColor;
 						switch (actionGuid) 
 						{
 							case -63941309:
@@ -49,12 +61,14 @@ public class Chuck : MonoBehaviour {
 							case -1483390853:
 								button.normalSprite = "1407862950_Perspective Button - Favorites";
 								break;
+							case -865861134:
+								button.normalSprite = "Button";
+								break;
 						}
 						break;
 					}
 					case Actor.eCharactor.BULBY:
 					{
-						baseButtonColor.defaultColor = outputColor;
 						switch (actionGuid)
 						{
 							case -526438998:
@@ -104,8 +118,16 @@ public class Chuck : MonoBehaviour {
 			Actor actor = ActorManager.Instance.Get(actorGuid);
 			if (actor != null)
 			{
-				actor.gameObject.BroadcastMessage(actionData.CallFunctionName);
-				Debug.Log ("Action:" + actionData.CallFunctionName);
+				if (actionData.Type == eActionType.Input) {
+					bool resultValue = false;
+					MethodInfo methodInfo = actor.GetType().GetMethod(actionData.CallFunctionName);
+					object thisvalue = methodInfo.Invoke(actor, null);
+					Debug.Log ("Action:" + actionData.CallFunctionName + "=>" + thisvalue.ToString ());
+				}
+				else{
+					actor.gameObject.BroadcastMessage(actionData.CallFunctionName);
+					Debug.Log ("Action:" + actionData.CallFunctionName);
+				}
 			}
 		}
 
