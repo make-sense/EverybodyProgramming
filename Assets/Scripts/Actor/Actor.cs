@@ -6,6 +6,7 @@ public class Actor : MonoBehaviour {
 
 	public enum eCharactor {
 		NONE,
+		STAGE,
 		BUTTY,
 		CALCHY,
 		BULBY,

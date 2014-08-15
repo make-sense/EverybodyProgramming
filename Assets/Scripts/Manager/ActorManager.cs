@@ -7,6 +7,15 @@ public class ActorManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		GameObject stageGameObject = GameObject.Find ("Stage");
+		if (stageGameObject != null) 
+		{
+			Stage stage = stageGameObject.GetComponentInChildren<Stage> () as Stage;
+			if (stage != null)
+			{
+				Add (stage);
+			}
+		}
 	}
 	
 	// Update is called once per frame

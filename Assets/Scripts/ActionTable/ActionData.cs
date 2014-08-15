@@ -16,6 +16,7 @@ public enum eActionType {
 public class ActionData {
 	public string Name;
 	public int Guid;
+	public Texture texture;
 	public eActionType Type;
 	public float Length = 0.1f;
 	public string CallFunctionName = "";

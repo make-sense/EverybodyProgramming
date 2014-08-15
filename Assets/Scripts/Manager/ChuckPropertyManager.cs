@@ -53,6 +53,9 @@ public class ChuckPropertyManager : MonoBehaviour {
 
 			UIButton button = instantiatedGameObject.GetComponentInChildren<UIButton> () as UIButton;
 			switch (actor.charactorType) {
+				case Actor.eCharactor.STAGE:
+					button.normalSprite = "1408105883_traffic_lights_green";
+					break;
 				case Actor.eCharactor.BUTTY:
 					button.normalSprite = "Button";
 					break;
@@ -81,6 +84,21 @@ public class ChuckPropertyManager : MonoBehaviour {
 			int heightStep = -40;
 			switch (actor.charactorType)
 			{
+				case Actor.eCharactor.STAGE:
+				{
+					ActionTable actions = GameObject.Find ("ActionStage").GetComponentInChildren<ActionTable> () as ActionTable;
+					foreach (ActionData data in actions.DataList)
+					{
+						GameObject instantiatedGO = NGUITools.AddChild(actionScrollRoot, actionButtonPrefab);
+						instantiatedGO.transform.localPosition = new Vector3(0f, (float)baseY+heightStep*count, 0f);
+						UILabel label = instantiatedGO.GetComponentInChildren<UILabel> () as UILabel;
+						label.text = data.Name;
+						ActionSymbol action = instantiatedGO.GetComponentInChildren<ActionSymbol> () as ActionSymbol;
+						action.guid = data.Guid;
+						count++;
+					}
+					break;
+				}
 				case Actor.eCharactor.BUTTY:
 				{
 					ActionTable actions = GameObject.Find ("ActionButty").GetComponentInChildren<ActionTable> () as ActionTable;

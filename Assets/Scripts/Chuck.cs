@@ -47,59 +47,7 @@ public class Chuck : MonoBehaviour {
 			if (detail != null) {
 				detail.gameObject.SetActive(true);
 				UIButton button = detail.GetComponentInChildren<UIButton> () as UIButton;
-				switch (actor.charactorType)
-				{
-					case Actor.eCharactor.BUTTY:
-					{
-						switch (actionGuid) 
-						{
-							case -63941309:
-								button.normalSprite = "1407589060_Perspective Button - Games";
-								break;
-							case -1620462626:
-								button.normalSprite = "Button_Red";
-								break;
-							case -1483390853:
-								button.normalSprite = "1407862950_Perspective Button - Favorites";
-								break;
-							case -865861134:
-								button.normalSprite = "Button";
-								break;
-						}
-						break;
-					}
-					case Actor.eCharactor.BULBY:
-					{
-						switch (actionGuid)
-						{
-							case -526438998:
-								button.normalSprite = "1407405112_Black_button";
-								break;
-							case -844790351:
-								button.normalSprite = "1407922654_Silver_button";
-								break;
-							case -323650059:
-								button.normalSprite = "1407405125_Red_button";
-								break;
-							case -268715499:
-								button.normalSprite = "1407405122_Green_button";
-								break;
-							case -1310113180:
-								button.normalSprite = "1407405123_Dark_blue_button";
-								break;
-							case -135481751:
-								button.normalSprite = "1407405117_Yellow_button";
-								break;
-							case -356674938:
-								button.normalSprite = "1407405119_Orange_button";
-								break;
-							case -1155006195:
-								button.normalSprite = "1407405121_Light_blue_button";
-								break;
-						}
-						break;
-					}
-				}
+				button.normalSprite = actionData.texture.name;
 			}
 		}
 	}
