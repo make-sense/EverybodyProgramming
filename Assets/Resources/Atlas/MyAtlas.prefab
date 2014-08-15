@@ -94,8 +94,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: 1407405112_Black_button
-    x: 536
-    y: 54
+    x: 349
+    y: 5
     width: 48
     height: 48
     borderLeft: 0
@@ -107,58 +107,6 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: 1407405117_Yellow_button
-    x: 487
-    y: 5
-    width: 48
-    height: 48
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: 1407405119_Orange_button
-    x: 487
-    y: 54
-    width: 48
-    height: 48
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: 1407405121_Light_blue_button
-    x: 438
-    y: 5
-    width: 48
-    height: 48
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: 1407405122_Green_button
-    x: 438
-    y: 54
-    width: 48
-    height: 48
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: 1407405123_Dark_blue_button
     x: 567
     y: 122
     width: 48
@@ -171,9 +119,61 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: 1407405125_Red_button
-    x: 349
+  - name: 1407405119_Orange_button
+    x: 438
     y: 5
+    width: 48
+    height: 48
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 1407405121_Light_blue_button
+    x: 487
+    y: 54
+    width: 48
+    height: 48
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 1407405122_Green_button
+    x: 487
+    y: 5
+    width: 48
+    height: 48
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 1407405123_Dark_blue_button
+    x: 536
+    y: 5
+    width: 48
+    height: 48
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 1407405125_Red_button
+    x: 536
+    y: 54
     width: 48
     height: 48
     borderLeft: 0
@@ -276,8 +276,8 @@ MonoBehaviour:
     paddingTop: 4
     paddingBottom: 2
   - name: 1407922654_Silver_button
-    x: 536
-    y: 5
+    x: 438
+    y: 54
     width: 48
     height: 48
     borderLeft: 0
@@ -288,6 +288,32 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
+  - name: 1408105883_traffic_lights_green
+    x: 662
+    y: 282
+    width: 116
+    height: 107
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 7
+    paddingRight: 5
+    paddingTop: 13
+    paddingBottom: 8
+  - name: 1408105883_traffic_lights_red
+    x: 779
+    y: 282
+    width: 116
+    height: 107
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 7
+    paddingRight: 5
+    paddingTop: 13
+    paddingBottom: 8
   - name: Button
     x: 438
     y: 103
@@ -329,7 +355,7 @@ MonoBehaviour:
     paddingBottom: 2
   - name: Calculator
     x: 662
-    y: 261
+    y: 153
     width: 90
     height: 128
     borderLeft: 0
