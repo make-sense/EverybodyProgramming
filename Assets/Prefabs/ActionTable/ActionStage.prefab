@@ -8,10 +8,10 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400000}
-  - 114: {fileID: 11400002}
+  - 114: {fileID: 11400006}
   - 114: {fileID: 11400000}
   m_Layer: 0
-  m_Name: ActionButty
+  m_Name: ActionStage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -41,35 +41,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DataList:
-  - Name: TouchDown
-    Guid: -63941309
+  - Name: Run
+    Guid: 1580525295
     Type: 0
     Length: 0
-    CallFunctionName: IsTouchDown
+    CallFunctionName: Run
     CallFunctionParam: 
     Params: []
-  - Name: Touching
-    Guid: -1620462626
-    Type: 0
-    Length: 0
-    CallFunctionName: IsTouching
-    CallFunctionParam: 
-    Params: []
-  - Name: TouchUp
-    Guid: -1483390853
-    Type: 0
-    Length: 0
-    CallFunctionName: IsTouchUp
-    CallFunctionParam: 
-    Params: []
-  - Name: Not Touch
-    Guid: -865861134
-    Type: 0
-    Length: 0
-    CallFunctionName: IsReleasing
-    CallFunctionParam: 
-    Params: []
---- !u!114 &11400002
+--- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -80,7 +59,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f0e25d203c734a419744615c6e7865d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newGuid: 0
+  newGuid: 1580525295
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

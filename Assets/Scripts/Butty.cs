@@ -42,15 +42,15 @@ public class Butty : Actor {
 		}
 	}
 
-	public void IsTouchDown(out bool resultValue)
+	public bool IsTouchDown ()
 	{
 		Debug.Log ("Butty:State : " + CheckState);
 		if (CheckState == STATE.TOUCHDOWN)
-			resultValue = true;
-		resultValue = false;
+			return true;
+		return false;
 	}
 	
-	public bool IsTouching()
+	public bool IsTouching ()
 	{
 		Debug.Log ("Butty:State : " + CheckState);
 		if (CheckState == STATE.TOUCHING)
@@ -58,20 +58,20 @@ public class Butty : Actor {
 		return false;
 	}
 	
-	public void IsTouchUp(out bool resultValue)
+	public bool IsTouchUp ()
 	{
 		Debug.Log ("Butty:State : " + CheckState);
 		if (CheckState == STATE.TOUCHUP)
-			resultValue = true;
-		resultValue = false;
+			return true;
+		return false;
 	}
 	
-	public void IsReleasing(out bool resultValue)
+	public bool IsReleasing ()
 	{
 		Debug.Log ("Butty:State : " + CheckState);
 		if (CheckState == STATE.RELEASING)
-			resultValue = true;
-		resultValue = false;
+			return true;
+		return false;
 	}
 	
 	public int pin = -1;

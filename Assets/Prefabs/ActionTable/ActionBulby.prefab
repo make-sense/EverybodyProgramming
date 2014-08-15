@@ -43,58 +43,58 @@ MonoBehaviour:
   DataList:
   - Name: Off
     Guid: -526438998
-    Type: 0
+    Type: 1
     Length: 0
-    CallFunctionName: OnColorBlack
+    CallFunctionName: SetColorBlack
     CallFunctionParam: 
     Params: []
   - Name: White
     Guid: -844790351
-    Type: 0
+    Type: 1
     Length: 0
-    CallFunctionName: OnColorWhite
+    CallFunctionName: SetColorWhite
     CallFunctionParam: 
     Params: []
   - Name: Red
     Guid: -323650059
-    Type: 0
+    Type: 1
     Length: 0
-    CallFunctionName: 
+    CallFunctionName: SetColorRed
     CallFunctionParam: 
     Params: []
   - Name: Green
     Guid: -268715499
-    Type: 0
+    Type: 1
     Length: 0
-    CallFunctionName: 
+    CallFunctionName: SetColorGreen
     CallFunctionParam: 
     Params: []
   - Name: Blue
     Guid: -1310113180
-    Type: 0
+    Type: 1
     Length: 0
-    CallFunctionName: 
+    CallFunctionName: SetColorBlue
     CallFunctionParam: 
     Params: []
   - Name: Yellow
     Guid: -135481751
-    Type: 0
+    Type: 1
     Length: 0
-    CallFunctionName: 
+    CallFunctionName: SetColorYellow
     CallFunctionParam: 
     Params: []
   - Name: Magenta
     Guid: -356674938
-    Type: 0
+    Type: 1
     Length: 0
-    CallFunctionName: 
+    CallFunctionName: SetColorMagenta
     CallFunctionParam: 
     Params: []
   - Name: Cyan
     Guid: -1155006195
-    Type: 0
+    Type: 1
     Length: 0
-    CallFunctionName: 
+    CallFunctionName: SetColorCyan
     CallFunctionParam: 
     Params: []
 --- !u!114 &11400006

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Reflection;
+using System.Threading;
 
 public class Chuck : MonoBehaviour {
 
@@ -9,7 +10,7 @@ public class Chuck : MonoBehaviour {
 
 	public System.Guid Guid;
 	private UIRoot _uiRoot = null;
-	private Chuck[] _children = new Chuck[2];
+	public Chuck[] _children = new Chuck[2];
 
 	public System.Guid actorGuid;
 	public int actionGuid;
@@ -108,7 +109,7 @@ public class Chuck : MonoBehaviour {
 		Execute ();
 	}
 
-	void Execute () {
+	public void Execute () {
 		// 1. check state
 
 		// 2. run this
@@ -132,8 +133,18 @@ public class Chuck : MonoBehaviour {
 		}
 
 		// 3. run bottom chuck
+		if (_children [0] != null) {
+//			Thread thread = new Thread (new ThreadStart (_children [0].Execute));
+//			thread.Start ();
+			_children [0].Execute ();
+		}
 
 		// 4. if end this, run right chuck
+		if (_children [1] != null) {
+//			Thread thread = new Thread (new ThreadStart (_children [1].Execute));
+//			thread.Start ();
+			_children [1].Execute ();
+		}
 	}
 
 	// Use this for initialization
@@ -157,23 +168,25 @@ public class Chuck : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other) 
 	{
-//		Debug.Log ("OnTriggerEnter");
 		if (other.tag == "Chuck") 
 		{
 			Vector3 srcPos = getGlobalPosition(this.transform);
 			Vector3 dstPos = getGlobalPosition(other.transform);
-//			Debug.Log (srcPos.ToString() + "<=>" + dstPos.ToString());
 			if (isRightEdge(srcPos, dstPos))
 			{
 				this.transform.parent = other.transform;
 				this.transform.localPosition = new Vector3(CHUCK_WIDTH, 0);
-//				Debug.Log ("Set this to right child");
+				Chuck rootChuck = other.GetComponentInChildren<Chuck> () as Chuck;
+				if (rootChuck != null)
+					rootChuck._children[1] = this;
 			}
 			else if (isBottomEdge(srcPos, dstPos))
 	        {
 				this.transform.parent = other.transform;
 				this.transform.localPosition = new Vector3(0, -CHUCK_HEIGHT);
-//				Debug.Log ("Set this to bottom child");
+				Chuck rootChuck = other.GetComponentInChildren<Chuck> () as Chuck;
+				if (rootChuck != null)
+					rootChuck._children[0] = this;
 			}
 		}
 		else if (other.tag == "ChuckStack")
@@ -190,11 +203,7 @@ public class Chuck : MonoBehaviour {
 		    return;
 
 		if (isChuckSeparated(this.transform))
-		{
-//			Debug.Log ("isChuckDisconnect");
 			this.transform.parent = _uiRoot.transform;
-		}
-//		Debug.Log ("OnDragEnd");
 	}
 
 	void OnDragDropRelease(GameObject surface)
