@@ -2958,50 +2958,6 @@ MonoBehaviour:
   mAtlas: {fileID: 11400000, guid: b85285fefb106402faa216e4dcb36432, type: 2}
   mSpriteName: 1407405121_Light_blue_button
   mFillCenter: 1
---- !u!1001 &514223827
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 833181563}
-    m_Modifications:
-    - target: {fileID: 400000, guid: 505360970b9e94e9c875cd277f73cef9, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 505360970b9e94e9c875cd277f73cef9, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 505360970b9e94e9c875cd277f73cef9, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 505360970b9e94e9c875cd277f73cef9, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 505360970b9e94e9c875cd277f73cef9, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 505360970b9e94e9c875cd277f73cef9, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 505360970b9e94e9c875cd277f73cef9, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 505360970b9e94e9c875cd277f73cef9, type: 2}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 505360970b9e94e9c875cd277f73cef9, type: 2}
-  m_RootGameObject: {fileID: 1137024243}
-  m_IsPrefabParent: 0
-  m_IsExploded: 1
 --- !u!1 &516070741
 GameObject:
   m_ObjectHideFlags: 0
@@ -6182,7 +6138,7 @@ BoxCollider:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100000, guid: 505360970b9e94e9c875cd277f73cef9, type: 2}
-  m_PrefabInternal: {fileID: 514223827}
+  m_PrefabInternal: {fileID: 1159441455}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1137024244}
@@ -6199,7 +6155,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400000, guid: 505360970b9e94e9c875cd277f73cef9, type: 2}
-  m_PrefabInternal: {fileID: 514223827}
+  m_PrefabInternal: {fileID: 1159441455}
   m_GameObject: {fileID: 1137024243}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -6212,7 +6168,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400000, guid: 505360970b9e94e9c875cd277f73cef9,
     type: 2}
-  m_PrefabInternal: {fileID: 514223827}
+  m_PrefabInternal: {fileID: 1159441455}
   m_GameObject: {fileID: 1137024243}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -6225,15 +6181,15 @@ MonoBehaviour:
     texture: {fileID: 2800000, guid: 3edcdea44e0ac49ad92f08e543e0447f, type: 3}
     Type: 1
     Length: 0
-    CallFunctionName: SetColorBlack
+    CallFunctionName: SetOff
     CallFunctionParam: 
     Params: []
-  - Name: White
+  - Name: On
     Guid: -844790351
     texture: {fileID: 2800000, guid: bccf0c8d302bd4373bffbc6dd483ce5f, type: 3}
     Type: 1
     Length: 0
-    CallFunctionName: SetColorWhite
+    CallFunctionName: SetOn
     CallFunctionParam: 
     Params: []
   - Name: Red
@@ -6241,7 +6197,7 @@ MonoBehaviour:
     texture: {fileID: 2800000, guid: 1abfcac7161304122b3589d8348a6b7d, type: 3}
     Type: 1
     Length: 0
-    CallFunctionName: SetColorRed
+    CallFunctionName: SetRed
     CallFunctionParam: 
     Params: []
   - Name: Green
@@ -6249,7 +6205,7 @@ MonoBehaviour:
     texture: {fileID: 2800000, guid: 281bf3aa71f014e80b29dcb79506bb9c, type: 3}
     Type: 1
     Length: 0
-    CallFunctionName: SetColorGreen
+    CallFunctionName: SetGreen
     CallFunctionParam: 
     Params: []
   - Name: Blue
@@ -6257,7 +6213,7 @@ MonoBehaviour:
     texture: {fileID: 2800000, guid: cd3772d13bbb74f8ebda8c70cd894991, type: 3}
     Type: 1
     Length: 0
-    CallFunctionName: SetColorBlue
+    CallFunctionName: SetBlue
     CallFunctionParam: 
     Params: []
   - Name: Yellow
@@ -6265,7 +6221,7 @@ MonoBehaviour:
     texture: {fileID: 2800000, guid: 40447da7442714fbd9564520f8496760, type: 3}
     Type: 1
     Length: 0
-    CallFunctionName: SetColorYellow
+    CallFunctionName: SetYellow
     CallFunctionParam: 
     Params: []
   - Name: Magenta
@@ -6273,7 +6229,7 @@ MonoBehaviour:
     texture: {fileID: 2800000, guid: e171f40b59f9145ca877ea64bcca5588, type: 3}
     Type: 1
     Length: 0
-    CallFunctionName: SetColorMagenta
+    CallFunctionName: SetMagenta
     CallFunctionParam: 
     Params: []
   - Name: Cyan
@@ -6281,7 +6237,7 @@ MonoBehaviour:
     texture: {fileID: 2800000, guid: a2a12efc1adbb4936b389c7a3734396b, type: 3}
     Type: 1
     Length: 0
-    CallFunctionName: SetColorCyan
+    CallFunctionName: SetCyan
     CallFunctionParam: 
     Params: []
 --- !u!114 &1137024246
@@ -6289,7 +6245,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400006, guid: 505360970b9e94e9c875cd277f73cef9,
     type: 2}
-  m_PrefabInternal: {fileID: 514223827}
+  m_PrefabInternal: {fileID: 1159441455}
   m_GameObject: {fileID: 1137024243}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -6514,6 +6470,50 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
+--- !u!1001 &1159441455
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 833181563}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 505360970b9e94e9c875cd277f73cef9, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 505360970b9e94e9c875cd277f73cef9, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 505360970b9e94e9c875cd277f73cef9, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 505360970b9e94e9c875cd277f73cef9, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 505360970b9e94e9c875cd277f73cef9, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 505360970b9e94e9c875cd277f73cef9, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 505360970b9e94e9c875cd277f73cef9, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 505360970b9e94e9c875cd277f73cef9, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 505360970b9e94e9c875cd277f73cef9, type: 2}
+  m_RootGameObject: {fileID: 1137024243}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &1160563556
 GameObject:
   m_ObjectHideFlags: 0

@@ -39,35 +39,35 @@ public class Bulby : Actor {
 		_configured = true;
 	}
 
-	public void SetColorBlack () 
+	public void SetOff () 
 	{
 		SetColor(Color.black);
 	}
-	public void SetColorWhite ()
+	public void SetOn ()
 	{
 		SetColor(Color.white);
 	}
-	public void SetColorRed ()
+	public void SetRed ()
 	{
 		SetColor (Color.red);
 	}
-	public void SetColorGreen ()
+	public void SetGreen ()
 	{
 		SetColor (Color.green);
 	}
-	public void SetColorBlue ()
+	public void SetBlue ()
 	{
 		SetColor (Color.blue);
 	}
-	public void SetColorYellow ()
+	public void SetYellow ()
 	{
 		SetColor (Color.yellow);
 	}
-	public void SetColorMagenta ()
+	public void SetMagenta ()
 	{
 		SetColor (Color.magenta);
 	}
-	public void SetColorCyan ()
+	public void SetCyan ()
 	{
 		SetColor (Color.cyan);
 	}

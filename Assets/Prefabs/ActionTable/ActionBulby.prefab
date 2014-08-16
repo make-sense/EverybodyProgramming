@@ -46,15 +46,15 @@ MonoBehaviour:
     texture: {fileID: 2800000, guid: 3edcdea44e0ac49ad92f08e543e0447f, type: 3}
     Type: 1
     Length: 0
-    CallFunctionName: SetColorBlack
+    CallFunctionName: SetOff
     CallFunctionParam: 
     Params: []
-  - Name: White
+  - Name: On
     Guid: -844790351
     texture: {fileID: 2800000, guid: bccf0c8d302bd4373bffbc6dd483ce5f, type: 3}
     Type: 1
     Length: 0
-    CallFunctionName: SetColorWhite
+    CallFunctionName: SetOn
     CallFunctionParam: 
     Params: []
   - Name: Red
@@ -62,7 +62,7 @@ MonoBehaviour:
     texture: {fileID: 2800000, guid: 1abfcac7161304122b3589d8348a6b7d, type: 3}
     Type: 1
     Length: 0
-    CallFunctionName: SetColorRed
+    CallFunctionName: SetRed
     CallFunctionParam: 
     Params: []
   - Name: Green
@@ -70,7 +70,7 @@ MonoBehaviour:
     texture: {fileID: 2800000, guid: 281bf3aa71f014e80b29dcb79506bb9c, type: 3}
     Type: 1
     Length: 0
-    CallFunctionName: SetColorGreen
+    CallFunctionName: SetGreen
     CallFunctionParam: 
     Params: []
   - Name: Blue
@@ -78,7 +78,7 @@ MonoBehaviour:
     texture: {fileID: 2800000, guid: cd3772d13bbb74f8ebda8c70cd894991, type: 3}
     Type: 1
     Length: 0
-    CallFunctionName: SetColorBlue
+    CallFunctionName: SetBlue
     CallFunctionParam: 
     Params: []
   - Name: Yellow
@@ -86,7 +86,7 @@ MonoBehaviour:
     texture: {fileID: 2800000, guid: 40447da7442714fbd9564520f8496760, type: 3}
     Type: 1
     Length: 0
-    CallFunctionName: SetColorYellow
+    CallFunctionName: SetYellow
     CallFunctionParam: 
     Params: []
   - Name: Magenta
@@ -94,7 +94,7 @@ MonoBehaviour:
     texture: {fileID: 2800000, guid: e171f40b59f9145ca877ea64bcca5588, type: 3}
     Type: 1
     Length: 0
-    CallFunctionName: SetColorMagenta
+    CallFunctionName: SetMagenta
     CallFunctionParam: 
     Params: []
   - Name: Cyan
@@ -102,7 +102,7 @@ MonoBehaviour:
     texture: {fileID: 2800000, guid: a2a12efc1adbb4936b389c7a3734396b, type: 3}
     Type: 1
     Length: 0
-    CallFunctionName: SetColorCyan
+    CallFunctionName: SetCyan
     CallFunctionParam: 
     Params: []
 --- !u!114 &11400006
