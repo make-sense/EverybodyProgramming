@@ -95,6 +95,9 @@ public class Bulby : Actor {
 		arduino = Arduino.global;
 	}
 	
+	public void Refresh () 
+	{
+	}
 
 	// Update is called once per frame
 	void Update () {

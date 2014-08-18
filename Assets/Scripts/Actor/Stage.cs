@@ -55,8 +55,27 @@ public class Stage : Actor {
 		base.charactorType = eCharactor.STAGE;
 	}
 	
+	public void Refresh () 
+	{
+	}
+
 	// Update is called once per frame
 	void Update () {
+
+		BetterList<Actor> actors = ActorManager.Instance.GetActors ();
+		foreach (Actor actor in actors) 
+		{
+			switch (actor.charactorType)
+			{
+			case Actor.eCharactor.BUTTY:
+				((Butty)actor).Refresh ();
+				break;
+			case Actor.eCharactor.BULBY:
+				((Bulby)actor).Refresh ();
+				break;
+			}
+		}
+
 		if (IsRun ()) 
 		{
 			BetterList<Chuck> chucks = ChuckManager.Instance.GetChucks ();

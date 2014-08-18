@@ -28,17 +28,18 @@ public class Butty : Actor {
 	{
 		get 
 		{
-			switch(_state)
-			{
-			case STATE.TOUCHDOWN:
-				_state = STATE.TOUCHDOWN_CHECKED;
-				return STATE.TOUCHDOWN;
-			case STATE.TOUCHUP:
-				_state = STATE.TOUCHUP_CHECKED;
-				return STATE.TOUCHUP;
-			default:
-				return _state;
-			}
+//			switch(_state)
+//			{
+//			case STATE.TOUCHDOWN:
+//				_state = STATE.TOUCHDOWN_CHECKED;
+//				return STATE.TOUCHDOWN;
+//			case STATE.TOUCHUP:
+//				_state = STATE.TOUCHUP_CHECKED;
+//				return STATE.TOUCHUP;
+//			default:
+//				return _state;
+//			}
+			return _state;
 		}
 	}
 
@@ -108,8 +109,8 @@ public class Butty : Actor {
 		arduino = Arduino.global;
 	}
 
-	// Update is called once per frame
-	void Update () {
+	public void Refresh () {
+		Debug.Log ("Butty::Refresh");
 		if (pin >= 0) 
 		{
 			if (!swButtonPressed)
@@ -122,6 +123,10 @@ public class Butty : Actor {
 				}
 			}
 		}
+	}
+
+	// Update is called once per frame
+	void Update () {
 	}
 
 	void OnPress (bool isPressed) 

@@ -22,6 +22,11 @@ public class Actor : MonoBehaviour {
 		Guid = System.Guid.NewGuid ();
 	}
 
+	public void Refresh ()
+	{
+		Debug.Log ("Actor::Refresh");
+	}
+
 	void OnTriggerEnter(Collider other) 
 	{
 		if (other.tag == DestroyTag)
