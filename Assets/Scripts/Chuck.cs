@@ -5,8 +5,8 @@ using System.Threading;
 
 public class Chuck : MonoBehaviour {
 
-	private float CHUCK_WIDTH = 110f;
-	private float CHUCK_HEIGHT = 152f;
+	private float CHUCK_WIDTH = 120f;
+	private float CHUCK_HEIGHT = 160f;
 
 	public System.Guid Guid;
 	private UIRoot _uiRoot = null;
@@ -18,7 +18,29 @@ public class Chuck : MonoBehaviour {
 	Color inputColor = new Color (1f, 0.5f, 0.5f);
 	Color outputColor = new Color (0.5f, 0.5f, 1f);
 	Color normalColor = new Color (230f/255f, 180f/255f, 30f/255f);
-	
+
+	public UIButton startButton;
+
+	public bool _isStart = false;
+
+	public void OnToggleStart ()
+	{
+		_isStart = !_isStart;
+		UpdateStartIcon();
+	}
+
+	private void UpdateStartIcon()
+	{
+		if (_isStart) 
+		{
+			startButton.normalSprite = "1408105883_traffic_lights_green";
+		}
+		else
+		{
+			startButton.normalSprite = "1408105883_traffic_lights_red";
+		}
+	}
+
 	public void SetAction(System.Guid actorID, int actionID)
 	{
 		actorGuid = actorID;
@@ -72,6 +94,8 @@ public class Chuck : MonoBehaviour {
 					MethodInfo methodInfo = actor.GetType().GetMethod(actionData.CallFunctionName);
 					object thisvalue = methodInfo.Invoke(actor, null);
 					Debug.Log ("Action:" + actionData.CallFunctionName + "=>" + thisvalue.ToString ());
+					if (thisvalue.ToString() == "False")
+						return;
 				}
 				else{
 					actor.gameObject.BroadcastMessage(actionData.CallFunctionName);
@@ -101,6 +125,7 @@ public class Chuck : MonoBehaviour {
 		ChuckManager.Instance.Add(this);
 		if (UIRoot.list.Count > 0)
 			_uiRoot = UIRoot.list[0];
+		UpdateStartIcon ();
 	}
 	
 	// Update is called once per frame

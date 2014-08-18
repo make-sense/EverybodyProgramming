@@ -3543,6 +3543,8 @@ GameObject:
   - 114: {fileID: 677506000}
   - 65: {fileID: 677505999}
   - 114: {fileID: 677506002}
+  - 54: {fileID: 677506004}
+  - 114: {fileID: 677506003}
   m_Layer: 8
   m_Name: Stage
   m_TagString: Untagged
@@ -3673,6 +3675,35 @@ MonoBehaviour:
   charactorType: 1
   ActorName: Stage
   Pos: {x: 0, y: 0, z: 0}
+--- !u!114 &677506003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 677505997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d9ee9adcf574fc42857acfaad9fb89e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  restriction: 0
+  cloneOnDrag: 1
+  pressAndHoldDelay: 1
+--- !u!54 &677506004
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 677505997}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &694358557
 GameObject:
   m_ObjectHideFlags: 0
@@ -5757,7 +5788,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9c795f466440d2147830d030126e6258, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 330
+      value: 310
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9c795f466440d2147830d030126e6258, type: 2}
       propertyPath: m_LocalPosition.z
@@ -5805,35 +5836,35 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 6500000, guid: 9c795f466440d2147830d030126e6258, type: 2}
       propertyPath: m_Size.x
-      value: 85
+      value: 105
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 9c795f466440d2147830d030126e6258, type: 2}
       propertyPath: mWidth
-      value: 85
+      value: 105
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 9c795f466440d2147830d030126e6258, type: 2}
       propertyPath: aspectRatio
-      value: .772727251
+      value: .777777791
       objectReference: {fileID: 0}
     - target: {fileID: 6500000, guid: 9c795f466440d2147830d030126e6258, type: 2}
       propertyPath: m_Size.y
-      value: 110
+      value: 135
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 9c795f466440d2147830d030126e6258, type: 2}
       propertyPath: mHeight
-      value: 110
+      value: 135
       objectReference: {fileID: 0}
     - target: {fileID: 11400010, guid: 9c795f466440d2147830d030126e6258, type: 2}
       propertyPath: mWidth
-      value: 77
+      value: 97
       objectReference: {fileID: 0}
     - target: {fileID: 11400010, guid: 9c795f466440d2147830d030126e6258, type: 2}
       propertyPath: mHeight
-      value: 102
+      value: 127
       objectReference: {fileID: 0}
     - target: {fileID: 11400010, guid: 9c795f466440d2147830d030126e6258, type: 2}
       propertyPath: aspectRatio
-      value: .754901946
+      value: .763779521
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9c795f466440d2147830d030126e6258, type: 2}
@@ -7576,7 +7607,7 @@ Transform:
   m_PrefabInternal: {fileID: 1044135061}
   m_GameObject: {fileID: 1439961878}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 330, z: 0}
+  m_LocalPosition: {x: 0, y: 310, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1867328151}
@@ -7594,7 +7625,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 85, y: 110, z: 0}
+  m_Size: {x: 105, y: 135, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1439961881
 MonoBehaviour:
@@ -7653,13 +7684,13 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: .90196079, g: .70588237, b: .117647059, a: 1}
   mPivot: 4
-  mWidth: 85
-  mHeight: 110
+  mWidth: 105
+  mHeight: 135
   mDepth: 4
   autoResizeBoxCollider: 1
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: .772727251
+  aspectRatio: .777777791
   mType: 0
   mFillDirection: 4
   mFillAmount: 1
@@ -10437,13 +10468,13 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 0, g: 0, b: 0, a: .737254918}
   mPivot: 4
-  mWidth: 77
-  mHeight: 102
+  mWidth: 97
+  mHeight: 127
   mDepth: 5
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: .754901946
+  aspectRatio: .763779521
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 0}
   mFont: {fileID: 11400000, guid: 29056518aafb01b49a5b08faf8e30cff, type: 2}

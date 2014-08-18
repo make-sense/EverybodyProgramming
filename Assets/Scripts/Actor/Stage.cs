@@ -26,7 +26,7 @@ public class Stage : Actor {
 		return _isRun;
 	}
 
-	private void SetUI ()
+	void SetUI ()
 	{
 		UIButton button = GetComponentInChildren<UIButton> () as UIButton;
 		if (button == null)
@@ -38,7 +38,16 @@ public class Stage : Actor {
 			button.normalSprite = "1408105883_traffic_lights_red";
 	}
 
-	private bool _isRun = false;
+	void OnTriggerEnter(Collider other) 
+	{
+		Debug.Log("Stage::OnTriggerEnter");
+		if (other.tag == "Chuck") 
+		{
+			Debug.Log(other.name);
+		}
+	}
+
+	bool _isRun = false;
 
 	// Use this for initialization
 	void Start () {
@@ -48,6 +57,16 @@ public class Stage : Actor {
 	
 	// Update is called once per frame
 	void Update () {
-	
+		if (IsRun ()) 
+		{
+			BetterList<Chuck> chucks = ChuckManager.Instance.GetChucks ();
+			foreach (Chuck chuck in chucks)
+			{
+				if (chuck._isStart)
+				{
+					chuck.Execute ();
+				}
+			}
+		}
 	}
 }
