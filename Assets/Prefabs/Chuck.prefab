@@ -215,7 +215,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 172, y: 132, z: 0}
+  m_Size: {x: 132, y: 172, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &11400000
 MonoBehaviour:
@@ -228,6 +228,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ec9fe48ba6c2d7429fc32123622abd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _children:
+  - {fileID: 0}
+  - {fileID: 0}
   actionGuid: 0
 --- !u!114 &11400002
 MonoBehaviour:
@@ -472,13 +475,13 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: .90196079, g: .70588237, b: .117647059, a: 1}
   mPivot: 4
-  mWidth: 172
-  mHeight: 132
+  mWidth: 132
+  mHeight: 172
   mDepth: 0
   autoResizeBoxCollider: 1
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 1.30303025
+  aspectRatio: .767441869
   mType: 3
   mFillDirection: 4
   mFillAmount: 1
