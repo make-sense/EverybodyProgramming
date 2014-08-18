@@ -230,6 +230,11 @@ public class Chuck : MonoBehaviour {
 		}
 	}
 
+	public bool IsRoot()
+	{
+		return isRoot (transform);
+	}
+
 	private bool isRoot(Transform transform)
 	{
 		if (transform.parent == null)

@@ -81,7 +81,8 @@ public class Stage : Actor {
 			BetterList<Chuck> chucks = ChuckManager.Instance.GetChucks ();
 			foreach (Chuck chuck in chucks)
 			{
-				if (chuck._isStart)
+				if (chuck.IsRoot ())
+//				if (chuck._isStart)
 				{
 					chuck.Execute ();
 				}
