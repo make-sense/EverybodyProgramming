@@ -5,8 +5,8 @@ using System.Threading;
 
 public class Chuck : MonoBehaviour {
 
-	private float CHUCK_WIDTH = 120f;
-	private float CHUCK_HEIGHT = 160f;
+	private float CHUCK_WIDTH = 90f;
+	private float CHUCK_HEIGHT = 120f;
 
 	public System.Guid Guid;
 	private UIRoot _uiRoot = null;
@@ -80,6 +80,7 @@ public class Chuck : MonoBehaviour {
 	}
 
 	public void Execute () {
+		StartCoroutine ("Execute_Co");
 		// 1. check state
 
 		// 2. run this
@@ -117,6 +118,12 @@ public class Chuck : MonoBehaviour {
 //			thread.Start ();
 			_children [1].Execute ();
 		}
+	}
+
+	IEnumerator Execute_Co ()
+	{
+
+		yield return null;
 	}
 
 	// Use this for initialization
@@ -165,7 +172,7 @@ public class Chuck : MonoBehaviour {
 		else if (other.tag == "ChuckStack")
 		{
 			Debug.Log ("Destroy " + gameObject.name);
-			ChuckManager.Instance.Remove(this);
+			ChuckManager.Instance.Remove (this);
 			Destroy(this.gameObject);
 		}
 	}

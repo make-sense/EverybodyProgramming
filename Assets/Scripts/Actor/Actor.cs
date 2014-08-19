@@ -24,13 +24,14 @@ public class Actor : MonoBehaviour {
 
 	public void Refresh ()
 	{
-		Debug.Log ("Actor::Refresh");
+//		Debug.Log ("Actor::Refresh");
 	}
 
 	void OnTriggerEnter(Collider other) 
 	{
 		if (other.tag == DestroyTag)
 		{
+			ActorManager.Instance.Remove(this);
 			Debug.Log ("Destroy " + gameObject.name);
 			Destroy(this.gameObject);
 		}

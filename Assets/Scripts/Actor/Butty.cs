@@ -110,7 +110,7 @@ public class Butty : Actor {
 	}
 
 	public void Refresh () {
-		Debug.Log ("Butty::Refresh");
+//		Debug.Log ("Butty::Refresh");
 		if (pin >= 0) 
 		{
 			if (!swButtonPressed)
