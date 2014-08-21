@@ -73,12 +73,16 @@ public class Stage : Actor {
 			case Actor.eCharactor.BULBY:
 				((Bulby)actor).Refresh ();
 				break;
+			case Actor.eCharactor.SANDY:
+				((Sandy)actor).Refresh ();
+				break;
 			}
 		}
 
 		if (IsRun ()) 
 		{
 			BetterList<Chuck> chucks = ChuckManager.Instance.GetChucks ();
+			Debug.Log ("ChuckSize: " + chucks.size.ToString ());
 			foreach (Chuck chuck in chucks)
 			{
 				if (chuck.IsRoot ())

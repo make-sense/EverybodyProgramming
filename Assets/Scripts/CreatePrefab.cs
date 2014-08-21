@@ -34,7 +34,7 @@ public class CreatePrefab : MonoBehaviour {
 			Debug.Log ("Actor Bulby Added!");
 			break;
 		case "Chuck":
-			ChuckManager.Instance.Add (instantiatedGameObject.GetComponentInChildren<Chuck> () as Chuck);
+//			ChuckManager.Instance.Add (instantiatedGameObject.GetComponentInChildren<Chuck> () as Chuck);
 			Debug.Log ("Chuck Added!");
 			break;
 		}

@@ -111,17 +111,15 @@ public class Butty : Actor {
 
 	public void Refresh () {
 //		Debug.Log ("Butty::Refresh");
-		if (pin >= 0) 
+		if (_configured) 
 		{
-			if (!swButtonPressed)
-			{
-				if (_configured)
-				{
-					int value = arduino.digitalRead (pin);
-					ChangeState ((value == Arduino.LOW) ? true : false);	// pressing button is LOW
-//					Debug.Log (value.ToString());
-				}
-			}
+			int value = arduino.digitalRead (pin);
+			ChangeState ((value == Arduino.LOW) ? true : false);	// pressing button is LOW
+//			Debug.Log (value.ToString());
+		} 
+		else 
+		{
+			ChangeState (swButtonPressed);
 		}
 	}
 
@@ -132,8 +130,8 @@ public class Butty : Actor {
 	void OnPress (bool isPressed) 
 	{
 		swButtonPressed = isPressed;
-		ChangeState (swButtonPressed);
-//		Debug.Log ("Butty OnPress");
+//		ChangeState (swButtonPressed);
+//		Debug.Log ("Butty OnPress with " + isPressed.ToString ());
 		PropertyManager.Instance.ShowButtyProperty (Guid);
 	}
 

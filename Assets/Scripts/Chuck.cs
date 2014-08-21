@@ -96,6 +96,7 @@ public class Chuck : MonoBehaviour {
 
 	public void Execute () {
 		// 1. check state
+//		Debug.Log ("Execute = " + Guid.ToString ());
 		ActionData actionData = ActionManager.Instance.GetActionData(actionGuid);
 		if (actionData != null) 
 		{
@@ -108,6 +109,8 @@ public class Chuck : MonoBehaviour {
 //					Debug.Log ("Action:" + actionData.CallFunctionName + "=>" + thisvalue.ToString ());
 					if (thisvalue.ToString() == "False")
 						return;
+					else
+						Debug.Log ("Action:" + actionData.CallFunctionName + "=>" + thisvalue.ToString ());
 				}
 			}
 		}
@@ -118,6 +121,8 @@ public class Chuck : MonoBehaviour {
 
 	IEnumerator Execute_Co ()
 	{
+		Debug.Log ("Execute Co:" + Guid.ToString ());
+
 		bool forceReturn = false;
 		// 2. run this
 		_status = eChuckStatus.RUNNING;
@@ -137,8 +142,10 @@ public class Chuck : MonoBehaviour {
 			forceReturn = true;
 		}
 
-		if (forceReturn)
+		if (forceReturn) {
+			Debug.Log ("Chuck::ForceReturn");
 			yield return null;
+		}
 
 		if (_children [0] != null) {
 			while (_children [0].Status == eChuckStatus.READY ||
@@ -149,8 +156,11 @@ public class Chuck : MonoBehaviour {
 		_status = eChuckStatus.DONE;
 		
 		// 4. if end this, run right chuck
-		if (_children [1] != null)
+		if (_children [1] != null) 
+		{
+			Debug.Log ("Execute Right:" + Guid.ToString ());
 			_children [1].Execute ();
+		}
 
 		yield return null;
 	}
@@ -161,6 +171,7 @@ public class Chuck : MonoBehaviour {
 		if (_children [0] != null) {
 			//			Thread thread = new Thread (new ThreadStart (_children [0].Execute));
 			//			thread.Start ();
+			Debug.Log ("Execute Bottom:" + Guid.ToString ());
 			_children [0].Execute ();
 		}
 		yield return null;

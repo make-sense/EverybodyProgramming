@@ -3,10 +3,12 @@ using System.Collections;
 
 public class Sandy : Actor {
 
-	public void WaitMiliSecond(string milisec)
+	public void WaitMiliSecond()
 	{
-		int sleep_ms = System.Convert.ToInt32 (milisec);
-		System.Threading.Thread.Sleep (sleep_ms);
+//		int sleep_ms = System.Convert.ToInt32 (milisec);
+//		Debug.Log ("Sandy:WaitMiliSecond => " + milisec.ToString ());
+		System.Threading.Thread.Sleep (1000);
+//		Debug.Log ("[End]Sandy:WaitMiliSecond => " + milisec.ToString ());
 	}
 
 	// Use this for initialization
