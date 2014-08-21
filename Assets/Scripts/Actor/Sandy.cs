@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Sandy : Actor {
 
-	public void waitMiliSecond(string milisec)
+	public void WaitMiliSecond(string milisec)
 	{
 		int sleep_ms = System.Convert.ToInt32 (milisec);
 		System.Threading.Thread.Sleep (sleep_ms);

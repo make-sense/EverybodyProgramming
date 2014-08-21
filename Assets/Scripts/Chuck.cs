@@ -279,7 +279,9 @@ public class Chuck : MonoBehaviour {
 
 	public bool IsRoot()
 	{
-		return isRoot (transform);
+		if (transform != null)
+			return isRoot (transform);
+		return false;
 	}
 
 	private bool isRoot(Transform transform)
