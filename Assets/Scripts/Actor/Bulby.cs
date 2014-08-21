@@ -74,8 +74,10 @@ public class Bulby : Actor {
 
 	public void SetColor(Color color)
 	{
-		UISprite sprite = GetComponent<UISprite> () as UISprite;
-		sprite.color = color;
+//		UISprite sprite = GetComponent<UISprite> () as UISprite;
+//		sprite.color = color;
+		UIButtonColor buttonColor = GetComponentInChildren<UIButtonColor> () as UIButtonColor;
+		buttonColor.defaultColor = color;
 
 		if (!_configured)
 			return;
