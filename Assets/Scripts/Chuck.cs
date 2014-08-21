@@ -129,16 +129,6 @@ public class Chuck : MonoBehaviour {
 				actor.gameObject.BroadcastMessage(actionData.CallFunctionName);
 				Debug.Log ("Action:" + actionData.CallFunctionName);
 			}
-
-			while (_children [0].Status == eChuckStatus.READY ||
-				_children [0].Status == eChuckStatus.RUNNING)
-				yield return WaitForSeconds(0.1f);
-
-			// 4. if end this, run right chuck
-			_children [1].Execute ();
-
-			_status = eChuckStatus.DONE;
-			
 		}
 		catch (System.NullReferenceException e) 
 		{
@@ -146,6 +136,15 @@ public class Chuck : MonoBehaviour {
 			Debug.Log (e.ToString());
 		}
 
+		while (_children [0].Status == eChuckStatus.READY ||
+			_children [0].Status == eChuckStatus.RUNNING)
+			yield return new WaitForSeconds(0.1f);
+
+		// 4. if end this, run right chuck
+		_children [1].Execute ();
+
+		_status = eChuckStatus.DONE;
+			
 		yield return null;
 	}
 
