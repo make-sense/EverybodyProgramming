@@ -62,6 +62,9 @@ public class ChuckPropertyManager : MonoBehaviour {
 				case Actor.eCharactor.BULBY:
 					button.normalSprite = "1407588716_bulb";
 					break;
+				case Actor.eCharactor.SANDY:
+					button.normalSprite = "1408611113_sandglass";
+					break;
 			}
 			count++;
 		}
@@ -128,6 +131,21 @@ public class ChuckPropertyManager : MonoBehaviour {
 						count++;
 					}
 					break;
+				}
+				case Actor.eCharactor.SANDY:
+				{
+				ActionTable actions = GameObject.Find ("ActionSandy").GetComponentInChildren<ActionTable> () as ActionTable;
+				foreach (ActionData data in actions.DataList)
+				{
+					GameObject instantiatedGO = NGUITools.AddChild(actionScrollRoot, actionButtonPrefab);
+					instantiatedGO.transform.localPosition = new Vector3(0f, (float)baseY+heightStep*count, 0f);
+					UILabel label = instantiatedGO.GetComponentInChildren<UILabel> () as UILabel;
+					label.text = data.Name;
+					ActionSymbol action = instantiatedGO.GetComponentInChildren<ActionSymbol> () as ActionSymbol;
+					action.guid = data.Guid;
+					count++;
+				}
+				break;
 				}
 			}
 		}

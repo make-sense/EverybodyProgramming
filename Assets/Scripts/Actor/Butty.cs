@@ -45,7 +45,7 @@ public class Butty : Actor {
 
 	public bool IsTouchDown ()
 	{
-		Debug.Log ("Butty:State : " + CheckState);
+//		Debug.Log ("Butty:State : " + CheckState);
 		if (CheckState == STATE.TOUCHDOWN)
 			return true;
 		return false;
@@ -53,7 +53,7 @@ public class Butty : Actor {
 	
 	public bool IsTouching ()
 	{
-		Debug.Log ("Butty:State : " + CheckState);
+//		Debug.Log ("Butty:State : " + CheckState);
 		if (CheckState == STATE.TOUCHING)
 			return true;
 		return false;
@@ -61,7 +61,7 @@ public class Butty : Actor {
 	
 	public bool IsTouchUp ()
 	{
-		Debug.Log ("Butty:State : " + CheckState);
+//		Debug.Log ("Butty:State : " + CheckState);
 		if (CheckState == STATE.TOUCHUP)
 			return true;
 		return false;
@@ -69,7 +69,7 @@ public class Butty : Actor {
 	
 	public bool IsReleasing ()
 	{
-		Debug.Log ("Butty:State : " + CheckState);
+//		Debug.Log ("Butty:State : " + CheckState);
 		if (CheckState == STATE.RELEASING)
 			return true;
 		return false;

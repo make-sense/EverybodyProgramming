@@ -10,6 +10,7 @@ public class Actor : MonoBehaviour {
 		BUTTY,
 		CALCHY,
 		BULBY,
+		SANDY,
 	};
 	public eCharactor charactorType = eCharactor.NONE;
 
