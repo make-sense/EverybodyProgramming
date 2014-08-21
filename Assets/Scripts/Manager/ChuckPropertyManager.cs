@@ -52,17 +52,17 @@ public class ChuckPropertyManager : MonoBehaviour {
 			actorSymbol.guid = actor.Guid;
 
 			UIButton button = instantiatedGameObject.GetComponentInChildren<UIButton> () as UIButton;
-			switch (actor.charactorType) {
-				case Actor.eCharactor.STAGE:
+			switch (actor.GetType ().ToString ()) {
+				case "Stage":
 					button.normalSprite = "1408105883_traffic_lights_green";
 					break;
-				case Actor.eCharactor.BUTTY:
+				case "Butty":
 					button.normalSprite = "Button";
 					break;
-				case Actor.eCharactor.BULBY:
+				case "Bulby":
 					button.normalSprite = "1407588716_bulb";
 					break;
-				case Actor.eCharactor.SANDY:
+				case "Sandy":
 					button.normalSprite = "1408611113_sandglass";
 					break;
 			}
@@ -85,9 +85,9 @@ public class ChuckPropertyManager : MonoBehaviour {
 			int count = 0;
 			int baseY = 70;
 			int heightStep = -40;
-			switch (actor.charactorType)
+			switch (actor.GetType ().ToString ())
 			{
-				case Actor.eCharactor.STAGE:
+				case "Stage":
 				{
 					ActionTable actions = GameObject.Find ("ActionStage").GetComponentInChildren<ActionTable> () as ActionTable;
 					foreach (ActionData data in actions.DataList)
@@ -102,7 +102,7 @@ public class ChuckPropertyManager : MonoBehaviour {
 					}
 					break;
 				}
-				case Actor.eCharactor.BUTTY:
+				case "Butty":
 				{
 					ActionTable actions = GameObject.Find ("ActionButty").GetComponentInChildren<ActionTable> () as ActionTable;
 					foreach (ActionData data in actions.DataList)
@@ -117,7 +117,7 @@ public class ChuckPropertyManager : MonoBehaviour {
 					}
 					break;
 				}
-				case Actor.eCharactor.BULBY:
+				case "Bulby":
 				{
 					ActionTable actions = GameObject.Find ("ActionBulby").GetComponentInChildren<ActionTable> () as ActionTable;
 					foreach (ActionData data in actions.DataList)
@@ -132,7 +132,7 @@ public class ChuckPropertyManager : MonoBehaviour {
 					}
 					break;
 				}
-				case Actor.eCharactor.SANDY:
+				case "Sandy":
 				{
 				ActionTable actions = GameObject.Find ("ActionSandy").GetComponentInChildren<ActionTable> () as ActionTable;
 				foreach (ActionData data in actions.DataList)

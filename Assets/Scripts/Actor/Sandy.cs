@@ -11,10 +11,14 @@ public class Sandy : Actor {
 //		Debug.Log ("[End]Sandy:WaitMiliSecond => " + milisec.ToString ());
 	}
 
+	public override void Refresh ()
+	{
+	}
+
 	// Use this for initialization
 	public void Start () {
 		base.Start ();
-		base.charactorType = Actor.eCharactor.SANDY;
+		ActorManager.Instance.Add (this);
 	}
 	
 	// Update is called once per frame

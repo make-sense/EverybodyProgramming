@@ -91,13 +91,13 @@ public class Bulby : Actor {
 	}
 
 	// Use this for initialization
-	void Start () {
+	public void Start () {
 		base.Start ();
-		base.charactorType = eCharactor.BULBY;
+		ActorManager.Instance.Add (this);
 		arduino = Arduino.global;
 	}
 	
-	public void Refresh () 
+	public override void Refresh () 
 	{
 	}
 

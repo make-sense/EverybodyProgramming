@@ -4,16 +4,6 @@ using System.Collections;
 public class Actor : MonoBehaviour {
 	public string DestroyTag;
 
-	public enum eCharactor {
-		NONE,
-		STAGE,
-		BUTTY,
-		CALCHY,
-		BULBY,
-		SANDY,
-	};
-	public eCharactor charactorType = eCharactor.NONE;
-
 	public System.Guid Guid;
 	public string ActorName;
 	public Vector3 Pos;
@@ -23,7 +13,7 @@ public class Actor : MonoBehaviour {
 		Guid = System.Guid.NewGuid ();
 	}
 
-	public void Refresh ()
+	public virtual void Refresh ()
 	{
 //		Debug.Log ("Actor::Refresh");
 	}

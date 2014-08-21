@@ -7,8 +7,17 @@ public class PropertyManager : MonoBehaviour {
 	public GameObject propertyRoot;
 	public GameObject propertyDetail;
 
-	Actor.eCharactor selectedCharactor = Actor.eCharactor.NONE;
 	public System.Guid currentGuid;
+
+	enum eCharactor {
+		NONE,
+		STAGE,
+		BUTTY,
+		CALCHY,
+		BULBY,
+		SANDY,
+	};
+	eCharactor _selectedCharactor;
 
 	// Use this for initialization
 	void Start () {
@@ -35,7 +44,7 @@ public class PropertyManager : MonoBehaviour {
 				t.gameObject.SetActive(false);
 		}
 
-		selectedCharactor = Actor.eCharactor.BUTTY;
+		_selectedCharactor = eCharactor.BUTTY;
 		Actor actor = ActorManager.Instance.Get (currentGuid);
 		if (actor != null)
 		{
@@ -63,7 +72,7 @@ public class PropertyManager : MonoBehaviour {
 				t.gameObject.SetActive(false);
 		}
 
-		selectedCharactor = Actor.eCharactor.BULBY;
+		_selectedCharactor = eCharactor.BULBY;
 		Actor actor = ActorManager.Instance.Get (currentGuid);
 		if (actor != null)
 		{
@@ -96,9 +105,9 @@ public class PropertyManager : MonoBehaviour {
 		UILabel label = ActorName.GetComponentInChildren<UILabel> () as UILabel;
 		Actor actor = ActorManager.Instance.Get (currentGuid);
 		actor.ActorName = label.text;
-		switch (selectedCharactor) 
+		switch (_selectedCharactor) 
 		{
-			case Actor.eCharactor.BUTTY:
+			case eCharactor.BUTTY:
 			{
 				GameObject gameObject = GameObject.Find ("ButtyProperty");
 				if (gameObject != null)
@@ -110,7 +119,7 @@ public class PropertyManager : MonoBehaviour {
 				}
 				break;
 			}
-			case Actor.eCharactor.BULBY:
+			case eCharactor.BULBY:
 			{
 				GameObject gameObject = GameObject.Find ("BulbyProperty");
 				if (gameObject != null)

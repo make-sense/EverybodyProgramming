@@ -105,11 +105,11 @@ public class Butty : Actor {
 
 	public void Start () {
 		base.Start ();
-		base.charactorType = eCharactor.BUTTY;
+		ActorManager.Instance.Add (this);
 		arduino = Arduino.global;
 	}
 
-	public void Refresh () {
+	public override void Refresh () {
 //		Debug.Log ("Butty::Refresh");
 		if (_configured) 
 		{
