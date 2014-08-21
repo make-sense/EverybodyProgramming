@@ -19,6 +19,21 @@ public class Chuck : MonoBehaviour {
 	Color outputColor = new Color (0.5f, 0.5f, 1f);
 	Color normalColor = new Color (230f/255f, 180f/255f, 30f/255f);
 
+	public enum eChuckStatus {
+		NONE,
+		READY,
+		RUNNING,
+		DONE,
+		WARNING,
+		ERROR,
+	};
+	eChuckStatus _status = eChuckStatus.READY;
+	public eChuckStatus Status {
+		get {
+			return _status;
+		}
+	}
+
 	public UIButton startButton;
 
 	public bool _isStart = false;
@@ -80,10 +95,7 @@ public class Chuck : MonoBehaviour {
 	}
 
 	public void Execute () {
-		StartCoroutine ("Execute_Co");
 		// 1. check state
-
-		// 2. run this
 		ActionData actionData = ActionManager.Instance.GetActionData(actionGuid);
 		if (actionData != null) 
 		{
@@ -98,31 +110,53 @@ public class Chuck : MonoBehaviour {
 					if (thisvalue.ToString() == "False")
 						return;
 				}
-				else{
-					actor.gameObject.BroadcastMessage(actionData.CallFunctionName);
-					Debug.Log ("Action:" + actionData.CallFunctionName);
-				}
 			}
 		}
 
-		// 3. run bottom chuck
-		if (_children [0] != null) {
-//			Thread thread = new Thread (new ThreadStart (_children [0].Execute));
-//			thread.Start ();
-			_children [0].Execute ();
-		}
-
-		// 4. if end this, run right chuck
-		if (_children [1] != null) {
-//			Thread thread = new Thread (new ThreadStart (_children [1].Execute));
-//			thread.Start ();
-			_children [1].Execute ();
-		}
+		StartCoroutine ("Execute_Co");
+		StartCoroutine ("Execute_Bottom");
 	}
 
 	IEnumerator Execute_Co ()
 	{
+		// 2. run this
+		_status = eChuckStatus.RUNNING;
 
+		try{
+			ActionData actionData = ActionManager.Instance.GetActionData(actionGuid);
+			Actor actor = ActorManager.Instance.Get(actorGuid);
+			if (actionData.Type == eActionType.Output) {
+				actor.gameObject.BroadcastMessage(actionData.CallFunctionName);
+				Debug.Log ("Action:" + actionData.CallFunctionName);
+			}
+
+			while (_children [0].Status == eChuckStatus.READY ||
+				_children [0].Status == eChuckStatus.RUNNING)
+				yield return WaitForSeconds(0.1f);
+
+			// 4. if end this, run right chuck
+			_children [1].Execute ();
+
+			_status = eChuckStatus.DONE;
+			
+		}
+		catch (System.NullReferenceException e) 
+		{
+			_status = eChuckStatus.ERROR;
+			Debug.Log (e.ToString());
+		}
+
+		yield return null;
+	}
+
+	IEnumerator Execute_Bottom ()
+	{
+		// 3. run bottom chuck
+		if (_children [0] != null) {
+			//			Thread thread = new Thread (new ThreadStart (_children [0].Execute));
+			//			thread.Start ();
+			_children [0].Execute ();
+		}
 		yield return null;
 	}
 
