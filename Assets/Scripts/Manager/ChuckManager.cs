@@ -6,16 +6,6 @@ public class ChuckManager : MonoBehaviour {
 
 	BetterList<Chuck> _chucks = new BetterList<Chuck> ();
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
-
 	public void Add (Chuck chuck) {
 		_chucks.Add(chuck);
 	}

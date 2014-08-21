@@ -18,27 +18,14 @@ public class Butty : Actor {
 		NONE,
 		RELEASING,
 		TOUCHDOWN,
-		TOUCHDOWN_CHECKED,
 		TOUCHING,
 		TOUCHUP,
-		TOUCHUP_CHECKED,
 	};
 	private STATE _state = STATE.RELEASING;
 	public STATE CheckState 
 	{
 		get 
 		{
-//			switch(_state)
-//			{
-//			case STATE.TOUCHDOWN:
-//				_state = STATE.TOUCHDOWN_CHECKED;
-//				return STATE.TOUCHDOWN;
-//			case STATE.TOUCHUP:
-//				_state = STATE.TOUCHUP_CHECKED;
-//				return STATE.TOUCHUP;
-//			default:
-//				return _state;
-//			}
 			return _state;
 		}
 	}
@@ -140,7 +127,6 @@ public class Butty : Actor {
 		switch(_state)
 		{
 			case STATE.TOUCHDOWN:
-			case STATE.TOUCHDOWN_CHECKED:
 			case STATE.TOUCHING:
 			{
 				UISprite sprite = GetComponentInChildren<UISprite> () as UISprite;
@@ -169,7 +155,6 @@ public class Butty : Actor {
 				break;
 			}
 			case STATE.TOUCHDOWN:
-			case STATE.TOUCHDOWN_CHECKED:
 			{
 				if (!pushed)
 					_state = STATE.TOUCHUP;
@@ -186,7 +171,6 @@ public class Butty : Actor {
 				break;
 			}
 			case STATE.TOUCHUP:
-			case STATE.TOUCHUP_CHECKED:
 			{
 				if (!pushed)
 					_state = STATE.RELEASING;
