@@ -3508,8 +3508,8 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 0, g: 0, b: 0, a: .737254918}
   mPivot: 4
-  mWidth: 82
-  mHeight: 82
+  mWidth: 62
+  mHeight: 62
   mDepth: 5
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
@@ -3870,7 +3870,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyTag: 
-  charactorType: 1
   ActorName: Stage
   Pos: {x: 0, y: 0, z: 0}
 --- !u!114 &677506003
@@ -6694,11 +6693,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 6500000, guid: 780e13121cc95d845aa3431dd36163cd, type: 2}
       propertyPath: m_Size.x
-      value: 90
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 6500000, guid: 780e13121cc95d845aa3431dd36163cd, type: 2}
       propertyPath: m_Size.y
-      value: 90
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 780e13121cc95d845aa3431dd36163cd, type: 2}
       propertyPath: mSpriteName
@@ -6714,11 +6713,15 @@ Prefab:
       objectReference: {fileID: 100004, guid: d30e9a44da552334e933d30db90a9d24, type: 2}
     - target: {fileID: 11400002, guid: 780e13121cc95d845aa3431dd36163cd, type: 2}
       propertyPath: mHeight
-      value: 90
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 780e13121cc95d845aa3431dd36163cd, type: 2}
       propertyPath: aspectRatio
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 780e13121cc95d845aa3431dd36163cd, type: 2}
+      propertyPath: mWidth
+      value: 70
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 780e13121cc95d845aa3431dd36163cd, type: 2}
@@ -7460,7 +7463,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 90, y: 90, z: 0}
+  m_Size: {x: 70, y: 70, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1253063368
 MonoBehaviour:
@@ -7519,8 +7522,8 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 90
-  mHeight: 90
+  mWidth: 70
+  mHeight: 70
   mDepth: 4
   autoResizeBoxCollider: 1
   hideIfOffScreen: 0
@@ -8404,7 +8407,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyTag: 
-  charactorType: 3
   ActorName: 
   Pos: {x: 0, y: 0, z: 0}
 --- !u!1 &1443527828

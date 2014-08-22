@@ -129,7 +129,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyTag: BulbyStack
-  charactorType: 3
   ActorName: 
   Pos: {x: 0, y: 0, z: 0}
   pinR: -1
@@ -241,8 +240,8 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 100
-  mHeight: 100
+  mWidth: 90
+  mHeight: 90
   mDepth: 4
   autoResizeBoxCollider: 1
   hideIfOffScreen: 0

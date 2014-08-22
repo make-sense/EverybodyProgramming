@@ -16,7 +16,7 @@ public class Chuck : MonoBehaviour {
 	public int actionGuid;
 
 	Color inputColor = new Color (1f, 0.5f, 0.5f);
-	Color outputColor = new Color (0.5f, 0.5f, 1f);
+	Color outputColor = new Color (0f, 200/255f, 100/255f);
 	Color normalColor = new Color (230f/255f, 180f/255f, 30f/255f);
 
 	public enum eChuckStatus {
