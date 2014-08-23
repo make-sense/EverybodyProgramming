@@ -12,4 +12,9 @@ Assets/NGUI*
 /*.userprefs
 /*.pidb
 /*.booproj
+
+# Android application package file
 *.apk
+
+# iOS project
+/iOS
