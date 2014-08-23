@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System;
 using System.Collections;
 using System.Reflection;
 using System.Threading;
@@ -14,6 +15,8 @@ public class Chuck : MonoBehaviour {
 
 	public System.Guid actorGuid;
 	public int actionGuid;
+
+	int TimeLength_ms = 100;
 
 	Color inputColor = new Color (1f, 0.5f, 0.5f);
 	Color outputColor = new Color (0f, 200/255f, 100/255f);
@@ -123,28 +126,34 @@ public class Chuck : MonoBehaviour {
 	{
 		Debug.Log ("Execute Co:" + Guid.ToString ());
 
-		bool forceReturn = false;
 		// 2. run this
 		_status = eChuckStatus.RUNNING;
 
-		try{
-			ActionData actionData = ActionManager.Instance.GetActionData(actionGuid);
-			Actor actor = ActorManager.Instance.Get(actorGuid);
-			if (actionData.Type == eActionType.Output) {
-				actor.gameObject.BroadcastMessage(actionData.CallFunctionName);
-				Debug.Log ("Action:" + actionData.CallFunctionName);
+		ActionData actionData = ActionManager.Instance.GetActionData(actionGuid);
+		if (actionData != null) 
+		{
+			Actor actor = ActorManager.Instance.Get (actorGuid);
+			if (actor != null)
+			{
+				if (actionData.Type == eActionType.Output) 
+				{
+					actor.gameObject.BroadcastMessage (actionData.CallFunctionName);
+					DateTime begin = DateTime.Now;
+					while (true) 
+					{
+						TimeSpan timeSpan = DateTime.Now.Subtract (begin);
+						if (timeSpan.TotalMilliseconds > TimeLength_ms)
+							break;
+						else
+							yield return new WaitForSeconds (0.1f);
+					}
+					Debug.Log ("Action:" + actionData.CallFunctionName);
+				}
 			}
 		}
-		catch (System.NullReferenceException e) 
+		else
 		{
-			Debug.Log (actionGuid.ToString () + ":" + e.ToString());
 			_status = eChuckStatus.ERROR;
-			forceReturn = true;
-		}
-
-		if (forceReturn) {
-			Debug.Log ("Chuck::ForceReturn");
-			yield return null;
 		}
 
 		if (_children [0] != null) {
