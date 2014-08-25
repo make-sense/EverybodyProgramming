@@ -8,8 +8,10 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400002}
-  m_Layer: 8
-  m_Name: NGUI Snapshot Point 36
+  - 114: {fileID: 11400000}
+  - 114: {fileID: 11400012}
+  m_Layer: 0
+  m_Name: Actions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -117,6 +119,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 70, y: 70, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f0e25d203c734a419744615c6e7865d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newGuid: 0
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -280,10 +294,54 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyTag: ButtyStack
-  charactorType: 1
   ActorName: 
   Pos: {x: 0, y: 0, z: 0}
+  actionPrefab: {fileID: 100000, guid: ece696d493fa3485e9c612e2545e142f, type: 2}
   pin: -1
+--- !u!114 &11400012
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 044dc5c6ddbb549c89106ae74fd195ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DataList:
+  - Name: TouchDown
+    Guid: -63941309
+    texture: {fileID: 2800000, guid: d9a7c94276334451ebc35f04ca7f60bc, type: 3}
+    Type: 0
+    Length: 0
+    CallFunctionName: IsTouchDown
+    CallFunctionParam: 
+    Params: []
+  - Name: Touching
+    Guid: -1620462626
+    texture: {fileID: 2800000, guid: 1b3d50a6c19794bf1b322dad8b47e09c, type: 3}
+    Type: 0
+    Length: 0
+    CallFunctionName: IsTouching
+    CallFunctionParam: 
+    Params: []
+  - Name: TouchUp
+    Guid: -1483390853
+    texture: {fileID: 2800000, guid: e129d52ca068f48e498050f0a85ef163, type: 3}
+    Type: 0
+    Length: 0
+    CallFunctionName: IsTouchUp
+    CallFunctionParam: 
+    Params: []
+  - Name: Not Touch
+    Guid: -865861134
+    texture: {fileID: 2800000, guid: 8dffeda40c120414ea890384dd9e4c3e, type: 3}
+    Type: 0
+    Length: 0
+    CallFunctionName: IsReleasing
+    CallFunctionParam: 
+    Params: []
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

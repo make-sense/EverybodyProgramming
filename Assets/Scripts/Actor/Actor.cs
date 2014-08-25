@@ -7,6 +7,7 @@ public class Actor : MonoBehaviour {
 	public System.Guid Guid;
 	public string ActorName;
 	public Vector3 Pos;
+	public GameObject actionPrefab;
 
 	public void Start ()
 	{

@@ -42,8 +42,8 @@ MonoBehaviour:
   material: {fileID: 2100000, guid: de82763caa9aa4820ac58f9e600721bd, type: 2}
   mSprites:
   - name: _ActorList_Button_RobotItem
-    x: 991
-    y: 347
+    x: 686
+    y: 48
     width: 28
     height: 42
     borderLeft: 0
@@ -56,7 +56,7 @@ MonoBehaviour:
     paddingBottom: 0
   - name: _AddActor_Sprite_Background
     x: 897
-    y: 402
+    y: 279
     width: 61
     height: 110
     borderLeft: 0
@@ -82,7 +82,7 @@ MonoBehaviour:
     paddingBottom: 0
   - name: _AddInterface_Sprite_Background
     x: 959
-    y: 403
+    y: 280
     width: 60
     height: 109
     borderLeft: 0
@@ -94,7 +94,7 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: 1407405112_Black_button
-    x: 55
+    x: 104
     y: 16
     width: 48
     height: 48
@@ -146,19 +146,6 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: 1407405122_Green_button
-    x: 272
-    y: 36
-    width: 48
-    height: 48
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: 1407405123_Dark_blue_button
     x: 223
     y: 36
     width: 48
@@ -171,7 +158,7 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: 1407405125_Red_button
+  - name: 1407405123_Dark_blue_button
     x: 174
     y: 36
     width: 48
@@ -184,9 +171,22 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
+  - name: 1407405125_Red_button
+    x: 55
+    y: 16
+    width: 48
+    height: 48
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
   - name: 1407405129_button-check_basic_blue
-    x: 944
-    y: 343
+    x: 730
+    y: 220
     width: 46
     height: 46
     borderLeft: 0
@@ -198,8 +198,8 @@ MonoBehaviour:
     paddingTop: 2
     paddingBottom: 0
   - name: 1407405131_button-check_basic_green
-    x: 897
-    y: 296
+    x: 639
+    y: 44
     width: 46
     height: 46
     borderLeft: 0
@@ -211,8 +211,8 @@ MonoBehaviour:
     paddingTop: 2
     paddingBottom: 0
   - name: 1407405133_button-check_basic_yellow
-    x: 897
-    y: 343
+    x: 639
+    y: 91
     width: 46
     height: 46
     borderLeft: 0
@@ -237,8 +237,8 @@ MonoBehaviour:
     paddingTop: 2
     paddingBottom: 0
   - name: 1407588716_bulb
-    x: 944
-    y: 297
+    x: 686
+    y: 92
     width: 33
     height: 45
     borderLeft: 0
@@ -250,19 +250,6 @@ MonoBehaviour:
     paddingTop: 1
     paddingBottom: 2
   - name: 1407589060_Perspective Button - Games
-    x: 639
-    y: 267
-    width: 128
-    height: 122
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 4
-    paddingBottom: 2
-  - name: 1407862950_Perspective Button - Favorites
     x: 768
     y: 267
     width: 128
@@ -275,9 +262,22 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 4
     paddingBottom: 2
+  - name: 1407862950_Perspective Button - Favorites
+    x: 639
+    y: 267
+    width: 128
+    height: 122
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 4
+    paddingBottom: 2
   - name: 1407922654_Silver_button
-    x: 104
-    y: 16
+    x: 272
+    y: 36
     width: 48
     height: 48
     borderLeft: 0
@@ -290,7 +290,7 @@ MonoBehaviour:
     paddingBottom: 0
   - name: 1408105883_traffic_lights_green
     x: 512
-    y: 41
+    y: 21
     width: 116
     height: 107
     borderLeft: 0
@@ -302,8 +302,8 @@ MonoBehaviour:
     paddingTop: 13
     paddingBottom: 8
   - name: 1408105883_traffic_lights_red
-    x: 512
-    y: 149
+    x: 897
+    y: 405
     width: 116
     height: 107
     borderLeft: 0
@@ -327,6 +327,32 @@ MonoBehaviour:
     paddingRight: 1
     paddingTop: 0
     paddingBottom: 0
+  - name: 1408949273_OS_Android
+    x: 512
+    y: 129
+    width: 111
+    height: 127
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 9
+    paddingRight: 8
+    paddingTop: 1
+    paddingBottom: 0
+  - name: 1408954378_Rotation
+    x: 174
+    y: 3
+    width: 32
+    height: 32
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
   - name: Button
     x: 768
     y: 390
@@ -341,8 +367,8 @@ MonoBehaviour:
     paddingTop: 4
     paddingBottom: 2
   - name: Button_Cancel
-    x: 512
-    y: 4
+    x: 639
+    y: 7
     width: 36
     height: 36
     borderLeft: 0

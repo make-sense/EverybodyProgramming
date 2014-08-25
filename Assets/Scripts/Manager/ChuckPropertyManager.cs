@@ -52,20 +52,8 @@ public class ChuckPropertyManager : MonoBehaviour {
 			actorSymbol.guid = actor.Guid;
 
 			UIButton button = instantiatedGameObject.GetComponentInChildren<UIButton> () as UIButton;
-			switch (actor.GetType ().ToString ()) {
-				case "Stage":
-					button.normalSprite = "1408105883_traffic_lights_green";
-					break;
-				case "Butty":
-					button.normalSprite = "Button";
-					break;
-				case "Bulby":
-					button.normalSprite = "1407588716_bulb";
-					break;
-				case "Sandy":
-					button.normalSprite = "1408611113_sandglass";
-					break;
-			}
+			UISprite actorSprite = actor.GetComponentInChildren<UISprite> () as UISprite;
+			button.normalSprite = actorSprite.spriteName;
 			count++;
 		}
 	}
@@ -81,73 +69,27 @@ public class ChuckPropertyManager : MonoBehaviour {
 
 		Debug.Log ("ChuckPropertyManager::UpdateAction with " + actorGuid);
 		Actor actor = ActorManager.Instance.Get (actorGuid);
-		if (actor != null) {
+		try {
+
 			int count = 0;
 			int baseY = 70;
 			int heightStep = -40;
-			switch (actor.GetType ().ToString ())
+
+			ActionTable actions = actor.GetComponentInChildren<ActionTable> () as ActionTable;
+			foreach (ActionData data in actions.DataList)
 			{
-				case "Stage":
-				{
-					ActionTable actions = GameObject.Find ("ActionStage").GetComponentInChildren<ActionTable> () as ActionTable;
-					foreach (ActionData data in actions.DataList)
-					{
-						GameObject instantiatedGO = NGUITools.AddChild(actionScrollRoot, actionButtonPrefab);
-						instantiatedGO.transform.localPosition = new Vector3(0f, (float)baseY+heightStep*count, 0f);
-						UILabel label = instantiatedGO.GetComponentInChildren<UILabel> () as UILabel;
-						label.text = data.Name;
-						ActionSymbol action = instantiatedGO.GetComponentInChildren<ActionSymbol> () as ActionSymbol;
-						action.guid = data.Guid;
-						count++;
-					}
-					break;
-				}
-				case "Butty":
-				{
-					ActionTable actions = GameObject.Find ("ActionButty").GetComponentInChildren<ActionTable> () as ActionTable;
-					foreach (ActionData data in actions.DataList)
-					{
-						GameObject instantiatedGO = NGUITools.AddChild(actionScrollRoot, actionButtonPrefab);
-						instantiatedGO.transform.localPosition = new Vector3(0f, (float)baseY+heightStep*count, 0f);
-						UILabel label = instantiatedGO.GetComponentInChildren<UILabel> () as UILabel;
-						label.text = data.Name;
-						ActionSymbol action = instantiatedGO.GetComponentInChildren<ActionSymbol> () as ActionSymbol;
-						action.guid = data.Guid;
-						count++;
-					}
-					break;
-				}
-				case "Bulby":
-				{
-					ActionTable actions = GameObject.Find ("ActionBulby").GetComponentInChildren<ActionTable> () as ActionTable;
-					foreach (ActionData data in actions.DataList)
-					{
-						GameObject instantiatedGO = NGUITools.AddChild(actionScrollRoot, actionButtonPrefab);
-						instantiatedGO.transform.localPosition = new Vector3(0f, (float)baseY+heightStep*count, 0f);
-						UILabel label = instantiatedGO.GetComponentInChildren<UILabel> () as UILabel;
-						label.text = data.Name;
-						ActionSymbol action = instantiatedGO.GetComponentInChildren<ActionSymbol> () as ActionSymbol;
-						action.guid = data.Guid;
-						count++;
-					}
-					break;
-				}
-				case "Sandy":
-				{
-				ActionTable actions = GameObject.Find ("ActionSandy").GetComponentInChildren<ActionTable> () as ActionTable;
-				foreach (ActionData data in actions.DataList)
-				{
-					GameObject instantiatedGO = NGUITools.AddChild(actionScrollRoot, actionButtonPrefab);
-					instantiatedGO.transform.localPosition = new Vector3(0f, (float)baseY+heightStep*count, 0f);
-					UILabel label = instantiatedGO.GetComponentInChildren<UILabel> () as UILabel;
-					label.text = data.Name;
-					ActionSymbol action = instantiatedGO.GetComponentInChildren<ActionSymbol> () as ActionSymbol;
-					action.guid = data.Guid;
-					count++;
-				}
-				break;
-				}
+				GameObject instantiatedGO = NGUITools.AddChild(actionScrollRoot, actionButtonPrefab);
+				instantiatedGO.transform.localPosition = new Vector3(0f, (float)baseY+heightStep*count, 0f);
+				UILabel label = instantiatedGO.GetComponentInChildren<UILabel> () as UILabel;
+				label.text = data.Name;
+				ActionSymbol action = instantiatedGO.GetComponentInChildren<ActionSymbol> () as ActionSymbol;
+				action.guid = data.Guid;
+				count++;
 			}
+		}
+		catch (System.NullReferenceException e) 
+		{
+			Debug.Log (e.ToString ());
 		}
 	}
 
