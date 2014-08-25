@@ -130,7 +130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f0e25d203c734a419744615c6e7865d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newGuid: 1407145390
+  newGuid: 833415323
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -294,13 +294,45 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DataList:
-  - Name: SetAngle
+  - Name: Left
+    Guid: 833415323
+    texture: {fileID: 2800000, guid: 554023f1a0ddc4a2080a4cc5202450a7, type: 3}
+    Type: 1
+    Length: 0
+    CallFunctionName: SetAngle
+    CallFunctionParam: 45
+    Params: []
+  - Name: MiddleLeft
     Guid: 1844093895
     texture: {fileID: 2800000, guid: 554023f1a0ddc4a2080a4cc5202450a7, type: 3}
     Type: 1
     Length: 0
     CallFunctionName: SetAngle
-    CallFunctionParam: 
+    CallFunctionParam: 75
+    Params: []
+  - Name: Middle
+    Guid: 1844093895
+    texture: {fileID: 2800000, guid: 554023f1a0ddc4a2080a4cc5202450a7, type: 3}
+    Type: 1
+    Length: 0
+    CallFunctionName: SetAngle
+    CallFunctionParam: 90
+    Params: []
+  - Name: MiddleRight
+    Guid: 1844093895
+    texture: {fileID: 2800000, guid: 554023f1a0ddc4a2080a4cc5202450a7, type: 3}
+    Type: 1
+    Length: 0
+    CallFunctionName: SetAngle
+    CallFunctionParam: 135
+    Params: []
+  - Name: Right
+    Guid: 1844093895
+    texture: {fileID: 2800000, guid: 554023f1a0ddc4a2080a4cc5202450a7, type: 3}
+    Type: 1
+    Length: 0
+    CallFunctionName: SetAngle
+    CallFunctionParam: 180
     Params: []
 --- !u!114 &11400012
 MonoBehaviour:

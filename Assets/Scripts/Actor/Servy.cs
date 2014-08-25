@@ -8,9 +8,9 @@ public class Servy : Actor {
 	private bool _configured = false;
 	public int pin = -1;
 	
-	public void SetAngle(int angle)
+	public void SetAngle(string angle)
 	{
-		Debug.Log ("SetAngle");
+		Debug.Log ("SetAngle:" + angle);
 	}
 	
 	public void AttachPin(int p)
