@@ -8,9 +8,11 @@ public class Servy : Actor {
 	private bool _configured = false;
 	public int pin = -1;
 	
-	public void SetAngle(string angle)
+	public void SetAngle(string angle_str)
 	{
-		Debug.Log ("SetAngle:" + angle);
+		int angle = System.Convert.ToInt32(angle_str);
+		arduino.analogWrite(pin, angle);
+		Debug.Log ("SetAngle:" + angle_str);
 	}
 	
 	public void AttachPin(int p)
@@ -49,4 +51,11 @@ public class Servy : Actor {
 	// Update is called once per frame
 	void Update () {	
 	}
+	
+	void OnPress (bool isPressed) 
+	{
+		Debug.Log ("Servy OnPress");
+		PropertyManager.Instance.ShowServyProperty (Guid);
+	}
+
 }

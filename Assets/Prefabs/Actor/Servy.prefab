@@ -300,7 +300,7 @@ MonoBehaviour:
     Type: 1
     Length: 0
     CallFunctionName: SetAngle
-    CallFunctionParam: 45
+    CallFunctionParam: 0
     Params: []
   - Name: MiddleLeft
     Guid: 1844093895
@@ -308,7 +308,7 @@ MonoBehaviour:
     Type: 1
     Length: 0
     CallFunctionName: SetAngle
-    CallFunctionParam: 75
+    CallFunctionParam: 45
     Params: []
   - Name: Middle
     Guid: 1844093895

@@ -47,7 +47,7 @@ MonoBehaviour:
     Type: 1
     Length: 0
     CallFunctionName: SetAngle
-    CallFunctionParam: 45
+    CallFunctionParam: 0
     Params: []
   - Name: MiddleLeft
     Guid: 1844093895
@@ -55,10 +55,10 @@ MonoBehaviour:
     Type: 1
     Length: 0
     CallFunctionName: SetAngle
-    CallFunctionParam: 75
+    CallFunctionParam: 45
     Params: []
   - Name: Middle
-    Guid: 1844093895
+    Guid: 1283001907
     texture: {fileID: 2800000, guid: 554023f1a0ddc4a2080a4cc5202450a7, type: 3}
     Type: 1
     Length: 0
@@ -66,7 +66,7 @@ MonoBehaviour:
     CallFunctionParam: 90
     Params: []
   - Name: MiddleRight
-    Guid: 1844093895
+    Guid: 1885231434
     texture: {fileID: 2800000, guid: 554023f1a0ddc4a2080a4cc5202450a7, type: 3}
     Type: 1
     Length: 0
@@ -74,7 +74,7 @@ MonoBehaviour:
     CallFunctionParam: 135
     Params: []
   - Name: Right
-    Guid: 1844093895
+    Guid: 537393370
     texture: {fileID: 2800000, guid: 554023f1a0ddc4a2080a4cc5202450a7, type: 3}
     Type: 1
     Length: 0
@@ -92,7 +92,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f0e25d203c734a419744615c6e7865d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newGuid: 833415323
+  newGuid: 1599167941
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

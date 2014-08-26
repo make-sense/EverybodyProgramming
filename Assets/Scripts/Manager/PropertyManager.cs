@@ -16,6 +16,7 @@ public class PropertyManager : MonoBehaviour {
 		CALCHY,
 		BULBY,
 		SANDY,
+		SERVY,
 	};
 	eCharactor _selectedCharactor;
 
@@ -93,6 +94,33 @@ public class PropertyManager : MonoBehaviour {
 		}
 	}
 
+	public void ShowServyProperty (System.Guid guid) {
+		currentGuid = guid;
+		Show ();
+		
+		foreach (Transform t in propertyDetail.transform) {
+			if (t.name == "ServyProperty")
+				t.gameObject.SetActive(true);
+			else
+				t.gameObject.SetActive(false);
+		}
+		
+		_selectedCharactor = eCharactor.SERVY;
+		Actor actor = ActorManager.Instance.Get (currentGuid);
+		if (actor != null)
+		{
+			UILabel label = ActorName.GetComponentInChildren<UILabel> () as UILabel;
+			if (label != null)
+			{
+				label.text = actor.ActorName;
+			}
+		}
+		else
+		{
+			Debug.Log ("Fail to found");
+		}
+	}
+
 	public void Show () {
 		propertyRoot.SetActive(true);
 	}
@@ -151,6 +179,18 @@ public class PropertyManager : MonoBehaviour {
 					}
 					((Bulby)actor).AttachPins(pinRed, pinGreen, pinBlue);
 					Debug.Log ("Attach pin ("+pinRed+", "+pinGreen+", "+pinBlue+")");
+				}
+				break;
+			}
+			case eCharactor.SERVY:
+			{
+				GameObject gameObject = GameObject.Find ("ServyProperty");
+				if (gameObject != null)
+				{
+					UIPopupList list = gameObject.GetComponentInChildren<UIPopupList> () as UIPopupList;
+					int pin = ConvertPin(list.value);
+					((Servy)actor).AttachPin(pin);
+					Debug.Log ("Attach pin:" + pin);
 				}
 				break;
 			}
