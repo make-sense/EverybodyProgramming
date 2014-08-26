@@ -109,7 +109,7 @@ public class Bulby : Actor {
 	void OnPress (bool isPressed) 
 	{
 		Debug.Log ("Bulby OnPress");
-		PropertyManager.Instance.ShowBulbyProperty (Guid);
+		PropertyManager.Instance.ShowProperty (Guid);
 	}
 
 	private void ChangeSprite()

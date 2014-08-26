@@ -119,7 +119,7 @@ public class Butty : Actor {
 		swButtonPressed = isPressed;
 //		ChangeState (swButtonPressed);
 //		Debug.Log ("Butty OnPress with " + isPressed.ToString ());
-		PropertyManager.Instance.ShowButtyProperty (Guid);
+		PropertyManager.Instance.ShowProperty (Guid);
 	}
 
 	private void ChangeSprite()

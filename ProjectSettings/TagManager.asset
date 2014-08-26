@@ -17,6 +17,8 @@ TagManager:
   - Stage
   - Servy
   - ServyStack
+  - DcMotorStack
+  - 
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX

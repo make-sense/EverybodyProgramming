@@ -9,17 +9,6 @@ public class PropertyManager : MonoBehaviour {
 
 	public System.Guid currentGuid;
 
-	enum eCharactor {
-		NONE,
-		STAGE,
-		BUTTY,
-		CALCHY,
-		BULBY,
-		SANDY,
-		SERVY,
-	};
-	eCharactor _selectedCharactor;
-
 	// Use this for initialization
 	void Start () {
 		propertyRoot = GameObject.Find ("Property");
@@ -34,90 +23,24 @@ public class PropertyManager : MonoBehaviour {
 	
 	}
 
-	public void ShowButtyProperty (System.Guid guid) {
+	public void ShowProperty (System.Guid guid) {
 		currentGuid = guid;
 		Show ();
 
-		foreach (Transform t in propertyDetail.transform) {
-			if (t.name == "ButtyProperty")
-				t.gameObject.SetActive(true);
-			else
-				t.gameObject.SetActive(false);
-		}
-
-		_selectedCharactor = eCharactor.BUTTY;
-		Actor actor = ActorManager.Instance.Get (currentGuid);
-		if (actor != null)
-		{
+		try {
+			Actor actor = ActorManager.Instance.Get (currentGuid);
+			foreach (Transform t in propertyDetail.transform) {
+				if (t.name == actor.GetType ().ToString ())
+					t.gameObject.SetActive(true);
+				else
+					t.gameObject.SetActive(false);
+			}
 			UILabel label = ActorName.GetComponentInChildren<UILabel> () as UILabel;
-			if (label != null)
-			{
-				label.text = actor.ActorName;
-			}
-//			Debug.Log ("Found actor");
+			label.text = actor.ActorName;
 		}
-		else
+		catch (System.NullReferenceException e) 
 		{
-			Debug.Log ("Fail to found");
-		}
-	}
-
-	public void ShowBulbyProperty (System.Guid guid) {
-		currentGuid = guid;
-		Show ();
-
-		foreach (Transform t in propertyDetail.transform) {
-			if (t.name == "BulbyProperty")
-				t.gameObject.SetActive(true);
-			else
-				t.gameObject.SetActive(false);
-		}
-
-		_selectedCharactor = eCharactor.BULBY;
-		Actor actor = ActorManager.Instance.Get (currentGuid);
-		if (actor != null)
-		{
-			UILabel label = ActorName.GetComponentInChildren<UILabel> () as UILabel;
-			if (label != null)
-			{
-				label.text = actor.ActorName;
-			}
-			else
-			{
-				Debug.Log ("[ShowBulbyProperty]Fail to found UIInput");
-			}
-			Debug.Log ("[ShowBulbyProperty]Found actor");
-		}
-		else
-		{
-			Debug.Log ("[ShowBulbyProperty]Fail to found Actor : " + currentGuid.ToString ());
-		}
-	}
-
-	public void ShowServyProperty (System.Guid guid) {
-		currentGuid = guid;
-		Show ();
-		
-		foreach (Transform t in propertyDetail.transform) {
-			if (t.name == "ServyProperty")
-				t.gameObject.SetActive(true);
-			else
-				t.gameObject.SetActive(false);
-		}
-		
-		_selectedCharactor = eCharactor.SERVY;
-		Actor actor = ActorManager.Instance.Get (currentGuid);
-		if (actor != null)
-		{
-			UILabel label = ActorName.GetComponentInChildren<UILabel> () as UILabel;
-			if (label != null)
-			{
-				label.text = actor.ActorName;
-			}
-		}
-		else
-		{
-			Debug.Log ("Fail to found");
+			Debug.Log (e.ToString ());
 		}
 	}
 
@@ -133,11 +56,11 @@ public class PropertyManager : MonoBehaviour {
 		UILabel label = ActorName.GetComponentInChildren<UILabel> () as UILabel;
 		Actor actor = ActorManager.Instance.Get (currentGuid);
 		actor.ActorName = label.text;
-		switch (_selectedCharactor) 
+		switch (actor.GetType ().ToString ()) 
 		{
-			case eCharactor.BUTTY:
+			case "Butty":
 			{
-				GameObject gameObject = GameObject.Find ("ButtyProperty");
+				GameObject gameObject = GameObject.Find (actor.GetType ().ToString ());
 				if (gameObject != null)
 				{
 					UIPopupList list = gameObject.GetComponentInChildren<UIPopupList> () as UIPopupList;
@@ -147,9 +70,9 @@ public class PropertyManager : MonoBehaviour {
 				}
 				break;
 			}
-			case eCharactor.BULBY:
+			case "Bulby":
 			{
-				GameObject gameObject = GameObject.Find ("BulbyProperty");
+				GameObject gameObject = GameObject.Find (actor.GetType ().ToString ());
 				if (gameObject != null)
 				{
 					int pinRed = -1;
@@ -182,9 +105,10 @@ public class PropertyManager : MonoBehaviour {
 				}
 				break;
 			}
-			case eCharactor.SERVY:
+			case "Servy":
+			case "DcMotor":
 			{
-				GameObject gameObject = GameObject.Find ("ServyProperty");
+				GameObject gameObject = GameObject.Find (actor.GetType ().ToString ());
 				if (gameObject != null)
 				{
 					UIPopupList list = gameObject.GetComponentInChildren<UIPopupList> () as UIPopupList;

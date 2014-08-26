@@ -11,7 +11,7 @@ GameObject:
   - 114: {fileID: 11400010}
   - 114: {fileID: 11400000}
   m_Layer: 0
-  m_Name: ActionServy
+  m_Name: ActionDcMotor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46,9 +46,9 @@ GameObject:
   - 65: {fileID: 6500000}
   - 54: {fileID: 5400000}
   - 114: {fileID: 11400002}
-  - 114: {fileID: 11400012}
+  - 114: {fileID: 11400014}
   m_Layer: 8
-  m_Name: Servy
+  m_Name: DcMotor
   m_TagString: Bulby
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,7 +74,7 @@ Transform:
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 360, y: 360, z: 360}
+  m_LocalScale: {x: 1.00007999, y: 1.00007999, z: 1.00007999}
   m_Children: []
   m_Father: {fileID: 400004}
   m_RootOrder: 1
@@ -131,45 +131,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DataList:
-  - Name: Left
-    Guid: 833415323
-    texture: {fileID: 2800000, guid: 554023f1a0ddc4a2080a4cc5202450a7, type: 3}
+  - Name: Off
+    Guid: 1614770510
+    texture: {fileID: 2800000, guid: 5a2efdb466404407e817bbc8b9ff763e, type: 3}
     Type: 1
     Length: 0
-    CallFunctionName: SetAngle
+    CallFunctionName: SetPower
     CallFunctionParam: 0
     Params: []
-  - Name: MiddleLeft
-    Guid: 1844093895
-    texture: {fileID: 2800000, guid: 554023f1a0ddc4a2080a4cc5202450a7, type: 3}
+  - Name: On
+    Guid: 1064821131
+    texture: {fileID: 2800000, guid: dc62469f614c24afcb148ca7204e573a, type: 3}
     Type: 1
     Length: 0
-    CallFunctionName: SetAngle
-    CallFunctionParam: 45
-    Params: []
-  - Name: Middle
-    Guid: 1283001907
-    texture: {fileID: 2800000, guid: 554023f1a0ddc4a2080a4cc5202450a7, type: 3}
-    Type: 1
-    Length: 0
-    CallFunctionName: SetAngle
-    CallFunctionParam: 90
-    Params: []
-  - Name: MiddleRight
-    Guid: 1885231434
-    texture: {fileID: 2800000, guid: 554023f1a0ddc4a2080a4cc5202450a7, type: 3}
-    Type: 1
-    Length: 0
-    CallFunctionName: SetAngle
-    CallFunctionParam: 135
-    Params: []
-  - Name: Right
-    Guid: 537393370
-    texture: {fileID: 2800000, guid: 554023f1a0ddc4a2080a4cc5202450a7, type: 3}
-    Type: 1
-    Length: 0
-    CallFunctionName: SetAngle
-    CallFunctionParam: 180
+    CallFunctionName: SetPower
+    CallFunctionParam: 100
     Params: []
 --- !u!114 &11400002
 MonoBehaviour:
@@ -277,8 +253,8 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 90
-  mHeight: 90
+  mWidth: 100
+  mHeight: 100
   mDepth: 4
   autoResizeBoxCollider: 1
   hideIfOffScreen: 0
@@ -295,7 +271,7 @@ MonoBehaviour:
   bottomType: 1
   topType: 1
   mAtlas: {fileID: 11400000, guid: b85285fefb106402faa216e4dcb36432, type: 2}
-  mSpriteName: HS-311
+  mSpriteName: 1810099
   mFillCenter: 1
 --- !u!114 &11400008
 MonoBehaviour:
@@ -333,8 +309,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f0e25d203c734a419744615c6e7865d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newGuid: 1599167941
---- !u!114 &11400012
+  newGuid: 1064821131
+--- !u!114 &11400014
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -342,13 +318,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 100004}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20bfbcd14cb524b21a36b5a8d33e8ec7, type: 3}
+  m_Script: {fileID: 11500000, guid: a305fb01b97b449ee9462f29bbc85a7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DestroyTag: ServyStack
+  DestroyTag: DcMotorStack
   ActorName: 
   Pos: {x: 0, y: 0, z: 0}
-  actionPrefab: {fileID: 0}
+  actionPrefab: {fileID: 100000, guid: c8ccb264edd8f42728d97efedbab20bc, type: 2}
   pin: -1
 --- !u!1001 &100100000
 Prefab:

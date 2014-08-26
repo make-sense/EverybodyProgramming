@@ -2,17 +2,16 @@
 using System.Collections;
 using Uniduino;
 
-public class Servy : Actor {
-	
+public class DcMotor : Actor {
 	Arduino arduino;
 	private bool _configured = false;
 	public int pin = -1;
 	
-	public void SetAngle(string angle_str)
+	public void SetPower(string power)
 	{
-		int angle = System.Convert.ToInt32(angle_str);
-		arduino.analogWrite(pin, angle);
-		Debug.Log ("SetAngle:" + angle_str);
+		int _power = System.Convert.ToInt32(power);
+		arduino.analogWrite(pin, _power);
+		Debug.Log ("SetAngle:" + power);
 	}
 	
 	public void AttachPin(int p)
@@ -34,7 +33,7 @@ public class Servy : Actor {
 	
 	void ConfigurePin ()
 	{
-		arduino.pinMode(pin, PinMode.SERVO);
+		arduino.pinMode(pin, PinMode.ANALOG);
 		_configured = true;
 	}
 	
@@ -54,8 +53,7 @@ public class Servy : Actor {
 	
 	void OnPress (bool isPressed) 
 	{
-		Debug.Log ("Servy OnPress");
+		Debug.Log ("DcMotor OnPress");
 		PropertyManager.Instance.ShowProperty (Guid);
 	}
-
 }
