@@ -2,13 +2,14 @@
 using System.Collections;
 
 public class CreatePrefab : MonoBehaviour {
+	public Transform ActorRoot;
 	public GameObject positionOfPrefab;
 	public GameObject prefab;
 	private static Vector3 _lastPosition;
 	
 	void OnDrag (Vector2 delta)
 	{
-		Transform _transform = UIRoot.list[0].transform.FindChild(positionOfPrefab.name);
+		Transform _transform = ActorRoot.FindChild(positionOfPrefab.name);
 		if (_transform != null) {
 			_lastPosition = _transform.localPosition;
 //			Debug.Log(_transform.name + ":" + _lastPosition.ToString());

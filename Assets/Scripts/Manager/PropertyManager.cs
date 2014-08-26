@@ -106,7 +106,6 @@ public class PropertyManager : MonoBehaviour {
 				break;
 			}
 			case "Servy":
-			case "DcMotor":
 			{
 				GameObject gameObject = GameObject.Find (actor.GetType ().ToString ());
 				if (gameObject != null)
@@ -114,6 +113,30 @@ public class PropertyManager : MonoBehaviour {
 					UIPopupList list = gameObject.GetComponentInChildren<UIPopupList> () as UIPopupList;
 					int pin = ConvertPin(list.value);
 					((Servy)actor).AttachPin(pin);
+					Debug.Log ("Attach pin:" + pin);
+				}
+				break;
+			}
+			case "DcMotor":
+			{
+				GameObject gameObject = GameObject.Find (actor.GetType ().ToString ());
+				if (gameObject != null)
+				{
+					UIPopupList list = gameObject.GetComponentInChildren<UIPopupList> () as UIPopupList;
+					int pin = ConvertPin(list.value);
+					((DcMotor)actor).AttachPin(pin);
+					Debug.Log ("Attach pin:" + pin);
+				}
+				break;
+			}
+			case "Analog":
+			{
+				GameObject gameObject = GameObject.Find (actor.GetType ().ToString ());
+				if (gameObject != null)
+				{
+					UIPopupList list = gameObject.GetComponentInChildren<UIPopupList> () as UIPopupList;
+					int pin = ConvertPin(list.value);
+					((Analog)actor).AttachPin(pin);
 					Debug.Log ("Attach pin:" + pin);
 				}
 				break;

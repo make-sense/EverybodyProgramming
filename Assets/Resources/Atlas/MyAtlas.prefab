@@ -42,8 +42,8 @@ MonoBehaviour:
   material: {fileID: 2100000, guid: de82763caa9aa4820ac58f9e600721bd, type: 2}
   mSprites:
   - name: _ActorList_Button_RobotItem
-    x: 557
-    y: 804
+    x: 141
+    y: 106
     width: 28
     height: 42
     borderLeft: 0
@@ -55,7 +55,7 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: _AddActor_Sprite_Background
-    x: 554
+    x: 671
     y: 690
     width: 61
     height: 110
@@ -81,7 +81,7 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: _AddInterface_Sprite_Background
-    x: 616
+    x: 733
     y: 691
     width: 60
     height: 109
@@ -94,8 +94,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: 1407405112_Black_button
-    x: 174
-    y: 39
+    x: 794
+    y: 752
     width: 48
     height: 48
     borderLeft: 0
@@ -107,8 +107,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: 1407405117_Yellow_button
-    x: 943
-    y: 804
+    x: 223
+    y: 24
     width: 48
     height: 48
     borderLeft: 0
@@ -120,8 +120,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: 1407405119_Orange_button
-    x: 943
-    y: 853
+    x: 174
+    y: 24
     width: 48
     height: 48
     borderLeft: 0
@@ -133,8 +133,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: 1407405121_Light_blue_button
-    x: 894
-    y: 804
+    x: 947
+    y: 849
     width: 48
     height: 48
     borderLeft: 0
@@ -146,8 +146,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: 1407405122_Green_button
-    x: 894
-    y: 853
+    x: 898
+    y: 849
     width: 48
     height: 48
     borderLeft: 0
@@ -159,8 +159,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: 1407405123_Dark_blue_button
-    x: 818
-    y: 849
+    x: 680
+    y: 847
     width: 48
     height: 48
     borderLeft: 0
@@ -172,8 +172,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: 1407405125_Red_button
-    x: 769
-    y: 849
+    x: 631
+    y: 847
     width: 48
     height: 48
     borderLeft: 0
@@ -185,8 +185,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: 1407405129_button-check_basic_blue
-    x: 223
-    y: 41
+    x: 898
+    y: 802
     width: 46
     height: 46
     borderLeft: 0
@@ -198,7 +198,7 @@ MonoBehaviour:
     paddingTop: 2
     paddingBottom: 0
   - name: 1407405131_button-check_basic_green
-    x: 818
+    x: 947
     y: 802
     width: 46
     height: 46
@@ -211,8 +211,8 @@ MonoBehaviour:
     paddingTop: 2
     paddingBottom: 0
   - name: 1407405133_button-check_basic_yellow
-    x: 769
-    y: 802
+    x: 794
+    y: 705
     width: 46
     height: 46
     borderLeft: 0
@@ -224,7 +224,7 @@ MonoBehaviour:
     paddingTop: 2
     paddingBottom: 0
   - name: 1407411897_live folder back
-    x: 769
+    x: 898
     y: 898
     width: 124
     height: 126
@@ -237,8 +237,8 @@ MonoBehaviour:
     paddingTop: 2
     paddingBottom: 0
   - name: 1407588716_bulb
-    x: 129
-    y: 35
+    x: 557
+    y: 801
     width: 33
     height: 45
     borderLeft: 0
@@ -251,7 +251,7 @@ MonoBehaviour:
     paddingBottom: 2
   - name: 1407589060_Perspective Button - Games
     x: 174
-    y: 555
+    y: 309
     width: 128
     height: 122
     borderLeft: 0
@@ -290,7 +290,7 @@ MonoBehaviour:
     paddingBottom: 0
   - name: 1408105883_traffic_lights_green
     x: 174
-    y: 196
+    y: 73
     width: 116
     height: 107
     borderLeft: 0
@@ -302,8 +302,8 @@ MonoBehaviour:
     paddingTop: 13
     paddingBottom: 8
   - name: 1408105883_traffic_lights_red
-    x: 174
-    y: 88
+    x: 443
+    y: 693
     width: 116
     height: 107
     borderLeft: 0
@@ -315,7 +315,7 @@ MonoBehaviour:
     paddingTop: 13
     paddingBottom: 8
   - name: 1408611113_sandglass
-    x: 502
+    x: 631
     y: 896
     width: 126
     height: 128
@@ -329,7 +329,7 @@ MonoBehaviour:
     paddingBottom: 0
   - name: 1408949273_OS_Android
     x: 174
-    y: 304
+    y: 181
     width: 111
     height: 127
     borderLeft: 0
@@ -341,8 +341,8 @@ MonoBehaviour:
     paddingTop: 1
     paddingBottom: 0
   - name: 1408954378_Rotation
-    x: 129
-    y: 2
+    x: 141
+    y: 73
     width: 32
     height: 32
     borderLeft: 0
@@ -354,8 +354,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: 1409049587_Power_-_Restart
-    x: 0
-    y: 20
+    x: 502
+    y: 896
     width: 128
     height: 128
     borderLeft: 0
@@ -367,7 +367,7 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: 1810099
-    x: 629
+    x: 758
     y: 806
     width: 139
     height: 101
@@ -380,7 +380,7 @@ MonoBehaviour:
     paddingTop: 24
     paddingBottom: 25
   - name: actor_frame
-    x: 443
+    x: 560
     y: 690
     width: 110
     height: 110
@@ -392,9 +392,22 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
+  - name: analog_signal
+    x: 0
+    y: 8
+    width: 140
+    height: 140
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
   - name: Button
     x: 174
-    y: 678
+    y: 555
     width: 128
     height: 122
     borderLeft: 0
@@ -419,8 +432,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Button_Red
-    x: 894
-    y: 902
+    x: 174
+    y: 678
     width: 128
     height: 122
     borderLeft: 0
@@ -446,7 +459,7 @@ MonoBehaviour:
     paddingBottom: 0
   - name: chuck_arrow_base
     x: 0
-    y: 801
+    y: 577
     width: 173
     height: 223
     borderLeft: 0
@@ -458,7 +471,7 @@ MonoBehaviour:
     paddingTop: 1
     paddingBottom: 1
   - name: chuck_arrow_bottom
-    x: 174
+    x: 338
     y: 801
     width: 163
     height: 223
@@ -485,7 +498,7 @@ MonoBehaviour:
     paddingBottom: 11
   - name: chuck_base
     x: 0
-    y: 577
+    y: 801
     width: 173
     height: 223
     borderLeft: 0
@@ -497,7 +510,7 @@ MonoBehaviour:
     paddingTop: 1
     paddingBottom: 1
   - name: chuck_bottom
-    x: 338
+    x: 174
     y: 801
     width: 163
     height: 223
@@ -523,8 +536,8 @@ MonoBehaviour:
     paddingTop: 1
     paddingBottom: 11
   - name: HS-311
-    x: 129
-    y: 81
+    x: 843
+    y: 733
     width: 33
     height: 67
     borderLeft: 0
@@ -536,7 +549,7 @@ MonoBehaviour:
     paddingTop: 4
     paddingBottom: 4
   - name: motor_go
-    x: 629
+    x: 758
     y: 908
     width: 139
     height: 116
