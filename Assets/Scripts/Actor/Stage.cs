@@ -26,6 +26,11 @@ public class Stage : Actor {
 		return _isRun;
 	}
 
+	public void Restart ()
+	{
+		Application.LoadLevel(Application.loadedLevel);
+	}
+
 	void SetUI ()
 	{
 		UIButton button = GetComponentInChildren<UIButton> () as UIButton;
