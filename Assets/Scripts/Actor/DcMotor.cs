@@ -33,8 +33,9 @@ public class DcMotor : Actor {
 	
 	void ConfigurePin ()
 	{
-		arduino.pinMode(pin, PinMode.ANALOG);
+		arduino.pinMode(pin, PinMode.PWM);
 		_configured = true;
+		Debug.Log ("DcMotor:Configured with " + pin.ToString ());
 	}
 	
 	// Use this for initialization
