@@ -8,10 +8,10 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400002}
-  - 114: {fileID: 11400010}
   - 114: {fileID: 11400000}
-  m_Layer: 0
-  m_Name: ActionDcMotor
+  - 114: {fileID: 11400010}
+  m_Layer: 8
+  m_Name: ActionAnalog
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73,7 +73,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 12.2437639, y: 217.525269, z: -1418.99414}
   m_LocalScale: {x: 1.00007999, y: 1.00007999, z: 1.00007999}
   m_Children: []
   m_Father: {fileID: 400004}
@@ -85,7 +85,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100004}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -12.2437639, y: -217.525269, z: 1418.99414}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400000}
@@ -117,7 +117,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 70, y: 70, z: 0}
+  m_Size: {x: 90, y: 90, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &11400000
 MonoBehaviour:
@@ -127,26 +127,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 044dc5c6ddbb549c89106ae74fd195ad, type: 3}
+  m_Script: {fileID: 11500000, guid: 8f0e25d203c734a419744615c6e7865d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DataList:
-  - Name: Off
-    Guid: 1614770510
-    texture: {fileID: 2800000, guid: 5a2efdb466404407e817bbc8b9ff763e, type: 3}
-    Type: 1
-    Length: 0
-    CallFunctionName: SetPower
-    CallFunctionParam: 0
-    Params: []
-  - Name: On
-    Guid: 1064821131
-    texture: {fileID: 2800000, guid: dc62469f614c24afcb148ca7204e573a, type: 3}
-    Type: 1
-    Length: 0
-    CallFunctionName: SetPower
-    CallFunctionParam: 100
-    Params: []
+  newGuid: 1064821131
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -191,8 +175,8 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 0, g: 0, b: 0, a: .737254918}
   mPivot: 4
-  mWidth: 62
-  mHeight: 62
+  mWidth: 82
+  mHeight: 82
   mDepth: 5
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
@@ -306,10 +290,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f0e25d203c734a419744615c6e7865d, type: 3}
+  m_Script: {fileID: 11500000, guid: 044dc5c6ddbb549c89106ae74fd195ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newGuid: 1064821131
+  DataList: []
 --- !u!114 &11400012
 MonoBehaviour:
   m_ObjectHideFlags: 1

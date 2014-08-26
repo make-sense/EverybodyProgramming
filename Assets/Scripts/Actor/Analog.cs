@@ -45,6 +45,7 @@ public class Analog : Actor {
 		if (_configured) 
 		{
 			int value = arduino.analogRead(pin);
+			Debug.Log (value.ToString ());
 		}
 	}
 	

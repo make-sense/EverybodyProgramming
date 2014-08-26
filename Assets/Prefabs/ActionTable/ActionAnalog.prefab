@@ -10,8 +10,8 @@ GameObject:
   - 4: {fileID: 400000}
   - 114: {fileID: 11400002}
   - 114: {fileID: 11400000}
-  m_Layer: 0
-  m_Name: ActionDcMotor
+  m_Layer: 8
+  m_Name: ActionAnalog
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -40,23 +40,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 044dc5c6ddbb549c89106ae74fd195ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DataList:
-  - Name: Off
-    Guid: 1614770510
-    texture: {fileID: 2800000, guid: 5a2efdb466404407e817bbc8b9ff763e, type: 3}
-    Type: 1
-    Length: 0
-    CallFunctionName: SetPower
-    CallFunctionParam: 0
-    Params: []
-  - Name: On
-    Guid: 1064821131
-    texture: {fileID: 2800000, guid: dc62469f614c24afcb148ca7204e573a, type: 3}
-    Type: 1
-    Length: 0
-    CallFunctionName: SetPower
-    CallFunctionParam: 100
-    Params: []
+  DataList: []
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
