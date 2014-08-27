@@ -35,7 +35,7 @@ public class Analog : Actor {
 		return false;
 	}
 	
-	public bool IslargerEqual (string value)
+	public bool IsLargerEqual (string value)
 	{
 		int cmp = System.Convert.ToInt32 (value);
 		if (analogValue >= cmp)
