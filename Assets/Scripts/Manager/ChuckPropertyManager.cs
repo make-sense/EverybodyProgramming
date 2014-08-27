@@ -9,6 +9,7 @@ public class ChuckPropertyManager : MonoBehaviour {
 
 	public GameObject actorSymbolPrefab;
 	public GameObject actionButtonPrefab;
+	public GameObject actionParam1Prefab;
 
 	public static System.Guid SelectedChuckGuid;
 	public static System.Guid SelectedActorGuid;
@@ -78,12 +79,19 @@ public class ChuckPropertyManager : MonoBehaviour {
 			ActionTable actions = actor.GetComponentInChildren<ActionTable> () as ActionTable;
 			foreach (ActionData data in actions.DataList)
 			{
-				GameObject instantiatedGO = NGUITools.AddChild(actionScrollRoot, actionButtonPrefab);
+				GameObject instantiatedGO;
+				if (data.IsParamNeed)
+					instantiatedGO = NGUITools.AddChild(actionScrollRoot, actionParam1Prefab);
+				else
+					instantiatedGO = NGUITools.AddChild(actionScrollRoot, actionButtonPrefab);
 				instantiatedGO.transform.localPosition = new Vector3(0f, (float)baseY+heightStep*count, 0f);
+
 				UILabel label = instantiatedGO.GetComponentInChildren<UILabel> () as UILabel;
 				label.text = data.Name;
+
 				ActionSymbol action = instantiatedGO.GetComponentInChildren<ActionSymbol> () as ActionSymbol;
 				action.guid = data.Guid;
+
 				count++;
 			}
 		}
@@ -99,6 +107,14 @@ public class ChuckPropertyManager : MonoBehaviour {
 			chuck.SetAction(SelectedActorGuid, actionGuid);
 		}
 		Debug.Log ("SetCurrentAction:" + actionGuid.ToString ());
+	}
+
+	public void SetCurrentAction(int actionGuid, string param) {
+		Chuck chuck = ChuckManager.Instance.Get (SelectedChuckGuid);
+		if (chuck != null) {
+			chuck.SetAction(SelectedActorGuid, actionGuid, param);
+		}
+		Debug.Log ("SetCurrentAction:" + actionGuid.ToString () + " with " + param);
 	}
 
 	private static ChuckPropertyManager _instance = null;

@@ -15,6 +15,7 @@ public class Chuck : MonoBehaviour {
 
 	public System.Guid actorGuid;
 	public int actionGuid;
+	string _param;
 
 	int TimeLength_ms = 100;
 
@@ -66,6 +67,14 @@ public class Chuck : MonoBehaviour {
 		SetActionUI();
 	}
 
+	public void SetAction(System.Guid actorID, int actionID, string param)
+	{
+		actorGuid = actorID;
+		actionGuid = actionID;
+		_param = param;
+		SetActionUI();
+	}
+
 	private void SetActionUI() {
 		Actor actor = ActorManager.Instance.Get (actorGuid);
 		if (actor != null) {
@@ -108,12 +117,19 @@ public class Chuck : MonoBehaviour {
 			{
 				if (actionData.Type == eActionType.Input) {
 					MethodInfo methodInfo = actor.GetType().GetMethod(actionData.CallFunctionName);
-					object thisvalue = methodInfo.Invoke(actor, null);
-//					Debug.Log ("Action:" + actionData.CallFunctionName + "=>" + thisvalue.ToString ());
-					if (thisvalue.ToString() == "False")
+					object result;
+					if (actionData.IsParamNeed) {
+						object[] parameters = new object[] { _param };
+						result = methodInfo.Invoke(actor, parameters);
+					}
+					else {
+						result = methodInfo.Invoke(actor, null);
+					}
+
+					if (result.ToString() == "False")
 						return;
 					else
-						Debug.Log ("Action:" + actionData.CallFunctionName + "=>" + thisvalue.ToString ());
+						Debug.Log ("Action:" + actionData.CallFunctionName + "=>" + result.ToString ());
 				}
 			}
 		}

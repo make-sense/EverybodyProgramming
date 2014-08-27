@@ -9,6 +9,48 @@ public class Analog : Actor {
 	
 	public int pin = -1;
 
+	int analogValue;
+
+	public bool IsLess (string value)
+	{
+		int cmp = System.Convert.ToInt32 (value);
+		if (analogValue < cmp)
+			return true;
+		return false;
+	}
+
+	public bool IsLessEqual (string value)
+	{
+		int cmp = System.Convert.ToInt32 (value);
+		if (analogValue <= cmp)
+			return true;
+		return false;
+	}
+	
+	public bool IsEqual (string value)
+	{
+		int cmp = System.Convert.ToInt32 (value);
+		if (analogValue == cmp)
+			return true;
+		return false;
+	}
+	
+	public bool IslargerEqual (string value)
+	{
+		int cmp = System.Convert.ToInt32 (value);
+		if (analogValue >= cmp)
+			return true;
+		return false;
+	}
+	
+	public bool IsLarger (string value)
+	{
+		int cmp = System.Convert.ToInt32 (value);
+		if (analogValue > cmp)
+			return true;
+		return false;
+	}
+	
 	public void AttachPin(int p)
 	{
 		UILabel uiLabel = this.GetComponentInChildren<UILabel> () as UILabel;
@@ -44,8 +86,8 @@ public class Analog : Actor {
 	{
 		if (_configured) 
 		{
-			int value = arduino.analogRead(pin);
-			Debug.Log (value.ToString ());
+			analogValue = arduino.analogRead(pin);
+			Debug.Log (analogValue.ToString ());
 		}
 	}
 	

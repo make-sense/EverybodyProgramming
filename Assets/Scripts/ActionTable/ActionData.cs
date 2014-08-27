@@ -19,7 +19,7 @@ public class ActionData {
 	public Texture texture;
 	public eActionType Type;
 	public float Length = 0.1f;
+	public bool IsParamNeed = false;
 	public string CallFunctionName = "";
 	public string CallFunctionParam = "";
-	public ActionParam[] Params;
 }

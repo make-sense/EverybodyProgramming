@@ -130,7 +130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f0e25d203c734a419744615c6e7865d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newGuid: 1064821131
+  newGuid: 1823301501
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -293,7 +293,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 044dc5c6ddbb549c89106ae74fd195ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DataList: []
+  DataList:
+  - Name: Less
+    Guid: 878073209
+    texture: {fileID: 0}
+    Type: 0
+    Length: 0
+    IsParamNeed: 1
+    CallFunctionName: IsLess
+    CallFunctionParam: 
+  - Name: Less&Equal
+    Guid: 2064575481
+    texture: {fileID: 0}
+    Type: 0
+    Length: 0
+    IsParamNeed: 1
+    CallFunctionName: IsLessEqual
+    CallFunctionParam: 
+  - Name: Equal
+    Guid: 124472537
+    texture: {fileID: 0}
+    Type: 0
+    Length: 0
+    IsParamNeed: 1
+    CallFunctionName: IsEqual
+    CallFunctionParam: 
+  - Name: Larger&Equal
+    Guid: 1644596489
+    texture: {fileID: 0}
+    Type: 0
+    Length: 0
+    IsParamNeed: 1
+    CallFunctionName: IsLargerEqual
+    CallFunctionParam: 
+  - Name: Larger
+    Guid: 1823301501
+    texture: {fileID: 0}
+    Type: 0
+    Length: 0
+    IsParamNeed: 1
+    CallFunctionName: IsLarger
+    CallFunctionParam: 
 --- !u!114 &11400012
 MonoBehaviour:
   m_ObjectHideFlags: 1
