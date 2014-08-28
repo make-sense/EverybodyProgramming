@@ -136,41 +136,41 @@ MonoBehaviour:
     texture: {fileID: 2800000, guid: 554023f1a0ddc4a2080a4cc5202450a7, type: 3}
     Type: 1
     Length: 0
+    IsParamNeed: 0
     CallFunctionName: SetAngle
-    CallFunctionParam: 0
-    Params: []
+    CallFunctionParam: 180
   - Name: MiddleLeft
     Guid: 1844093895
     texture: {fileID: 2800000, guid: 554023f1a0ddc4a2080a4cc5202450a7, type: 3}
     Type: 1
     Length: 0
+    IsParamNeed: 0
     CallFunctionName: SetAngle
-    CallFunctionParam: 45
-    Params: []
+    CallFunctionParam: 135
   - Name: Middle
     Guid: 1283001907
     texture: {fileID: 2800000, guid: 554023f1a0ddc4a2080a4cc5202450a7, type: 3}
     Type: 1
     Length: 0
+    IsParamNeed: 0
     CallFunctionName: SetAngle
     CallFunctionParam: 90
-    Params: []
   - Name: MiddleRight
     Guid: 1885231434
     texture: {fileID: 2800000, guid: 554023f1a0ddc4a2080a4cc5202450a7, type: 3}
     Type: 1
     Length: 0
+    IsParamNeed: 0
     CallFunctionName: SetAngle
-    CallFunctionParam: 135
-    Params: []
+    CallFunctionParam: 45
   - Name: Right
     Guid: 537393370
     texture: {fileID: 2800000, guid: 554023f1a0ddc4a2080a4cc5202450a7, type: 3}
     Type: 1
     Length: 0
+    IsParamNeed: 0
     CallFunctionName: SetAngle
-    CallFunctionParam: 180
-    Params: []
+    CallFunctionParam: 0
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1

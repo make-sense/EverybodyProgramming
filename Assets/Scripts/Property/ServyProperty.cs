@@ -8,7 +8,7 @@ public class ServyProperty : MonoBehaviour {
 		Actor actor = ActorManager.Instance.Get (PropertyManager.Instance.currentGuid);
 		if (actor == null)
 			return;
-		((Servy)actor).SetAngle ("0");
+		((Servy)actor).SetAngle ("180");
 	}
 	
 	public void OnAngleMiddleLeft()
@@ -16,7 +16,7 @@ public class ServyProperty : MonoBehaviour {
 		Actor actor = ActorManager.Instance.Get (PropertyManager.Instance.currentGuid);
 		if (actor == null)
 			return;
-		((Servy)actor).SetAngle ("45");
+		((Servy)actor).SetAngle ("135");
 	}
 	
 	public void OnAngleMiddle()
@@ -32,7 +32,7 @@ public class ServyProperty : MonoBehaviour {
 		Actor actor = ActorManager.Instance.Get (PropertyManager.Instance.currentGuid);
 		if (actor == null)
 			return;
-		((Servy)actor).SetAngle ("135");
+		((Servy)actor).SetAngle ("45");
 	}
 	
 	public void OnAngleRight()
@@ -40,7 +40,7 @@ public class ServyProperty : MonoBehaviour {
 		Actor actor = ActorManager.Instance.Get (PropertyManager.Instance.currentGuid);
 		if (actor == null)
 			return;
-		((Servy)actor).SetAngle ("180");
+		((Servy)actor).SetAngle ("\t0");
 	}
 
 	private static ServyProperty _instance = null;
