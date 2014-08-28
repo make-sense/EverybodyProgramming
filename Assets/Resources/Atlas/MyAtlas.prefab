@@ -68,8 +68,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: _AddActor_Sprite_BackgroundGray
-    x: 502
-    y: 841
+    x: 964
+    y: 843
     width: 54
     height: 54
     borderLeft: 0
@@ -94,8 +94,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: 1407405112_Black_button
-    x: 794
-    y: 752
+    x: 174
+    y: 24
     width: 48
     height: 48
     borderLeft: 0
@@ -120,8 +120,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: 1407405119_Orange_button
-    x: 174
-    y: 24
+    x: 794
+    y: 752
     width: 48
     height: 48
     borderLeft: 0
@@ -133,8 +133,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: 1407405121_Light_blue_button
-    x: 947
-    y: 849
+    x: 794
+    y: 703
     width: 48
     height: 48
     borderLeft: 0
@@ -146,8 +146,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: 1407405122_Green_button
-    x: 898
-    y: 849
+    x: 843
+    y: 752
     width: 48
     height: 48
     borderLeft: 0
@@ -159,8 +159,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: 1407405123_Dark_blue_button
-    x: 680
-    y: 847
+    x: 843
+    y: 703
     width: 48
     height: 48
     borderLeft: 0
@@ -172,8 +172,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: 1407405125_Red_button
-    x: 631
-    y: 847
+    x: 892
+    y: 752
     width: 48
     height: 48
     borderLeft: 0
@@ -185,8 +185,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: 1407405129_button-check_basic_blue
-    x: 898
-    y: 802
+    x: 975
+    y: 754
     width: 46
     height: 46
     borderLeft: 0
@@ -198,8 +198,8 @@ MonoBehaviour:
     paddingTop: 2
     paddingBottom: 0
   - name: 1407405131_button-check_basic_green
-    x: 947
-    y: 802
+    x: 975
+    y: 707
     width: 46
     height: 46
     borderLeft: 0
@@ -211,8 +211,8 @@ MonoBehaviour:
     paddingTop: 2
     paddingBottom: 0
   - name: 1407405133_button-check_basic_yellow
-    x: 794
-    y: 705
+    x: 303
+    y: 512
     width: 46
     height: 46
     borderLeft: 0
@@ -237,8 +237,8 @@ MonoBehaviour:
     paddingTop: 2
     paddingBottom: 0
   - name: 1407588716_bulb
-    x: 557
-    y: 801
+    x: 350
+    y: 513
     width: 33
     height: 45
     borderLeft: 0
@@ -251,7 +251,7 @@ MonoBehaviour:
     paddingBottom: 2
   - name: 1407589060_Perspective Button - Games
     x: 174
-    y: 309
+    y: 432
     width: 128
     height: 122
     borderLeft: 0
@@ -264,7 +264,7 @@ MonoBehaviour:
     paddingBottom: 2
   - name: 1407862950_Perspective Button - Favorites
     x: 174
-    y: 432
+    y: 309
     width: 128
     height: 122
     borderLeft: 0
@@ -276,8 +276,8 @@ MonoBehaviour:
     paddingTop: 4
     paddingBottom: 2
   - name: 1407922654_Silver_button
-    x: 557
-    y: 847
+    x: 892
+    y: 703
     width: 48
     height: 48
     borderLeft: 0
@@ -407,7 +407,7 @@ MonoBehaviour:
     paddingBottom: 0
   - name: Button
     x: 174
-    y: 555
+    y: 678
     width: 128
     height: 122
     borderLeft: 0
@@ -419,8 +419,8 @@ MonoBehaviour:
     paddingTop: 4
     paddingBottom: 2
   - name: Button_Cancel
-    x: 502
-    y: 804
+    x: 964
+    y: 806
     width: 36
     height: 36
     borderLeft: 0
@@ -433,7 +433,7 @@ MonoBehaviour:
     paddingBottom: 0
   - name: Button_Red
     x: 174
-    y: 678
+    y: 555
     width: 128
     height: 122
     borderLeft: 0
@@ -459,7 +459,7 @@ MonoBehaviour:
     paddingBottom: 0
   - name: chuck_arrow_base
     x: 0
-    y: 577
+    y: 801
     width: 173
     height: 223
     borderLeft: 0
@@ -498,7 +498,7 @@ MonoBehaviour:
     paddingBottom: 11
   - name: chuck_base
     x: 0
-    y: 801
+    y: 577
     width: 173
     height: 223
     borderLeft: 0
@@ -536,7 +536,7 @@ MonoBehaviour:
     paddingTop: 1
     paddingBottom: 11
   - name: HS-311
-    x: 843
+    x: 941
     y: 733
     width: 33
     height: 67
@@ -574,6 +574,71 @@ MonoBehaviour:
     paddingRight: 6
     paddingTop: 19
     paddingBottom: 19
+  - name: servo_center
+    x: 697
+    y: 805
+    width: 50
+    height: 90
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 25
+    paddingRight: 25
+    paddingTop: 10
+    paddingBottom: 0
+  - name: servo_left
+    x: 631
+    y: 820
+    width: 65
+    height: 75
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 10
+    paddingRight: 25
+    paddingTop: 25
+    paddingBottom: 0
+  - name: servo_left_center
+    x: 564
+    y: 810
+    width: 60
+    height: 85
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 15
+    paddingRight: 25
+    paddingTop: 15
+    paddingBottom: 0
+  - name: servo_right
+    x: 898
+    y: 822
+    width: 65
+    height: 75
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 25
+    paddingRight: 10
+    paddingTop: 25
+    paddingBottom: 0
+  - name: servo_right_center
+    x: 502
+    y: 809
+    width: 61
+    height: 86
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 25
+    paddingRight: 14
+    paddingTop: 14
+    paddingBottom: 0
   mPixelSize: 1
   mReplacement: {fileID: 0}
   mCoordinates: 0

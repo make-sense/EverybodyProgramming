@@ -133,7 +133,7 @@ MonoBehaviour:
   DataList:
   - Name: Left
     Guid: 833415323
-    texture: {fileID: 2800000, guid: 554023f1a0ddc4a2080a4cc5202450a7, type: 3}
+    texture: {fileID: 2800000, guid: ed4ad63c34b764062a2b25e9dd38c539, type: 3}
     Type: 1
     Length: 0
     IsParamNeed: 0
@@ -141,7 +141,7 @@ MonoBehaviour:
     CallFunctionParam: 180
   - Name: MiddleLeft
     Guid: 1844093895
-    texture: {fileID: 2800000, guid: 554023f1a0ddc4a2080a4cc5202450a7, type: 3}
+    texture: {fileID: 2800000, guid: f4a6ecc7da1cf443c8fb1b5d564185be, type: 3}
     Type: 1
     Length: 0
     IsParamNeed: 0
@@ -149,7 +149,7 @@ MonoBehaviour:
     CallFunctionParam: 135
   - Name: Middle
     Guid: 1283001907
-    texture: {fileID: 2800000, guid: 554023f1a0ddc4a2080a4cc5202450a7, type: 3}
+    texture: {fileID: 2800000, guid: 2b4c099c3c09840d98669400dec5f986, type: 3}
     Type: 1
     Length: 0
     IsParamNeed: 0
@@ -157,7 +157,7 @@ MonoBehaviour:
     CallFunctionParam: 90
   - Name: MiddleRight
     Guid: 1885231434
-    texture: {fileID: 2800000, guid: 554023f1a0ddc4a2080a4cc5202450a7, type: 3}
+    texture: {fileID: 2800000, guid: 169c63da7bfea4b8ab0aa41663dc3a61, type: 3}
     Type: 1
     Length: 0
     IsParamNeed: 0
@@ -165,7 +165,7 @@ MonoBehaviour:
     CallFunctionParam: 45
   - Name: Right
     Guid: 537393370
-    texture: {fileID: 2800000, guid: 554023f1a0ddc4a2080a4cc5202450a7, type: 3}
+    texture: {fileID: 2800000, guid: dcef4984243ba42168c4e520778717df, type: 3}
     Type: 1
     Length: 0
     IsParamNeed: 0
