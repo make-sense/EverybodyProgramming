@@ -84,9 +84,11 @@ public class Analog : Actor {
 	
 	public override void Refresh () 
 	{
-		if (_configured) 
+		if (_configured & arduino.IsOpen)
 		{
 			analogValue = arduino.analogRead(pin);
+			UILabel label = this.GetComponentInChildren<UILabel> () as UILabel;
+			label.text = "A" + pin.ToString () + ":" + analogValue.ToString ();
 			Debug.Log (analogValue.ToString ());
 		}
 	}
