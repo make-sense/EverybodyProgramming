@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 400000}
   - 114: {fileID: 11400006}
   - 114: {fileID: 11400000}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ActionBulby
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46,65 +46,73 @@ MonoBehaviour:
     texture: {fileID: 2800000, guid: 3edcdea44e0ac49ad92f08e543e0447f, type: 3}
     Type: 1
     Length: 0
+    IsParamNeed: 0
     CallFunctionName: SetOff
     CallFunctionParam: 
-    Params: []
   - Name: On
     Guid: -844790351
     texture: {fileID: 2800000, guid: bccf0c8d302bd4373bffbc6dd483ce5f, type: 3}
     Type: 1
     Length: 0
+    IsParamNeed: 0
     CallFunctionName: SetOn
     CallFunctionParam: 
-    Params: []
   - Name: Red
     Guid: -323650059
     texture: {fileID: 2800000, guid: 1abfcac7161304122b3589d8348a6b7d, type: 3}
     Type: 1
     Length: 0
+    IsParamNeed: 0
     CallFunctionName: SetRed
     CallFunctionParam: 
-    Params: []
   - Name: Green
     Guid: -268715499
     texture: {fileID: 2800000, guid: 281bf3aa71f014e80b29dcb79506bb9c, type: 3}
     Type: 1
     Length: 0
+    IsParamNeed: 0
     CallFunctionName: SetGreen
     CallFunctionParam: 
-    Params: []
   - Name: Blue
     Guid: -1310113180
     texture: {fileID: 2800000, guid: cd3772d13bbb74f8ebda8c70cd894991, type: 3}
     Type: 1
     Length: 0
+    IsParamNeed: 0
     CallFunctionName: SetBlue
     CallFunctionParam: 
-    Params: []
   - Name: Yellow
     Guid: -135481751
     texture: {fileID: 2800000, guid: 40447da7442714fbd9564520f8496760, type: 3}
     Type: 1
     Length: 0
+    IsParamNeed: 0
     CallFunctionName: SetYellow
     CallFunctionParam: 
-    Params: []
   - Name: Magenta
     Guid: -356674938
     texture: {fileID: 2800000, guid: e171f40b59f9145ca877ea64bcca5588, type: 3}
     Type: 1
     Length: 0
+    IsParamNeed: 0
     CallFunctionName: SetMagenta
     CallFunctionParam: 
-    Params: []
   - Name: Cyan
     Guid: -1155006195
     texture: {fileID: 2800000, guid: a2a12efc1adbb4936b389c7a3734396b, type: 3}
     Type: 1
     Length: 0
+    IsParamNeed: 0
     CallFunctionName: SetCyan
     CallFunctionParam: 
-    Params: []
+  - Name: Random
+    Guid: 2051366845
+    texture: {fileID: 2800000, guid: a2a12efc1adbb4936b389c7a3734396b, type: 3}
+    Type: 1
+    Length: 0
+    IsParamNeed: 0
+    CallFunctionName: SetRandom
+    CallFunctionParam: 
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -116,7 +124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f0e25d203c734a419744615c6e7865d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newGuid: 0
+  newGuid: 2051366845
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

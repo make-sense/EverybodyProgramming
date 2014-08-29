@@ -71,6 +71,12 @@ public class Bulby : Actor {
 	{
 		SetColor (Color.cyan);
 	}
+	Color[] colors = {Color.red, Color.green, Color.blue, Color.yellow, Color.magenta, Color.cyan};
+	public void SetRandom ()
+	{
+		int rand = Random.Range(0, 5);
+		SetColor (colors[rand]);
+	}
 
 	public void SetColor(Color color)
 	{
