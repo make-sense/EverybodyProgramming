@@ -11135,7 +11135,7 @@ MonoBehaviour:
     mMethodName: SetCurrentSelection
     mParameters: []
     oneShot: 0
-  mSelectedItem: X
+  mSelectedItem: D6
   eventReceiver: {fileID: 0}
   functionName: 
   textScale: 0
@@ -16396,7 +16396,7 @@ MonoBehaviour:
     mMethodName: SetCurrentSelection
     mParameters: []
     oneShot: 0
-  mSelectedItem: X
+  mSelectedItem: A0
   eventReceiver: {fileID: 0}
   functionName: 
   textScale: 0
