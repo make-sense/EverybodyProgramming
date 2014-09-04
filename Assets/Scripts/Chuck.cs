@@ -19,9 +19,9 @@ public class Chuck : MonoBehaviour {
 
 	int TimeLength_ms = 100;
 
-	Color inputColor = new Color (1f, 0.5f, 0.5f);
-	Color outputColor = new Color (0f, 200/255f, 100/255f);
-	Color normalColor = new Color (230f/255f, 180f/255f, 30f/255f);
+	Color inputColor = new Color (217f/255f, 83f/255f, 79f/255f);
+	Color outputColor = new Color (92f/255f, 184f/255f, 92f/255f);
+	Color normalColor = new Color (240f/255f, 173f/255f, 78f/255f);
 
 	public enum eChuckStatus {
 		NONE,

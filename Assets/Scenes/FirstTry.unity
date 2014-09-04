@@ -3074,7 +3074,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: dd3e5035e889d4a3e90184015b98fb13, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: dd3e5035e889d4a3e90184015b98fb13, type: 2}
       propertyPath: m_Layer
@@ -8373,7 +8373,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9c795f466440d2147830d030126e6258, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 9c795f466440d2147830d030126e6258, type: 2}
       propertyPath: mSpriteName
@@ -8385,15 +8385,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 9c795f466440d2147830d030126e6258, type: 2}
       propertyPath: mColor.r
-      value: .90196079
+      value: .941176474
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 9c795f466440d2147830d030126e6258, type: 2}
       propertyPath: mColor.g
-      value: .70588237
+      value: .678431392
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 9c795f466440d2147830d030126e6258, type: 2}
       propertyPath: mColor.b
-      value: .117647059
+      value: .305882365
       objectReference: {fileID: 0}
     - target: {fileID: 6500000, guid: 9c795f466440d2147830d030126e6258, type: 2}
       propertyPath: m_Size.x
@@ -8431,6 +8431,10 @@ Prefab:
       propertyPath: ActorRoot
       value: 
       objectReference: {fileID: 1951330662}
+    - target: {fileID: 11400002, guid: 9c795f466440d2147830d030126e6258, type: 2}
+      propertyPath: mColor.a
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9c795f466440d2147830d030126e6258, type: 2}
   m_RootGameObject: {fileID: 1439961878}
@@ -11478,7 +11482,7 @@ MonoBehaviour:
     relative: 1
     absolute: 0
   updateAnchors: 1
-  mColor: {r: .90196079, g: .70588237, b: .117647059, a: 1}
+  mColor: {r: .941176474, g: .678431392, b: .305882365, a: 1}
   mPivot: 4
   mWidth: 105
   mHeight: 135
