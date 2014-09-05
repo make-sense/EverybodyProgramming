@@ -10,9 +10,12 @@ public class Servy : Actor {
 	
 	public void SetAngle(string angle_str)
 	{
-		int angle = System.Convert.ToInt32(angle_str);
-		arduino.analogWrite(pin, angle);
-		Debug.Log ("SetAngle:" + angle_str);
+		if (_configured)
+		{
+			int angle = System.Convert.ToInt32(angle_str);
+			arduino.analogWrite(pin, angle);
+			Debug.Log ("SetAngle:" + angle_str);
+		}
 	}
 	
 	public void AttachPin(int p)

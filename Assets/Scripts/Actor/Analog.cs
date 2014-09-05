@@ -51,6 +51,7 @@ public class Analog : Actor {
 		return false;
 	}
 	
+
 	public void AttachPin(int p)
 	{
 		UILabel uiLabel = this.GetComponentInChildren<UILabel> () as UILabel;

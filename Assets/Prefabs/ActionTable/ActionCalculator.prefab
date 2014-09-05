@@ -1,0 +1,115 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400000}
+  - 114: {fileID: 11400002}
+  - 114: {fileID: 11400000}
+  m_Layer: 0
+  m_Name: ActionCalculator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &400000
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -215.512039, y: 311.087738, z: 666.124207}
+  m_LocalScale: {x: 360, y: 360, z: 360}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 044dc5c6ddbb549c89106ae74fd195ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DataList:
+  - Name: Get
+    Guid: 1222247682
+    texture: {fileID: 0}
+    Type: 0
+    Length: 0
+    IsParamNeed: 0
+    CallFunctionName: GetValue
+    CallFunctionParam: 
+  - Name: Set
+    Guid: 1951503608
+    texture: {fileID: 0}
+    Type: 1
+    Length: 0
+    IsParamNeed: 0
+    CallFunctionName: SetValue
+    CallFunctionParam: 
+  - Name: Add
+    Guid: 2069855636
+    texture: {fileID: 0}
+    Type: 1
+    Length: 0
+    IsParamNeed: 0
+    CallFunctionName: Add
+    CallFunctionParam: 
+  - Name: Sub
+    Guid: 19444313
+    texture: {fileID: 0}
+    Type: 1
+    Length: 0
+    IsParamNeed: 0
+    CallFunctionName: Sub
+    CallFunctionParam: 
+  - Name: Mul
+    Guid: 722704767
+    texture: {fileID: 0}
+    Type: 1
+    Length: 0
+    IsParamNeed: 0
+    CallFunctionName: Mul
+    CallFunctionParam: 
+  - Name: Div
+    Guid: 1184388469
+    texture: {fileID: 0}
+    Type: 1
+    Length: 0
+    IsParamNeed: 0
+    CallFunctionName: Div
+    CallFunctionParam: 
+--- !u!114 &11400002
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f0e25d203c734a419744615c6e7865d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newGuid: 1184388469
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 100000}
+  m_IsPrefabParent: 1
+  m_IsExploded: 1

@@ -35,8 +35,8 @@ public class PropertyManager : MonoBehaviour {
 				else
 					t.gameObject.SetActive(false);
 			}
-			UILabel label = ActorName.GetComponentInChildren<UILabel> () as UILabel;
-			label.text = actor.ActorName;
+			UIInput input = ActorName.GetComponentInChildren<UIInput> () as UIInput;
+			input.value = actor.GetName ();
 		}
 		catch (System.NullReferenceException e) 
 		{
@@ -55,7 +55,7 @@ public class PropertyManager : MonoBehaviour {
 	public void Set () {
 		UILabel label = ActorName.GetComponentInChildren<UILabel> () as UILabel;
 		Actor actor = ActorManager.Instance.Get (currentGuid);
-		actor.ActorName = label.text;
+		actor.SetName (label.text);
 		switch (actor.GetType ().ToString ()) 
 		{
 			case "Butty":

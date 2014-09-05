@@ -76,7 +76,7 @@ public class ChuckPropertyManager : MonoBehaviour {
 			int baseY = 70;
 			int heightStep = -40;
 
-			ActionTable actions = actor.GetComponentInChildren<ActionTable> () as ActionTable;
+			ActionTable actions = actor.action.GetComponentInChildren<ActionTable> () as ActionTable;
 			foreach (ActionData data in actions.DataList)
 			{
 				GameObject instantiatedGO;

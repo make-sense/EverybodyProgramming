@@ -20,5 +20,7 @@ public class CreatePrefab : MonoBehaviour {
 	{
 		GameObject instantiatedGameObject = NGUITools.AddChild(this.transform.parent.gameObject, prefab);
 		instantiatedGameObject.transform.localPosition = _lastPosition;
+		UISprite sprite = instantiatedGameObject.GetComponentInChildren<UISprite> () as UISprite;
+		sprite.MakePixelPerfect ();
 	}
 }

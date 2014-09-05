@@ -9,9 +9,12 @@ public class DcMotor : Actor {
 	
 	public void SetPower(string power)
 	{
-		int _power = System.Convert.ToInt32(power);
-		arduino.analogWrite(pin, _power);
-		Debug.Log ("SetAngle:" + power);
+		if (_configured)
+		{
+			int _power = System.Convert.ToInt32(power);
+			arduino.analogWrite(pin, _power);
+			Debug.Log ("SetAngle:" + power);
+		}
 	}
 	
 	public void AttachPin(int p)

@@ -1,22 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &100000
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 400002}
-  - 114: {fileID: 11400000}
-  - 114: {fileID: 11400010}
-  m_Layer: 8
-  m_Name: ActionAnalog
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &100002
 GameObject:
   m_ObjectHideFlags: 0
@@ -48,8 +31,8 @@ GameObject:
   - 114: {fileID: 11400002}
   - 114: {fileID: 11400012}
   m_Layer: 8
-  m_Name: Analog
-  m_TagString: Bulby
+  m_Name: Calculator
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -114,18 +97,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 400004}
   m_RootOrder: 0
---- !u!4 &400002
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.2437639, y: 217.525269, z: -1418.99414}
-  m_LocalScale: {x: 1.00007999, y: 1.00007999, z: 1.00007999}
-  m_Children: []
-  m_Father: {fileID: 400004}
-  m_RootOrder: 1
 --- !u!4 &400004
 Transform:
   m_ObjectHideFlags: 1
@@ -133,11 +104,10 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100004}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 47.6270638, y: 161.707474, z: 2944.51172}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400000}
-  - {fileID: 400002}
   - {fileID: 400008}
   - {fileID: 400010}
   m_Father: {fileID: 0}
@@ -166,7 +136,7 @@ Transform:
   m_Children:
   - {fileID: 400006}
   m_Father: {fileID: 400004}
-  m_RootOrder: 2
+  m_RootOrder: 1
 --- !u!4 &400010
 Transform:
   m_ObjectHideFlags: 1
@@ -178,7 +148,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400004}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!54 &5400000
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -204,20 +174,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 90, y: 90, z: 0}
+  m_Size: {x: 90, y: 128, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f0e25d203c734a419744615c6e7865d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  newGuid: 1823301501
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -263,7 +221,7 @@ MonoBehaviour:
   mColor: {r: 0, g: 0, b: 0, a: .737254918}
   mPivot: 4
   mWidth: 82
-  mHeight: 82
+  mHeight: 120
   mDepth: 5
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
@@ -325,12 +283,12 @@ MonoBehaviour:
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mWidth: 90
-  mHeight: 90
+  mHeight: 128
   mDepth: 4
   autoResizeBoxCollider: 1
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 1
+  aspectRatio: .703125
   mType: 1
   mFillDirection: 4
   mFillAmount: 1
@@ -342,7 +300,7 @@ MonoBehaviour:
   bottomType: 1
   topType: 1
   mAtlas: {fileID: 11400000, guid: b85285fefb106402faa216e4dcb36432, type: 2}
-  mSpriteName: analog_signal
+  mSpriteName: Calculator
   mFillCenter: 1
 --- !u!114 &11400008
 MonoBehaviour:
@@ -369,58 +327,6 @@ MonoBehaviour:
   disabledSprite2D: {fileID: 0}
   pixelSnap: 0
   onClick: []
---- !u!114 &11400010
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 044dc5c6ddbb549c89106ae74fd195ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DataList:
-  - Name: Less
-    Guid: 878073209
-    texture: {fileID: 0}
-    Type: 0
-    Length: 0
-    IsParamNeed: 1
-    CallFunctionName: IsLess
-    CallFunctionParam: 
-  - Name: Less&Equal
-    Guid: 2064575481
-    texture: {fileID: 0}
-    Type: 0
-    Length: 0
-    IsParamNeed: 1
-    CallFunctionName: IsLessEqual
-    CallFunctionParam: 
-  - Name: Equal
-    Guid: 124472537
-    texture: {fileID: 0}
-    Type: 0
-    Length: 0
-    IsParamNeed: 1
-    CallFunctionName: IsEqual
-    CallFunctionParam: 
-  - Name: Larger&Equal
-    Guid: 1644596489
-    texture: {fileID: 0}
-    Type: 0
-    Length: 0
-    IsParamNeed: 1
-    CallFunctionName: IsLargerEqual
-    CallFunctionParam: 
-  - Name: Larger
-    Guid: 1823301501
-    texture: {fileID: 0}
-    Type: 0
-    Length: 0
-    IsParamNeed: 1
-    CallFunctionName: IsLarger
-    CallFunctionParam: 
 --- !u!114 &11400012
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -429,14 +335,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 100004}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78014c81652fe4da4adb9d398915e5df, type: 3}
+  m_Script: {fileID: 11500000, guid: b9976280f47204df686b8d7a32e6e00f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DestroyTag: AnalogStack
+  DestroyTag: CalculatorStack
   _Name: 
   Pos: {x: 0, y: 0, z: 0}
-  actionPrefab: {fileID: 0}
-  pin: -1
+  action: {fileID: 100000, guid: f5516c22776f74bceb5a51f4425e5c73, type: 2}
 --- !u!114 &11400014
 MonoBehaviour:
   m_ObjectHideFlags: 1
