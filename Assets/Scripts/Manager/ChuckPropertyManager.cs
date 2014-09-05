@@ -14,6 +14,9 @@ public class ChuckPropertyManager : MonoBehaviour {
 	public static System.Guid SelectedChuckGuid;
 	public static System.Guid SelectedActorGuid;
 
+	Color inputColor = new Color (217f/255f, 83f/255f, 79f/255f);
+	Color outputColor = new Color (92f/255f, 184f/255f, 92f/255f);
+
 	// Use this for initialization
 	void Start () {
 		Hide ();
@@ -87,6 +90,12 @@ public class ChuckPropertyManager : MonoBehaviour {
 				else
 					instantiatedGO = NGUITools.AddChild(actionScrollRoot, actionButtonPrefab);
 				instantiatedGO.transform.localPosition = new Vector3(0f, (float)baseY+heightStep*count, 0f);
+
+				UIButtonColor buttonColor = instantiatedGO.GetComponentInChildren<UIButtonColor> () as UIButtonColor;
+				if (data.Type == eActionType.Input)
+					buttonColor.defaultColor = inputColor;
+				else
+					buttonColor.defaultColor = outputColor;
 
 				UILabel label = instantiatedGO.GetComponentInChildren<UILabel> () as UILabel;
 				label.text = data.Name;
