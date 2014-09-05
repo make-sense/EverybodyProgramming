@@ -1,22 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &100000
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 400002}
-  - 114: {fileID: 11400000}
-  - 114: {fileID: 11400010}
-  m_Layer: 8
-  m_Name: ActionAnalog
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &100002
 GameObject:
   m_ObjectHideFlags: 0
@@ -114,18 +97,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 400004}
   m_RootOrder: 0
---- !u!4 &400002
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.2437639, y: 217.525269, z: -1418.99414}
-  m_LocalScale: {x: 1.00007999, y: 1.00007999, z: 1.00007999}
-  m_Children: []
-  m_Father: {fileID: 400004}
-  m_RootOrder: 1
 --- !u!4 &400004
 Transform:
   m_ObjectHideFlags: 1
@@ -137,7 +108,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400000}
-  - {fileID: 400002}
   - {fileID: 400008}
   - {fileID: 400010}
   m_Father: {fileID: 0}
@@ -166,7 +136,7 @@ Transform:
   m_Children:
   - {fileID: 400006}
   m_Father: {fileID: 400004}
-  m_RootOrder: 2
+  m_RootOrder: 1
 --- !u!4 &400010
 Transform:
   m_ObjectHideFlags: 1
@@ -178,7 +148,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400004}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!54 &5400000
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -206,18 +176,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 90, y: 90, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f0e25d203c734a419744615c6e7865d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  newGuid: 1823301501
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -369,58 +327,6 @@ MonoBehaviour:
   disabledSprite2D: {fileID: 0}
   pixelSnap: 0
   onClick: []
---- !u!114 &11400010
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 044dc5c6ddbb549c89106ae74fd195ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DataList:
-  - Name: Less
-    Guid: 878073209
-    texture: {fileID: 0}
-    Type: 0
-    Length: 0
-    IsParamNeed: 1
-    CallFunctionName: IsLess
-    CallFunctionParam: 
-  - Name: Less&Equal
-    Guid: 2064575481
-    texture: {fileID: 0}
-    Type: 0
-    Length: 0
-    IsParamNeed: 1
-    CallFunctionName: IsLessEqual
-    CallFunctionParam: 
-  - Name: Equal
-    Guid: 124472537
-    texture: {fileID: 0}
-    Type: 0
-    Length: 0
-    IsParamNeed: 1
-    CallFunctionName: IsEqual
-    CallFunctionParam: 
-  - Name: Larger&Equal
-    Guid: 1644596489
-    texture: {fileID: 0}
-    Type: 0
-    Length: 0
-    IsParamNeed: 1
-    CallFunctionName: IsLargerEqual
-    CallFunctionParam: 
-  - Name: Larger
-    Guid: 1823301501
-    texture: {fileID: 0}
-    Type: 0
-    Length: 0
-    IsParamNeed: 1
-    CallFunctionName: IsLarger
-    CallFunctionParam: 
 --- !u!114 &11400012
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -435,7 +341,7 @@ MonoBehaviour:
   DestroyTag: AnalogStack
   _Name: 
   Pos: {x: 0, y: 0, z: 0}
-  actionPrefab: {fileID: 0}
+  action: {fileID: 100000, guid: 220990d89128e45b3ae37740da8a15a4, type: 2}
   pin: -1
 --- !u!114 &11400014
 MonoBehaviour:

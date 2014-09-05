@@ -1,22 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &100000
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 400002}
-  - 114: {fileID: 11400010}
-  - 114: {fileID: 11400012}
-  m_Layer: 8
-  m_Name: Actions
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &100002
 GameObject:
   m_ObjectHideFlags: 0
@@ -98,18 +81,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 400004}
   m_RootOrder: 1
---- !u!4 &400002
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.1875086, y: 6.32872581, z: 0}
-  m_LocalScale: {x: 360, y: 360, z: 360}
-  m_Children: []
-  m_Father: {fileID: 400004}
-  m_RootOrder: 2
 --- !u!4 &400004
 Transform:
   m_ObjectHideFlags: 1
@@ -122,7 +93,6 @@ Transform:
   m_Children:
   - {fileID: 400006}
   - {fileID: 400000}
-  - {fileID: 400002}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &400006
@@ -191,7 +161,7 @@ MonoBehaviour:
   DestroyTag: BulbyStack
   _Name: 
   Pos: {x: 0, y: 0, z: 0}
-  actionPrefab: {fileID: 0}
+  action: {fileID: 100000, guid: 505360970b9e94e9c875cd277f73cef9, type: 2}
   pinR: -1
   pinG: -1
   pinB: -1
@@ -346,102 +316,6 @@ MonoBehaviour:
   disabledSprite2D: {fileID: 0}
   pixelSnap: 0
   onClick: []
---- !u!114 &11400010
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f0e25d203c734a419744615c6e7865d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  newGuid: 0
---- !u!114 &11400012
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 044dc5c6ddbb549c89106ae74fd195ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DataList:
-  - Name: Off
-    Guid: -526438998
-    texture: {fileID: 2800000, guid: 3edcdea44e0ac49ad92f08e543e0447f, type: 3}
-    Type: 1
-    Length: 0
-    IsParamNeed: 0
-    CallFunctionName: SetOff
-    CallFunctionParam: 
-  - Name: On
-    Guid: -844790351
-    texture: {fileID: 2800000, guid: bccf0c8d302bd4373bffbc6dd483ce5f, type: 3}
-    Type: 1
-    Length: 0
-    IsParamNeed: 0
-    CallFunctionName: SetOn
-    CallFunctionParam: 
-  - Name: Red
-    Guid: -323650059
-    texture: {fileID: 2800000, guid: 1abfcac7161304122b3589d8348a6b7d, type: 3}
-    Type: 1
-    Length: 0
-    IsParamNeed: 0
-    CallFunctionName: SetRed
-    CallFunctionParam: 
-  - Name: Green
-    Guid: -268715499
-    texture: {fileID: 2800000, guid: 281bf3aa71f014e80b29dcb79506bb9c, type: 3}
-    Type: 1
-    Length: 0
-    IsParamNeed: 0
-    CallFunctionName: SetGreen
-    CallFunctionParam: 
-  - Name: Blue
-    Guid: -1310113180
-    texture: {fileID: 2800000, guid: cd3772d13bbb74f8ebda8c70cd894991, type: 3}
-    Type: 1
-    Length: 0
-    IsParamNeed: 0
-    CallFunctionName: SetBlue
-    CallFunctionParam: 
-  - Name: Yellow
-    Guid: -135481751
-    texture: {fileID: 2800000, guid: 40447da7442714fbd9564520f8496760, type: 3}
-    Type: 1
-    Length: 0
-    IsParamNeed: 0
-    CallFunctionName: SetYellow
-    CallFunctionParam: 
-  - Name: Magenta
-    Guid: -356674938
-    texture: {fileID: 2800000, guid: e171f40b59f9145ca877ea64bcca5588, type: 3}
-    Type: 1
-    Length: 0
-    IsParamNeed: 0
-    CallFunctionName: SetMagenta
-    CallFunctionParam: 
-  - Name: Cyan
-    Guid: -1155006195
-    texture: {fileID: 2800000, guid: a2a12efc1adbb4936b389c7a3734396b, type: 3}
-    Type: 1
-    Length: 0
-    IsParamNeed: 0
-    CallFunctionName: SetCyan
-    CallFunctionParam: 
-  - Name: Random
-    Guid: 2051366845
-    texture: {fileID: 2800000, guid: a2a12efc1adbb4936b389c7a3734396b, type: 3}
-    Type: 1
-    Length: 0
-    IsParamNeed: 0
-    CallFunctionName: SetRandom
-    CallFunctionParam: 
 --- !u!114 &11400014
 MonoBehaviour:
   m_ObjectHideFlags: 1
