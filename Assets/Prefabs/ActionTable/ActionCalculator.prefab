@@ -54,7 +54,7 @@ MonoBehaviour:
     texture: {fileID: 0}
     Type: 1
     Length: 0
-    IsParamNeed: 0
+    IsParamNeed: 1
     CallFunctionName: SetValue
     CallFunctionParam: 
   - Name: Add
@@ -62,7 +62,7 @@ MonoBehaviour:
     texture: {fileID: 0}
     Type: 1
     Length: 0
-    IsParamNeed: 0
+    IsParamNeed: 1
     CallFunctionName: Add
     CallFunctionParam: 
   - Name: Sub
@@ -70,7 +70,7 @@ MonoBehaviour:
     texture: {fileID: 0}
     Type: 1
     Length: 0
-    IsParamNeed: 0
+    IsParamNeed: 1
     CallFunctionName: Sub
     CallFunctionParam: 
   - Name: Mul
@@ -78,7 +78,7 @@ MonoBehaviour:
     texture: {fileID: 0}
     Type: 1
     Length: 0
-    IsParamNeed: 0
+    IsParamNeed: 1
     CallFunctionName: Mul
     CallFunctionParam: 
   - Name: Div
@@ -86,7 +86,7 @@ MonoBehaviour:
     texture: {fileID: 0}
     Type: 1
     Length: 0
-    IsParamNeed: 0
+    IsParamNeed: 1
     CallFunctionName: Div
     CallFunctionParam: 
 --- !u!114 &11400002
