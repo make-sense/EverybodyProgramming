@@ -7,13 +7,16 @@ public class Servy : Actor {
 	Arduino arduino;
 	private bool _configured = false;
 	public int pin = -1;
+	public Transform Horn;
+	public float Speed = 1000f;
+	int targetAngle = 90;
 	
 	public void SetAngle(string angle_str)
 	{
+		targetAngle = System.Convert.ToInt32(angle_str);
 		if (_configured)
 		{
-			int angle = System.Convert.ToInt32(angle_str);
-			arduino.analogWrite(pin, angle);
+			arduino.analogWrite(pin, targetAngle);
 			Debug.Log ("SetAngle:" + angle_str);
 		}
 	}
@@ -52,7 +55,15 @@ public class Servy : Actor {
 	}
 	
 	// Update is called once per frame
-	void Update () {	
+	void Update () {
+		if (Horn.localRotation.z > (Mathf.PI / 180) * targetAngle)
+		{
+			Horn.transform.Rotate(Vector3.back * Time.deltaTime * Speed);
+		}
+		else
+		{
+			Horn.transform.Rotate(Vector3.forward * Time.deltaTime * Speed);
+		}
 	}
 	
 	void OnPress (bool isPressed) 
