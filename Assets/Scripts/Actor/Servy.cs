@@ -8,8 +8,8 @@ public class Servy : Actor {
 	private bool _configured = false;
 	public int pin = -1;
 	public Transform Horn;
-	public float Speed = 1000f;
-	int targetAngle = 90;
+	public float Speed = 10f;
+	int targetAngle = 180;
 	
 	public void SetAngle(string angle_str)
 	{
@@ -55,14 +55,18 @@ public class Servy : Actor {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		if (Horn.localRotation.z > (Mathf.PI / 180) * targetAngle)
+	void Update () 
+	{
+		if (Mathf.Abs (Horn.localEulerAngles.z - targetAngle) > 1) 
 		{
-			Horn.transform.Rotate(Vector3.back * Time.deltaTime * Speed);
-		}
-		else
-		{
-			Horn.transform.Rotate(Vector3.forward * Time.deltaTime * Speed);
+			if (Horn.localEulerAngles.z > targetAngle) 
+			{
+				Horn.Rotate (Vector3.forward, -Speed * Time.deltaTime);
+			} 
+			else 
+			{
+				Horn.Rotate (Vector3.forward, Speed * Time.deltaTime);
+			}
 		}
 	}
 	
