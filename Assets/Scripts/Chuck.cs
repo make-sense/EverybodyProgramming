@@ -97,6 +97,8 @@ public class Chuck : MonoBehaviour {
 				detail.gameObject.SetActive(true);
 				UIButton button = detail.GetComponentInChildren<UIButton> () as UIButton;
 				button.normalSprite = actionData.texture.name;
+				UISprite sprite = button.GetComponentInChildren<UISprite> () as UISprite;
+				sprite.MakePixelPerfect ();
 			}
 		}
 	}

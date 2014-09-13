@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 400000}
   - 114: {fileID: 11400002}
   - 114: {fileID: 11400000}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ActionButty
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,36 +43,36 @@ MonoBehaviour:
   DataList:
   - Name: TouchDown
     Guid: -63941309
-    texture: {fileID: 2800000, guid: d9a7c94276334451ebc35f04ca7f60bc, type: 3}
+    texture: {fileID: 2800000, guid: eec3c4ac2c50943b9aba80d1a40ddbb6, type: 3}
     Type: 0
     Length: 0
+    IsParamNeed: 0
     CallFunctionName: IsTouchDown
     CallFunctionParam: 
-    Params: []
   - Name: Touching
     Guid: -1620462626
-    texture: {fileID: 2800000, guid: 1b3d50a6c19794bf1b322dad8b47e09c, type: 3}
+    texture: {fileID: 2800000, guid: e828f9d557eac44ee9635c6bf4d82180, type: 3}
     Type: 0
     Length: 0
+    IsParamNeed: 0
     CallFunctionName: IsTouching
     CallFunctionParam: 
-    Params: []
   - Name: TouchUp
     Guid: -1483390853
-    texture: {fileID: 2800000, guid: e129d52ca068f48e498050f0a85ef163, type: 3}
+    texture: {fileID: 2800000, guid: 63f9d0d534a864558ad168b7d17df7be, type: 3}
     Type: 0
     Length: 0
+    IsParamNeed: 0
     CallFunctionName: IsTouchUp
     CallFunctionParam: 
-    Params: []
   - Name: Not Touch
     Guid: -865861134
     texture: {fileID: 2800000, guid: 8dffeda40c120414ea890384dd9e4c3e, type: 3}
     Type: 0
     Length: 0
+    IsParamNeed: 0
     CallFunctionName: IsReleasing
     CallFunctionParam: 
-    Params: []
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
