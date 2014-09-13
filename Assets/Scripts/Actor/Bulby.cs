@@ -71,6 +71,21 @@ public class Bulby : Actor {
 	{
 		SetColor (Color.cyan);
 	}
+	public void SetColorRed (string inValue)
+	{
+		int red = System.Convert.ToInt32 (inValue);
+		SetColor (red, -1, -1);
+	}
+	public void SetColorGreen (string inValue)
+	{
+		int green = System.Convert.ToInt32 (inValue);
+		SetColor (-1, green, -1);
+	}
+	public void SetColorBlue (string inValue)
+	{
+		int blue = System.Convert.ToInt32 (inValue);
+		SetColor (-1, -1, blue);
+	}
 	Color[] colors = {Color.red, Color.green, Color.blue, Color.yellow, Color.magenta, Color.cyan};
 	public void SetRandom ()
 	{
@@ -80,8 +95,6 @@ public class Bulby : Actor {
 
 	public void SetColor(Color color)
 	{
-//		UISprite sprite = GetComponent<UISprite> () as UISprite;
-//		sprite.color = color;
 		UIButtonColor buttonColor = GetComponentInChildren<UIButtonColor> () as UIButtonColor;
 		buttonColor.defaultColor = color;
 
@@ -94,6 +107,29 @@ public class Bulby : Actor {
 			arduino.digitalWrite (pinG, (int)(color.g * 255));
 		if (pinB >= 0)
 			arduino.digitalWrite (pinB, (int)(color.b * 255));
+	}
+	public void SetColor(int red, int green, int blue)
+	{
+		if (_configured)
+		{
+			if (red >= 0 && pinR >= 0)
+				arduino.digitalWrite (pinR, red);
+			if (green >= 0 && pinG >= 0)
+				arduino.digitalWrite (pinG, green);
+			if (blue >= 0 && pinB >= 0)
+				arduino.digitalWrite (pinB, blue);
+		}
+
+		UIButtonColor buttonColor = GetComponentInChildren<UIButtonColor> () as UIButtonColor;
+
+		if (red == -1)
+			red = (int)(buttonColor.defaultColor.r * 255);
+		if (green == -1)
+			green = (int)(buttonColor.defaultColor.g * 255);
+		if (blue == -1)
+			blue = (int)(buttonColor.defaultColor.b * 255);
+
+		buttonColor.defaultColor = new Color(((float)red)/255, ((float)green)/255, ((float)blue)/255);
 	}
 
 	// Use this for initialization
