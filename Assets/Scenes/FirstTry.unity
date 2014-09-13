@@ -1475,7 +1475,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3006
+  startingRenderQueue: 3008
   mAlpha: 1
   mClipping: 3
   mClipRange: {x: 0, y: 0, z: 180, w: 55}
@@ -6871,7 +6871,7 @@ MonoBehaviour:
   DataList:
   - Name: Get
     Guid: 1222247682
-    texture: {fileID: 0}
+    texture: {fileID: 2800000, guid: 1cff09076971eb147b55f22b60093b56, type: 3}
     Type: 0
     Length: 0
     IsParamNeed: 0
@@ -6879,7 +6879,7 @@ MonoBehaviour:
     CallFunctionParam: 
   - Name: Set
     Guid: 1951503608
-    texture: {fileID: 0}
+    texture: {fileID: 2800000, guid: 1cff09076971eb147b55f22b60093b56, type: 3}
     Type: 1
     Length: 0
     IsParamNeed: 1
@@ -6887,7 +6887,7 @@ MonoBehaviour:
     CallFunctionParam: 
   - Name: Add
     Guid: 2069855636
-    texture: {fileID: 0}
+    texture: {fileID: 2800000, guid: 1cff09076971eb147b55f22b60093b56, type: 3}
     Type: 1
     Length: 0
     IsParamNeed: 1
@@ -6895,7 +6895,7 @@ MonoBehaviour:
     CallFunctionParam: 
   - Name: Sub
     Guid: 19444313
-    texture: {fileID: 0}
+    texture: {fileID: 2800000, guid: 1cff09076971eb147b55f22b60093b56, type: 3}
     Type: 1
     Length: 0
     IsParamNeed: 1
@@ -6903,7 +6903,7 @@ MonoBehaviour:
     CallFunctionParam: 
   - Name: Mul
     Guid: 722704767
-    texture: {fileID: 0}
+    texture: {fileID: 2800000, guid: 1cff09076971eb147b55f22b60093b56, type: 3}
     Type: 1
     Length: 0
     IsParamNeed: 1
@@ -6911,7 +6911,7 @@ MonoBehaviour:
     CallFunctionParam: 
   - Name: Div
     Guid: 1184388469
-    texture: {fileID: 0}
+    texture: {fileID: 2800000, guid: 1cff09076971eb147b55f22b60093b56, type: 3}
     Type: 1
     Length: 0
     IsParamNeed: 1
@@ -9833,6 +9833,30 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: f5516c22776f74bceb5a51f4425e5c73, type: 2}
+      propertyPath: DataList.Array.data[0].texture
+      value: 
+      objectReference: {fileID: 2800000, guid: 1cff09076971eb147b55f22b60093b56, type: 3}
+    - target: {fileID: 11400000, guid: f5516c22776f74bceb5a51f4425e5c73, type: 2}
+      propertyPath: DataList.Array.data[1].texture
+      value: 
+      objectReference: {fileID: 2800000, guid: 1cff09076971eb147b55f22b60093b56, type: 3}
+    - target: {fileID: 11400000, guid: f5516c22776f74bceb5a51f4425e5c73, type: 2}
+      propertyPath: DataList.Array.data[2].texture
+      value: 
+      objectReference: {fileID: 2800000, guid: 1cff09076971eb147b55f22b60093b56, type: 3}
+    - target: {fileID: 11400000, guid: f5516c22776f74bceb5a51f4425e5c73, type: 2}
+      propertyPath: DataList.Array.data[3].texture
+      value: 
+      objectReference: {fileID: 2800000, guid: 1cff09076971eb147b55f22b60093b56, type: 3}
+    - target: {fileID: 11400000, guid: f5516c22776f74bceb5a51f4425e5c73, type: 2}
+      propertyPath: DataList.Array.data[4].texture
+      value: 
+      objectReference: {fileID: 2800000, guid: 1cff09076971eb147b55f22b60093b56, type: 3}
+    - target: {fileID: 11400000, guid: f5516c22776f74bceb5a51f4425e5c73, type: 2}
+      propertyPath: DataList.Array.data[5].texture
+      value: 
+      objectReference: {fileID: 2800000, guid: 1cff09076971eb147b55f22b60093b56, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f5516c22776f74bceb5a51f4425e5c73, type: 2}
   m_RootGameObject: {fileID: 823698980}
@@ -13502,7 +13526,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3007
+  startingRenderQueue: 3009
   mAlpha: 1
   mClipping: 3
   mClipRange: {x: 0, y: 0, z: 180, w: 180}
