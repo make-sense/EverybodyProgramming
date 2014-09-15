@@ -73,18 +73,21 @@ public class Bulby : Actor {
 	}
 	public void SetColorRed (string inValue)
 	{
-		int red = System.Convert.ToInt32 (inValue);
-		SetColor (red, -1, -1);
+		int red;
+		if (int.TryParse(inValue, out red))
+			SetColor (red, -1, -1);
 	}
 	public void SetColorGreen (string inValue)
 	{
-		int green = System.Convert.ToInt32 (inValue);
-		SetColor (-1, green, -1);
+		int green;
+		if (int.TryParse(inValue, out green))
+			SetColor (-1, green, -1);
 	}
 	public void SetColorBlue (string inValue)
 	{
-		int blue = System.Convert.ToInt32 (inValue);
-		SetColor (-1, -1, blue);
+		int blue;
+		if (int.TryParse(inValue, out blue))
+			SetColor (-1, -1, blue);
 	}
 	Color[] colors = {Color.red, Color.green, Color.blue, Color.yellow, Color.magenta, Color.cyan};
 	public void SetRandom ()
