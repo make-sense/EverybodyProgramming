@@ -66,7 +66,6 @@ public class Servy : Actor {
 		float diff = currentAngle - targetAngle;
 		if (diff > 270f)
 			diff = diff - 360f;
-		Debug.Log ("o: " + Horn.localEulerAngles.z.ToString () + ", c: " + currentAngle.ToString () + ", d: " + diff.ToString ());
 		if (Mathf.Abs (diff) > 1f)
 		{
 			if (diff > 0f)
