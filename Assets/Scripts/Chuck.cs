@@ -155,7 +155,10 @@ public class Chuck : MonoBehaviour {
 			{
 				if (actionData.Type == eActionType.Output) 
 				{
-					actor.gameObject.BroadcastMessage (actionData.CallFunctionName, _param);
+					if (actionData.IsParamNeed)
+						actor.gameObject.BroadcastMessage (actionData.CallFunctionName, _param);
+					else
+						actor.gameObject.BroadcastMessage (actionData.CallFunctionName, actionData.CallFunctionParam);
 					DateTime begin = DateTime.Now;
 					while (true) 
 					{
