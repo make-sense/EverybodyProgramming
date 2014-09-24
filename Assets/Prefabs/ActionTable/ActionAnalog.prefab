@@ -41,41 +41,41 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DataList:
-  - Name: Less
+  - Name: <
     Guid: 878073209
-    texture: {fileID: 0}
+    texture: {fileID: 2800000, guid: d91d7ac8b0438443f985ada9f72a5fe0, type: 3}
     Type: 0
     Length: 0
     IsParamNeed: 1
     CallFunctionName: IsLess
     CallFunctionParam: 
-  - Name: Less&Equal
+  - Name: <=
     Guid: 2064575481
-    texture: {fileID: 0}
+    texture: {fileID: 2800000, guid: d91d7ac8b0438443f985ada9f72a5fe0, type: 3}
     Type: 0
     Length: 0
     IsParamNeed: 1
     CallFunctionName: IsLessEqual
     CallFunctionParam: 
-  - Name: Equal
+  - Name: =
     Guid: 124472537
-    texture: {fileID: 0}
+    texture: {fileID: 2800000, guid: d91d7ac8b0438443f985ada9f72a5fe0, type: 3}
     Type: 0
     Length: 0
     IsParamNeed: 1
     CallFunctionName: IsEqual
     CallFunctionParam: 
-  - Name: Larger&Equal
+  - Name: '>='
     Guid: 1644596489
-    texture: {fileID: 0}
+    texture: {fileID: 2800000, guid: d91d7ac8b0438443f985ada9f72a5fe0, type: 3}
     Type: 0
     Length: 0
     IsParamNeed: 1
     CallFunctionName: IsLargerEqual
     CallFunctionParam: 
-  - Name: Larger
+  - Name: '>'
     Guid: 1823301501
-    texture: {fileID: 0}
+    texture: {fileID: 2800000, guid: d91d7ac8b0438443f985ada9f72a5fe0, type: 3}
     Type: 0
     Length: 0
     IsParamNeed: 1

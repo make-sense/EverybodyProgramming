@@ -53,9 +53,10 @@ public class PropertyManager : MonoBehaviour {
 	}
 
 	public void Set () {
-		UILabel label = ActorName.GetComponentInChildren<UILabel> () as UILabel;
+		UIInput input = ActorName.GetComponentInChildren<UIInput> () as UIInput;
+//		UILabel label = ActorName.GetComponentInChildren<UILabel> () as UILabel;
 		Actor actor = ActorManager.Instance.Get (currentGuid);
-		actor.SetName (label.text);
+		actor.SetName (input.value);
 		switch (actor.GetType ().ToString ()) 
 		{
 			case "Butty":

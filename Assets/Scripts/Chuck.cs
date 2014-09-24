@@ -40,26 +40,6 @@ public class Chuck : MonoBehaviour {
 
 	public UIButton startButton;
 
-	public bool _isStart = false;
-
-	public void OnToggleStart ()
-	{
-		_isStart = !_isStart;
-		UpdateStartIcon();
-	}
-
-	private void UpdateStartIcon()
-	{
-		if (_isStart) 
-		{
-			startButton.normalSprite = "1408105883_traffic_lights_green";
-		}
-		else
-		{
-			startButton.normalSprite = "1408105883_traffic_lights_red";
-		}
-	}
-
 	public void SetAction(System.Guid actorID, int actionID)
 	{
 		actorGuid = actorID;
@@ -159,14 +139,21 @@ public class Chuck : MonoBehaviour {
 						actor.gameObject.BroadcastMessage (actionData.CallFunctionName, _param);
 					else
 						actor.gameObject.BroadcastMessage (actionData.CallFunctionName, actionData.CallFunctionParam);
+
+					if (actionData.CallFunctionName=="WaitSecond")
+					{
+						TimeLength_ms = (int)(System.Convert.ToDouble (_param) * 1000);
+						Debug.Log ("Set chuck's execute time to " + TimeLength_ms + "ms");
+					}
+
 					DateTime begin = DateTime.Now;
-					while (true) 
+					while (true)
 					{
 						TimeSpan timeSpan = DateTime.Now.Subtract (begin);
 						if (timeSpan.TotalMilliseconds > TimeLength_ms)
 							break;
 						else
-							yield return new WaitForSeconds (0.1f);
+							yield return new WaitForSeconds (0.01f);
 					}
 					Debug.Log ("Action:" + actionData.CallFunctionName);
 				}
@@ -213,7 +200,6 @@ public class Chuck : MonoBehaviour {
 		ChuckManager.Instance.Add(this);
 		if (UIRoot.list.Count > 0)
 			_uiRoot = UIRoot.list[0];
-		UpdateStartIcon ();
 	}
 	
 	// Update is called once per frame

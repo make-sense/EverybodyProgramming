@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 400000}
   - 114: {fileID: 11400002}
   - 114: {fileID: 11400000}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ActionSandy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46,9 +46,9 @@ MonoBehaviour:
     texture: {fileID: 2800000, guid: b6bca540d280f784087718a4a7f250f2, type: 3}
     Type: 1
     Length: 0
-    CallFunctionName: WaitMiliSecond
-    CallFunctionParam: 1000
-    Params: []
+    IsParamNeed: 1
+    CallFunctionName: WaitSecond
+    CallFunctionParam: 
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
