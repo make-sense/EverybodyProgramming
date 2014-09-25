@@ -89,6 +89,9 @@ public class Chuck : MonoBehaviour {
 	}
 
 	public void Execute () {
+		if (_status != eChuckStatus.READY)
+			return;
+
 		// 1. check state
 //		Debug.Log ("Execute = " + Guid.ToString ());
 		ActionData actionData = ActionManager.Instance.GetActionData(actionGuid);
@@ -179,6 +182,8 @@ public class Chuck : MonoBehaviour {
 			_children [1].Execute ();
 		}
 
+		checkDone ();
+
 		yield return null;
 	}
 
@@ -192,6 +197,25 @@ public class Chuck : MonoBehaviour {
 			_children [0].Execute ();
 		}
 		yield return null;
+	}
+
+	void checkDone ()
+	{
+		if (_children [0] == null && _children [1] == null)
+			_status = eChuckStatus.READY;
+		else if (_children [0] != null && _children [0]._status == eChuckStatus.READY)
+			_status = eChuckStatus.READY;
+		else if (_children [1] != null && _children [1]._status == eChuckStatus.READY)
+			_status = eChuckStatus.READY;
+
+		if (_status == eChuckStatus.READY) 
+		{
+			if (!IsRoot())
+			{
+				Chuck parent = transform.parent.GetComponentInChildren<Chuck> () as Chuck;
+				parent.checkDone ();
+			}
+		}
 	}
 
 	// Use this for initialization
