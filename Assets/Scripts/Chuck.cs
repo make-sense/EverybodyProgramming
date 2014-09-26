@@ -55,6 +55,41 @@ public class Chuck : MonoBehaviour {
 		SetActionUI();
 	}
 
+	private void UpdateChuckUI ()
+	{
+		Transform detail = this.transform.FindChild("Detail");
+		UIButton baseButton = GetComponentInChildren<UIButton> () as UIButton;
+		if (detail.gameObject.activeSelf) 
+		{
+			if (_children[0] == null && _children[1] == null)
+				baseButton.normalSprite = "chuck_base";
+			else if (_children[0] != null && _children[1] == null)
+				baseButton.normalSprite = "chuck_bottom";
+			else if (_children[0] == null && _children[1] != null)
+				baseButton.normalSprite = "chuck_right";
+			else
+				baseButton.normalSprite = "chuck_full";
+		} else {
+			if (_children[0] == null && _children[1] == null)
+				baseButton.normalSprite = "chuck_arrow_base";
+			else if (_children[0] != null && _children[1] == null)
+				baseButton.normalSprite = "chuck_arrow_bottom";
+			else if (_children[0] == null && _children[1] != null)
+				baseButton.normalSprite = "chuck_arrow_right";
+			else
+				baseButton.normalSprite = "chuck_arrow_full";
+		}
+	}
+
+	private static void UpdateChuckUIAll ()
+	{
+		BetterList<Chuck> chucks = ChuckManager.Instance.GetChucks ();
+		foreach (Chuck chuck in chucks) 
+		{
+			chuck.UpdateChuckUI ();
+		}
+	}
+	
 	private void SetActionUI() {
 		Actor actor = ActorManager.Instance.Get (actorGuid);
 		if (actor != null) {
@@ -80,6 +115,7 @@ public class Chuck : MonoBehaviour {
 				UISprite sprite = button.GetComponentInChildren<UISprite> () as UISprite;
 				sprite.MakePixelPerfect ();
 			}
+			UpdateChuckUI ();
 		}
 	}
 
@@ -259,6 +295,7 @@ public class Chuck : MonoBehaviour {
 				if (rootChuck != null)
 					rootChuck._children[0] = this;
 			}
+			UpdateChuckUI ();
 		}
 		else if (other.tag == "ChuckStack")
 		{
@@ -273,13 +310,17 @@ public class Chuck : MonoBehaviour {
 		if (isRoot(this.transform))
 		    return;
 
-		if (isChuckSeparated(this.transform))
+		if (isChuckSeparated (this.transform)) 
+		{
 			this.transform.parent = _uiRoot.transform;
+			UpdateChuckUIAll ();
+		}
 	}
 
 	void OnDragDropRelease(GameObject surface)
 	{
 		Debug.Log ("OnDragDropRelease");
+		UpdateChuckUI ();
 	}
 
 	private bool isRightEdge(Vector3 src, Vector3 dst) 

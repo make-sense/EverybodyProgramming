@@ -5,6 +5,45 @@ public class Calculator : Actor {
 
 	int _value;
 
+	public bool IsLess (string value)
+	{
+		int cmp = System.Convert.ToInt32 (value);
+		if (_value < cmp)
+			return true;
+		return false;
+	}
+	
+	public bool IsLessEqual (string value)
+	{
+		int cmp = System.Convert.ToInt32 (value);
+		if (_value <= cmp)
+			return true;
+		return false;
+	}
+	
+	public bool IsEqual (string value)
+	{
+		int cmp = System.Convert.ToInt32 (value);
+		if (_value == cmp)
+			return true;
+		return false;
+	}
+	
+	public bool IsLargerEqual (string value)
+	{
+		int cmp = System.Convert.ToInt32 (value);
+		if (_value >= cmp)
+			return true;
+		return false;
+	}
+	
+	public bool IsLarger (string value)
+	{
+		int cmp = System.Convert.ToInt32 (value);
+		if (_value > cmp)
+			return true;
+		return false;
+	}
 	public int GetValue ()
 	{
 		return _value;
