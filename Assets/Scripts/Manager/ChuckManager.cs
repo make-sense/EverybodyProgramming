@@ -6,6 +6,12 @@ public class ChuckManager : MonoBehaviour {
 
 	BetterList<Chuck> _chucks = new BetterList<Chuck> ();
 
+	public int count;
+
+	void Update () {
+		count = _chucks.size;
+	}
+
 	public void Add (Chuck chuck) {
 		_chucks.Add(chuck);
 	}

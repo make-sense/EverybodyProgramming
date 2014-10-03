@@ -38,8 +38,6 @@ public class Chuck : MonoBehaviour {
 		}
 	}
 
-	public UIButton startButton;
-
 	public void SetAction(System.Guid actorID, int actionID)
 	{
 		actorGuid = actorID;
@@ -49,27 +47,16 @@ public class Chuck : MonoBehaviour {
 
 	public void SetAction(System.Guid actorID, int actionID, string param)
 	{
-		actorGuid = actorID;
-		actionGuid = actionID;
 		_param = param;
-		SetActionUI();
+		SetAction (actorID, actionID);
 	}
 
 	private void UpdateChuckUI ()
 	{
 		Transform detail = this.transform.FindChild("Detail");
 		UIButton baseButton = GetComponentInChildren<UIButton> () as UIButton;
-		if (detail.gameObject.activeSelf) 
+		if (detail == null || !detail.gameObject.activeSelf)
 		{
-			if (_children[0] == null && _children[1] == null)
-				baseButton.normalSprite = "chuck_base";
-			else if (_children[0] != null && _children[1] == null)
-				baseButton.normalSprite = "chuck_bottom";
-			else if (_children[0] == null && _children[1] != null)
-				baseButton.normalSprite = "chuck_right";
-			else
-				baseButton.normalSprite = "chuck_full";
-		} else {
 			if (_children[0] == null && _children[1] == null)
 				baseButton.normalSprite = "chuck_arrow_base";
 			else if (_children[0] != null && _children[1] == null)
@@ -78,6 +65,17 @@ public class Chuck : MonoBehaviour {
 				baseButton.normalSprite = "chuck_arrow_right";
 			else
 				baseButton.normalSprite = "chuck_arrow_full";
+		}
+		else 
+		{
+			if (_children[0] == null && _children[1] == null)
+				baseButton.normalSprite = "chuck_base";
+			else if (_children[0] != null && _children[1] == null)
+				baseButton.normalSprite = "chuck_bottom";	
+			else if (_children[0] == null && _children[1] != null)
+				baseButton.normalSprite = "chuck_right";
+			else
+				baseButton.normalSprite = "chuck_full";
 		}
 	}
 
@@ -262,15 +260,18 @@ public class Chuck : MonoBehaviour {
 			_uiRoot = UIRoot.list[0];
 	}
 	
-	// Update is called once per frame
-	void Update () {
-	}
-
 	void OnPress (bool isPressed) 
 	{
 		Debug.Log ("Chuck OnPress:"+Guid.ToString ());
 		ChuckPropertyManager.Instance.Show ();
 		ChuckPropertyManager.SelectedChuckGuid = Guid;
+
+		UpdateChuckUI ();
+		if (isChuckSeparated (this.transform)) 
+		{
+			this.transform.parent = _uiRoot.transform;
+			UpdateChuckUIAll ();
+		}
 	}
 
 	void OnTriggerEnter(Collider other) 
@@ -295,32 +296,23 @@ public class Chuck : MonoBehaviour {
 				if (rootChuck != null)
 					rootChuck._children[0] = this;
 			}
-			UpdateChuckUI ();
+			UpdateChuckUIAll ();
 		}
 		else if (other.tag == "ChuckStack")
 		{
-			Debug.Log ("Destroy " + gameObject.name);
-			ChuckManager.Instance.Remove (this);
-			Destroy(this.gameObject);
+			DestroyRecursively (this);
 		}
 	}
 
-	void OnDragEnd () 
+	void DestroyRecursively (Chuck chuck)
 	{
-		if (isRoot(this.transform))
-		    return;
-
-		if (isChuckSeparated (this.transform)) 
-		{
-			this.transform.parent = _uiRoot.transform;
-			UpdateChuckUIAll ();
-		}
-	}
-
-	void OnDragDropRelease(GameObject surface)
-	{
-		Debug.Log ("OnDragDropRelease");
-		UpdateChuckUI ();
+		if (chuck._children [0] != null)
+			DestroyRecursively (chuck._children [0]);
+		if (chuck._children [1] != null)
+			DestroyRecursively (chuck._children [1]);
+		Debug.Log ("Destroy Chuck: " + chuck.Guid.ToString ());
+		ChuckManager.Instance.Remove (chuck);
+		Destroy (chuck.gameObject);
 	}
 
 	private bool isRightEdge(Vector3 src, Vector3 dst) 

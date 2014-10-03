@@ -49,21 +49,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!1 &100012
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 400012}
-  m_Layer: 8
-  m_Name: NGUI Snapshot Point 36
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &100014
 GameObject:
   m_ObjectHideFlags: 0
@@ -137,18 +122,6 @@ Transform:
   m_Children:
   - {fileID: 400002}
   m_Father: {fileID: 400016}
-  m_RootOrder: 3
---- !u!4 &400012
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100012}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 400016}
   m_RootOrder: 2
 --- !u!4 &400014
 Transform:
@@ -169,12 +142,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100016}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 185.168808, y: 45.5925446, z: 2642.69531}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400000}
   - {fileID: 400014}
-  - {fileID: 400012}
   - {fileID: 400004}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -232,7 +204,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   actionGuid: 0
-  startButton: {fileID: 0}
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -420,7 +391,7 @@ MonoBehaviour:
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: .767441869
+  aspectRatio: .763779521
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 0}
   mFont: {fileID: 11400000, guid: 29056518aafb01b49a5b08faf8e30cff, type: 2}
