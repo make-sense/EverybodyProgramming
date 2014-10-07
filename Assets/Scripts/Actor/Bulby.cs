@@ -41,35 +41,35 @@ public class Bulby : Actor {
 
 	public void SetOff () 
 	{
-		SetColor(Color.black);
+		SetColor(0, 0, 0);
 	}
 	public void SetOn ()
 	{
-		SetColor(Color.white);
+		SetColor(100, 100, 100);
 	}
 	public void SetRed ()
 	{
-		SetColor (Color.red);
+		SetColor (100, 0, 0);
 	}
 	public void SetGreen ()
 	{
-		SetColor (Color.green);
+		SetColor (0, 100, 0);
 	}
 	public void SetBlue ()
 	{
-		SetColor (Color.blue);
+		SetColor (0, 0, 100);
 	}
 	public void SetYellow ()
 	{
-		SetColor (Color.yellow);
+		SetColor (100, 100, 0);
 	}
 	public void SetMagenta ()
 	{
-		SetColor (Color.magenta);
+		SetColor (100, 0, 100);
 	}
 	public void SetCyan ()
 	{
-		SetColor (Color.cyan);
+		SetColor (0, 100, 100);
 	}
 	public void SetColorRed (string inValue)
 	{
@@ -98,21 +98,20 @@ public class Bulby : Actor {
 
 	public void SetColor(Color color)
 	{
-		UIButtonColor buttonColor = GetComponentInChildren<UIButtonColor> () as UIButtonColor;
-		buttonColor.defaultColor = color;
-
-		if (!_configured)
-			return;
-		
-		if (pinR >= 0)
-			arduino.digitalWrite (pinR, (int)(color.r * 255));
-		if (pinG >= 0)
-			arduino.digitalWrite (pinG, (int)(color.g * 255));
-		if (pinB >= 0)
-			arduino.digitalWrite (pinB, (int)(color.b * 255));
+		int r = (int)(color.r * 100);
+		int g = (int)(color.g * 100);
+		int b = (int)(color.b * 100);
+		SetColor (r, g, b);
 	}
 	public void SetColor(int red, int green, int blue)
 	{
+		if (red > 100)
+			red = 100;
+		if (green > 100)
+			green = 100;
+		if (blue > 100)
+			blue = 100;
+
 		if (_configured)
 		{
 			if (red >= 0 && pinR >= 0)
@@ -132,7 +131,7 @@ public class Bulby : Actor {
 		if (blue == -1)
 			blue = (int)(buttonColor.defaultColor.b * 255);
 
-		buttonColor.defaultColor = new Color(((float)red)/255, ((float)green)/255, ((float)blue)/255);
+		buttonColor.defaultColor = new Color(((float)red)/100, ((float)green)/100, ((float)blue)/100);
 	}
 
 	// Use this for initialization
@@ -153,11 +152,7 @@ public class Bulby : Actor {
 
 	void OnPress (bool isPressed) 
 	{
-		Debug.Log ("Bulby OnPress");
+//		Debug.Log ("Bulby OnPress");
 		PropertyManager.Instance.ShowProperty (Guid);
-	}
-
-	private void ChangeSprite()
-	{
 	}
 }
