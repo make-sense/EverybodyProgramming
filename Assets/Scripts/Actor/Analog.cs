@@ -71,7 +71,7 @@ public class Analog : Actor {
 	
 	void ConfigurePin ()
 	{
-		arduino.pinMode(pin, PinMode.ANALOG);
+//		arduino.pinMode(pin, PinMode.ANALOG);
 		arduino.reportAnalog(pin, 1);
 		_configured = true;
 	}
@@ -90,7 +90,7 @@ public class Analog : Actor {
 			analogValue = arduino.analogRead(pin);
 			UILabel label = this.GetComponentInChildren<UILabel> () as UILabel;
 			label.text = "A" + pin.ToString () + ":" + analogValue.ToString ();
-			Debug.Log (analogValue.ToString ());
+//			Debug.Log (analogValue.ToString ());
 		}
 	}
 	
