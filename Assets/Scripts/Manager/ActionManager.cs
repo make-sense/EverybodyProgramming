@@ -26,16 +26,6 @@ public class ActionManager : MonoBehaviour {
 		return null;
 	}
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
-
 	private static ActionManager _instance = null;
 	public static ActionManager Instance
 	{
