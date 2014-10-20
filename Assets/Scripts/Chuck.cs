@@ -262,15 +262,18 @@ public class Chuck : MonoBehaviour {
 	
 	void OnPress (bool isPressed) 
 	{
-		Debug.Log ("Chuck OnPress:"+Guid.ToString ());
+//		Debug.Log ("Chuck OnPress:"+Guid.ToString ());
 		ChuckPropertyManager.Instance.Show ();
 		ChuckPropertyManager.SelectedChuckGuid = Guid;
 
 		UpdateChuckUI ();
-		if (isChuckSeparated (this.transform)) 
+		if (!isPressed)
 		{
-			this.transform.parent = _uiRoot.transform;
-			UpdateChuckUIAll ();
+			if (isChuckSeparated (this.transform))
+			{
+				this.transform.parent = _uiRoot.transform;
+				UpdateChuckUIAll ();
+			}
 		}
 	}
 
@@ -310,7 +313,7 @@ public class Chuck : MonoBehaviour {
 			DestroyRecursively (chuck._children [0]);
 		if (chuck._children [1] != null)
 			DestroyRecursively (chuck._children [1]);
-		Debug.Log ("Destroy Chuck: " + chuck.Guid.ToString ());
+//		Debug.Log ("Destroy Chuck: " + chuck.Guid.ToString ());
 		ChuckManager.Instance.Remove (chuck);
 		Destroy (chuck.gameObject);
 	}
@@ -339,7 +342,7 @@ public class Chuck : MonoBehaviour {
 
 	private bool isChuckSeparated(Transform src)
 	{
-		if (src.transform.localPosition.x < CHUCK_WIDTH -CHUCK_WIDTH*0.2f || 
+		if (src.transform.localPosition.x < CHUCK_WIDTH - CHUCK_WIDTH*0.2f || 
 			src.transform.localPosition.x > CHUCK_WIDTH + CHUCK_WIDTH*0.2f ||
 		    src.transform.localPosition.y < -CHUCK_HEIGHT - CHUCK_HEIGHT*0.2f ||
 		    src.transform.localPosition.y > -CHUCK_HEIGHT + CHUCK_HEIGHT*0.2f)
