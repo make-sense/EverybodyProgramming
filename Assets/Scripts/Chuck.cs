@@ -342,10 +342,10 @@ public class Chuck : MonoBehaviour {
 
 	private bool isChuckSeparated(Transform src)
 	{
-		if (src.transform.localPosition.x < CHUCK_WIDTH - CHUCK_WIDTH*0.2f || 
-			src.transform.localPosition.x > CHUCK_WIDTH + CHUCK_WIDTH*0.2f ||
-		    src.transform.localPosition.y < -CHUCK_HEIGHT - CHUCK_HEIGHT*0.2f ||
-		    src.transform.localPosition.y > -CHUCK_HEIGHT + CHUCK_HEIGHT*0.2f)
+		if ((src.transform.localPosition.x < CHUCK_WIDTH - CHUCK_WIDTH*0.2f || 
+			src.transform.localPosition.x > CHUCK_WIDTH + CHUCK_WIDTH*0.2f) &&
+		    (src.transform.localPosition.y < -CHUCK_HEIGHT - CHUCK_HEIGHT*0.2f ||
+		    src.transform.localPosition.y > -CHUCK_HEIGHT + CHUCK_HEIGHT*0.2f))
 			return true;
 		return false;
 	}
