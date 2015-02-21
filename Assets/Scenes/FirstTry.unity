@@ -1455,7 +1455,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3008
+  startingRenderQueue: 3006
   mAlpha: 1
   mClipping: 3
   mClipRange: {x: 0, y: 0, z: 180, w: 55}
@@ -13508,7 +13508,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3009
+  startingRenderQueue: 3007
   mAlpha: 1
   mClipping: 3
   mClipRange: {x: 0, y: 0, z: 180, w: 180}
